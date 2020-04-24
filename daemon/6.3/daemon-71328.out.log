@@ -1,0 +1,1034 @@
+2020-04-23T23:47:52.415-0500 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonMain] Assuming the daemon was started with following jvm opts: [--add-opens, java.base/java.util=ALL-UNNAMED, --add-opens, java.base/java.lang=ALL-UNNAMED, --add-opens, java.base/java.lang.invoke=ALL-UNNAMED, --add-opens, java.prefs/java.util.prefs=ALL-UNNAMED, -XX:MaxMetaspaceSize=256m, -XX:+HeapDumpOnOutOfMemoryError, -Xms256m, -Xmx512m, -Dfile.encoding=UTF-8, -Duser.country=US, -Duser.language=en, -Duser.variant]
+2020-04-23T23:47:52.671-0500 [INFO] [org.gradle.launcher.daemon.server.Daemon] start() called on daemon - DefaultDaemonContext[uid=d384845b-4e87-432a-86f5-47ad81a31420,javaHome=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home,daemonRegistryDir=/Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon,pid=71328,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2020-04-23T23:47:52.732-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface utun0
+2020-04-23T23:47:52.732-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2020-04-23T23:47:52.733-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:625e:5fde:20bd:7be0%utun0
+2020-04-23T23:47:52.733-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface awdl0
+2020-04-23T23:47:52.733-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2020-04-23T23:47:52.737-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:f851:caff:feda:e263%awdl0
+2020-04-23T23:47:52.738-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface en0
+2020-04-23T23:47:52.738-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? false
+2020-04-23T23:47:52.738-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /2605:6000:1a12:cab:0:0:0:1b3%en0
+2020-04-23T23:47:52.739-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /2605:6000:1a12:cab:fcc6:29bb:63f4:448f%en0
+2020-04-23T23:47:52.740-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /2605:6000:1a12:cab:1a:eae0:1175:d5f5%en0
+2020-04-23T23:47:52.741-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /fe80:0:0:0:1829:614c:a8:e213%en0
+2020-04-23T23:47:52.741-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding remote address /192.168.1.55
+2020-04-23T23:47:52.741-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding IP addresses for network interface lo0
+2020-04-23T23:47:52.742-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Is this a loopback interface? true
+2020-04-23T23:47:52.742-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Ignoring remote address on loopback interface /fe80:0:0:0:0:0:0:1%lo0
+2020-04-23T23:47:52.743-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /0:0:0:0:0:0:0:1%lo0
+2020-04-23T23:47:52.743-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.InetAddresses] Adding loopback address /127.0.0.1
+2020-04-23T23:47:52.748-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Listening on [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]].
+2020-04-23T23:47:52.764-0500 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] Daemon starting at: Thu Apr 23 23:47:52 CDT 2020, with address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:47:52.765-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertising the daemon address to the clients: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:47:52.765-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Advertised daemon context: DefaultDaemonContext[uid=d384845b-4e87-432a-86f5-47ad81a31420,javaHome=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home,daemonRegistryDir=/Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon,pid=71328,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2020-04-23T23:47:52.767-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]], context: DefaultDaemonContext[uid=d384845b-4e87-432a-86f5-47ad81a31420,javaHome=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home,daemonRegistryDir=/Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon,pid=71328,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+2020-04-23T23:47:52.781-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-23T23:47:52.785-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:47:52.790-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:47:52.791-0500 [LIFECYCLE] [org.gradle.launcher.daemon.server.Daemon] Daemon server started.
+2020-04-23T23:47:52.792-0500 [DEBUG] [org.gradle.launcher.daemon.bootstrap.DaemonStartupCommunication] Completed writing the daemon greeting. Closing streams...
+2020-04-23T23:47:52.809-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:62382 to /127.0.0.1:62381.
+2020-04-23T23:47:52.810-0500 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stopOnExpiration() called on daemon
+2020-04-23T23:47:52.817-0500 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] awaitExpiration() called on daemon
+2020-04-23T23:47:52.818-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:47:52.931-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 18: received class org.gradle.launcher.daemon.protocol.Build
+2020-04-23T23:47:52.931-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 18: Received non-IO message from client: Build{id=4e933661-6277-4931-9a6d-fecce9692972, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}
+2020-04-23T23:47:52.932-0500 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=4e933661-6277-4931-9a6d-fecce9692972, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}.
+2020-04-23T23:47:52.933-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=4e933661-6277-4931-9a6d-fecce9692972, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack} with connection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62382.
+2020-04-23T23:47:52.938-0500 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=4e933661-6277-4931-9a6d-fecce9692972, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62382] after 0.0 minutes of idle
+2020-04-23T23:47:52.938-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:47:52.939-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:47:52.940-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-23T23:47:52.941-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:47:52.942-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:47:52.943-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-23T23:47:52.944-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:47:52.946-0500 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=4e933661-6277-4931-9a6d-fecce9692972, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}. Dispatching build started information...
+2020-04-23T23:47:52.947-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 20: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@7af6b3ba
+2020-04-23T23:47:52.953-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin, SHELL=/bin/bash, USER=supriyamukherjee, VERSIONER_PYTHON_PREFER_32_BIT=no, TMPDIR=/var/folders/28/gycdj8516q9fvvgzb_3jw0280000gn/T/, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.wA0d84Klbi/Listeners, XPC_FLAGS=0x0, VERSIONER_PYTHON_VERSION=2.7, __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.Mk0sb63aZY/Render, LOGNAME=supriyamukherjee, LC_CTYPE=en_US.UTF-8, XPC_SERVICE_NAME=com.jetbrains.intellij.ce.32712, HOME=/Users/supriyamukherjee}
+2020-04-23T23:47:52.964-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2020-04-23T23:47:52.965-0500 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 71328). The daemon log file: /Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon/6.3/daemon-71328.out.log
+2020-04-23T23:47:52.969-0500 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting build in new daemon [memory: 536.9 MB]
+2020-04-23T23:47:52.981-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2020-04-23T23:47:52.982-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=d384845b-4e87-432a-86f5-47ad81a31420,javaHome=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home,daemonRegistryDir=/Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon,pid=71328,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':compileJava'.
+> Could not target platform: 'Java SE 14' using tool chain: 'JDK 13 (13)'.
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.3/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD FAILED in 15s
+1 actionable task: 1 executed
+2020-04-23T23:48:06.152-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2020-04-23T23:48:06.164-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:48:06.165-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=4e933661-6277-4931-9a6d-fecce9692972, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62382]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@20efbe2f with state Busy
+2020-04-23T23:48:06.165-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=4e933661-6277-4931-9a6d-fecce9692972, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62382]
+2020-04-23T23:48:06.166-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-23T23:48:06.166-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:48:06.166-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:48:06.167-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-23T23:48:06.168-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:06.169-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:06.171-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:48:06.171-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@2edf9725]
+2020-04-23T23:48:06.173-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@2edf9725]
+2020-04-23T23:48:06.188-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=4e933661-6277-4931-9a6d-fecce9692972, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}
+2020-04-23T23:48:06.206-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 18: received class org.gradle.launcher.daemon.protocol.CloseInput
+2020-04-23T23:48:06.206-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 18: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@746a6f54
+2020-04-23T23:48:06.207-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 18: received class org.gradle.launcher.daemon.protocol.Finished
+2020-04-23T23:48:06.207-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 18: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@6079e23e
+2020-04-23T23:48:06.208-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2020-04-23T23:48:06.209-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 18: received null
+2020-04-23T23:48:06.209-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 18: Received end-of-input from client.
+2020-04-23T23:48:06.208-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@6079e23e
+2020-04-23T23:48:06.209-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: stopping connection
+2020-04-23T23:48:06.213-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: stopping connection
+2020-04-23T23:48:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:48:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:12.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:12.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:48:12.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:12.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:22.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:48:22.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:22.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:22.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:48:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:48:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:22.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:48:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:32.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:48:32.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:32.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:32.827-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:48:32.827-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:32.828-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:41.613-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:62423 to /127.0.0.1:62381.
+2020-04-23T23:48:41.643-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 47: received class org.gradle.launcher.daemon.protocol.Build
+2020-04-23T23:48:41.643-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 47: Received non-IO message from client: Build{id=57683f8f-eb1e-4e54-a258-1428a39ad0ff, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}
+2020-04-23T23:48:41.643-0500 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=57683f8f-eb1e-4e54-a258-1428a39ad0ff, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}.
+2020-04-23T23:48:41.644-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=57683f8f-eb1e-4e54-a258-1428a39ad0ff, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack} with connection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62423.
+2020-04-23T23:48:41.644-0500 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=57683f8f-eb1e-4e54-a258-1428a39ad0ff, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62423] after 0.0 minutes of idle
+2020-04-23T23:48:41.645-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:48:41.645-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:48:41.646-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-23T23:48:41.646-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:48:41.648-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:48:41.648-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-23T23:48:41.649-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:48:41.649-0500 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=57683f8f-eb1e-4e54-a258-1428a39ad0ff, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}. Dispatching build started information...
+2020-04-23T23:48:41.649-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 20: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@4048a08f
+2020-04-23T23:48:41.651-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin, SHELL=/bin/bash, USER=supriyamukherjee, VERSIONER_PYTHON_PREFER_32_BIT=no, TMPDIR=/var/folders/28/gycdj8516q9fvvgzb_3jw0280000gn/T/, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.wA0d84Klbi/Listeners, XPC_FLAGS=0x0, VERSIONER_PYTHON_VERSION=2.7, __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.Mk0sb63aZY/Render, LOGNAME=supriyamukherjee, LC_CTYPE=en_US.UTF-8, XPC_SERVICE_NAME=com.jetbrains.intellij.ce.32712, HOME=/Users/supriyamukherjee}
+2020-04-23T23:48:41.652-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2020-04-23T23:48:41.654-0500 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 71328). The daemon log file: /Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon/6.3/daemon-71328.out.log
+2020-04-23T23:48:41.660-0500 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting 2nd build in daemon [uptime: 49.151 secs, performance: 99%, non-heap usage: 18% of 268.4 MB]
+2020-04-23T23:48:41.661-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2020-04-23T23:48:41.662-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=d384845b-4e87-432a-86f5-47ad81a31420,javaHome=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home,daemonRegistryDir=/Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon,pid=71328,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+<ijLog><event type='reportLocation' testReport='/Users/supriyamukherjee/Desktop/Lift Off/Competrack/build/reports/tests/test/index.html' /></ijLog>
+
+<ijLog><event type='beforeSuite'><ijLogEol/>
+  <test id=':test' parentId=''><ijLogEol/>
+    <descriptor name='Gradle Test Run :test' className='' /><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='beforeSuite'><ijLogEol/>
+  <test id='1.1' parentId=':test'><ijLogEol/>
+    <descriptor name='Gradle Test Executor 1' className='' /><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='beforeSuite'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuNjA5IFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuQm9vdHN0cmFwVXRpbHMgLSBJbnN0YW50aWF0aW5nIENhY2hlQXdhcmVDb250ZXh0TG9hZGVyRGVsZWdhdGUgZnJvbSBjbGFzcyBbb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuY2FjaGUuRGVmYXVsdENhY2hlQXdhcmVDb250ZXh0TG9hZGVyRGVsZWdhdGVdCg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuNjQ5IFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuQm9vdHN0cmFwVXRpbHMgLSBJbnN0YW50aWF0aW5nIEJvb3RzdHJhcENvbnRleHQgdXNpbmcgY29uc3RydWN0b3IgW3B1YmxpYyBvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC5zdXBwb3J0LkRlZmF1bHRCb290c3RyYXBDb250ZXh0KGphdmEubGFuZy5DbGFzcyxvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC5DYWNoZUF3YXJlQ29udGV4dExvYWRlckRlbGVnYXRlKV0K]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuNzIxIFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuQm9vdHN0cmFwVXRpbHMgLSBJbnN0YW50aWF0aW5nIFRlc3RDb250ZXh0Qm9vdHN0cmFwcGVyIGZvciB0ZXN0IGNsYXNzIFtvcmcubGF1bmNoY29kZS5Db21wZXRyYWNrLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzXSBmcm9tIGNsYXNzIFtvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5jb250ZXh0LlNwcmluZ0Jvb3RUZXN0Q29udGV4dEJvb3RzdHJhcHBlcl0K]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuNzU4IFtUZXN0IHdvcmtlcl0gSU5GTyBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5jb250ZXh0LlNwcmluZ0Jvb3RUZXN0Q29udGV4dEJvb3RzdHJhcHBlciAtIE5laXRoZXIgQENvbnRleHRDb25maWd1cmF0aW9uIG5vciBAQ29udGV4dEhpZXJhcmNoeSBmb3VuZCBmb3IgdGVzdCBjbGFzcyBbb3JnLmxhdW5jaGNvZGUuQ29tcGV0cmFjay5Db21wZXRyYWNrQXBwbGljYXRpb25UZXN0c10sIHVzaW5nIFNwcmluZ0Jvb3RDb250ZXh0TG9hZGVyCg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuNzcxIFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuc3VwcG9ydC5BYnN0cmFjdENvbnRleHRMb2FkZXIgLSBEaWQgbm90IGRldGVjdCBkZWZhdWx0IHJlc291cmNlIGxvY2F0aW9uIGZvciB0ZXN0IGNsYXNzIFtvcmcubGF1bmNoY29kZS5Db21wZXRyYWNrLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzXTogY2xhc3MgcGF0aCByZXNvdXJjZSBbb3JnL2xhdW5jaGNvZGUvQ29tcGV0cmFjay9Db21wZXRyYWNrQXBwbGljYXRpb25UZXN0cy1jb250ZXh0LnhtbF0gZG9lcyBub3QgZXhpc3QK]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuNzc2IFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuc3VwcG9ydC5BYnN0cmFjdENvbnRleHRMb2FkZXIgLSBEaWQgbm90IGRldGVjdCBkZWZhdWx0IHJlc291cmNlIGxvY2F0aW9uIGZvciB0ZXN0IGNsYXNzIFtvcmcubGF1bmNoY29kZS5Db21wZXRyYWNrLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzXTogY2xhc3MgcGF0aCByZXNvdXJjZSBbb3JnL2xhdW5jaGNvZGUvQ29tcGV0cmFjay9Db21wZXRyYWNrQXBwbGljYXRpb25UZXN0c0NvbnRleHQuZ3Jvb3Z5XSBkb2VzIG5vdCBleGlzdAo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuNzc3IFtUZXN0IHdvcmtlcl0gSU5GTyBvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC5zdXBwb3J0LkFic3RyYWN0Q29udGV4dExvYWRlciAtIENvdWxkIG5vdCBkZXRlY3QgZGVmYXVsdCByZXNvdXJjZSBsb2NhdGlvbnMgZm9yIHRlc3QgY2xhc3MgW29yZy5sYXVuY2hjb2RlLkNvbXBldHJhY2suQ29tcGV0cmFja0FwcGxpY2F0aW9uVGVzdHNdOiBubyByZXNvdXJjZSBmb3VuZCBmb3Igc3VmZml4ZXMgey1jb250ZXh0LnhtbCwgQ29udGV4dC5ncm9vdnl9Lgo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuNzgwIFtUZXN0IHdvcmtlcl0gSU5GTyBvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC5zdXBwb3J0LkFubm90YXRpb25Db25maWdDb250ZXh0TG9hZGVyVXRpbHMgLSBDb3VsZCBub3QgZGV0ZWN0IGRlZmF1bHQgY29uZmlndXJhdGlvbiBjbGFzc2VzIGZvciB0ZXN0IGNsYXNzIFtvcmcubGF1bmNoY29kZS5Db21wZXRyYWNrLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzXTogQ29tcGV0cmFja0FwcGxpY2F0aW9uVGVzdHMgZG9lcyBub3QgZGVjbGFyZSBhbnkgc3RhdGljLCBub24tcHJpdmF0ZSwgbm9uLWZpbmFsLCBuZXN0ZWQgY2xhc3NlcyBhbm5vdGF0ZWQgd2l0aCBAQ29uZmlndXJhdGlvbi4K]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuODc4IFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuc3VwcG9ydC5BY3RpdmVQcm9maWxlc1V0aWxzIC0gQ291bGQgbm90IGZpbmQgYW4gJ2Fubm90YXRpb24gZGVjbGFyaW5nIGNsYXNzJyBmb3IgYW5ub3RhdGlvbiB0eXBlIFtvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC5BY3RpdmVQcm9maWxlc10gYW5kIGNsYXNzIFtvcmcubGF1bmNoY29kZS5Db21wZXRyYWNrLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzXQo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuOTkxIFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay5jb250ZXh0LmFubm90YXRpb24uQ2xhc3NQYXRoU2Nhbm5pbmdDYW5kaWRhdGVDb21wb25lbnRQcm92aWRlciAtIElkZW50aWZpZWQgY2FuZGlkYXRlIGNvbXBvbmVudCBjbGFzczogZmlsZSBbL1VzZXJzL3N1cHJpeWFtdWtoZXJqZWUvRGVza3RvcC9MaWZ0IE9mZi9Db21wZXRyYWNrL2J1aWxkL2NsYXNzZXMvamF2YS9tYWluL29yZy9sYXVuY2hjb2RlL0NvbXBldHJhY2svQ29tcGV0cmFja0FwcGxpY2F0aW9uLmNsYXNzXQo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDAuOTk0IFtUZXN0IHdvcmtlcl0gSU5GTyBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5jb250ZXh0LlNwcmluZ0Jvb3RUZXN0Q29udGV4dEJvb3RzdHJhcHBlciAtIEZvdW5kIEBTcHJpbmdCb290Q29uZmlndXJhdGlvbiBvcmcubGF1bmNoY29kZS5Db21wZXRyYWNrLkNvbXBldHJhY2tBcHBsaWNhdGlvbiBmb3IgdGVzdCBjbGFzcyBvcmcubGF1bmNoY29kZS5Db21wZXRyYWNrLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzCg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDEuMTI5IFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3QuY29udGV4dC5TcHJpbmdCb290VGVzdENvbnRleHRCb290c3RyYXBwZXIgLSBAVGVzdEV4ZWN1dGlvbkxpc3RlbmVycyBpcyBub3QgcHJlc2VudCBmb3IgY2xhc3MgW29yZy5sYXVuY2hjb2RlLkNvbXBldHJhY2suQ29tcGV0cmFja0FwcGxpY2F0aW9uVGVzdHNdOiB1c2luZyBkZWZhdWx0cy4K]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDEuMTI5IFtUZXN0IHdvcmtlcl0gSU5GTyBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5jb250ZXh0LlNwcmluZ0Jvb3RUZXN0Q29udGV4dEJvb3RzdHJhcHBlciAtIExvYWRlZCBkZWZhdWx0IFRlc3RFeGVjdXRpb25MaXN0ZW5lciBjbGFzcyBuYW1lcyBmcm9tIGxvY2F0aW9uIFtNRVRBLUlORi9zcHJpbmcuZmFjdG9yaWVzXTogW29yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0LmF1dG9jb25maWd1cmUucmVzdGRvY3MuUmVzdERvY3NUZXN0RXhlY3V0aW9uTGlzdGVuZXIsIG9yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0LmF1dG9jb25maWd1cmUud2ViLmNsaWVudC5Nb2NrUmVzdFNlcnZpY2VTZXJ2ZXJSZXNldFRlc3RFeGVjdXRpb25MaXN0ZW5lciwgb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3QuYXV0b2NvbmZpZ3VyZS53ZWIuc2VydmxldC5Nb2NrTXZjUHJpbnRPbmx5T25GYWlsdXJlVGVzdEV4ZWN1dGlvbkxpc3RlbmVyLCBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5hdXRvY29uZmlndXJlLndlYi5zZXJ2bGV0LldlYkRyaXZlclRlc3RFeGVjdXRpb25MaXN0ZW5lciwgb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3QubW9jay5tb2NraXRvLk1vY2tpdG9UZXN0RXhlY3V0aW9uTGlzdGVuZXIsIG9yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0Lm1vY2subW9ja2l0by5SZXNldE1vY2tzVGVzdEV4ZWN1dGlvbkxpc3RlbmVyLCBvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC53ZWIuU2VydmxldFRlc3RFeGVjdXRpb25MaXN0ZW5lciwgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuc3VwcG9ydC5EaXJ0aWVzQ29udGV4dEJlZm9yZU1vZGVzVGVzdEV4ZWN1dGlvbkxpc3RlbmVyLCBvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC5zdXBwb3J0LkRlcGVuZGVuY3lJbmplY3Rpb25UZXN0RXhlY3V0aW9uTGlzdGVuZXIsIG9yZy5zcHJpbmdmcmFtZXdvcmsudGVzdC5jb250ZXh0LnN1cHBvcnQuRGlydGllc0NvbnRleHRUZXN0RXhlY3V0aW9uTGlzdGVuZXIsIG9yZy5zcHJpbmdmcmFtZXdvcmsudGVzdC5jb250ZXh0LnRyYW5zYWN0aW9uLlRyYW5zYWN0aW9uYWxUZXN0RXhlY3V0aW9uTGlzdGVuZXIsIG9yZy5zcHJpbmdmcmFtZXdvcmsudGVzdC5jb250ZXh0LmpkYmMuU3FsU2NyaXB0c1Rlc3RFeGVjdXRpb25MaXN0ZW5lciwgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuZXZlbnQuRXZlbnRQdWJsaXNoaW5nVGVzdEV4ZWN1dGlvbkxpc3RlbmVyXQo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDEuMTYwIFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3QuY29udGV4dC5TcHJpbmdCb290VGVzdENvbnRleHRCb290c3RyYXBwZXIgLSBTa2lwcGluZyBjYW5kaWRhdGUgVGVzdEV4ZWN1dGlvbkxpc3RlbmVyIFtvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC50cmFuc2FjdGlvbi5UcmFuc2FjdGlvbmFsVGVzdEV4ZWN1dGlvbkxpc3RlbmVyXSBkdWUgdG8gYSBtaXNzaW5nIGRlcGVuZGVuY3kuIFNwZWNpZnkgY3VzdG9tIGxpc3RlbmVyIGNsYXNzZXMgb3IgbWFrZSB0aGUgZGVmYXVsdCBsaXN0ZW5lciBjbGFzc2VzIGFuZCB0aGVpciByZXF1aXJlZCBkZXBlbmRlbmNpZXMgYXZhaWxhYmxlLiBPZmZlbmRpbmcgY2xhc3M6IFtvcmcvc3ByaW5nZnJhbWV3b3JrL3RyYW5zYWN0aW9uL2ludGVyY2VwdG9yL1RyYW5zYWN0aW9uQXR0cmlidXRlU291cmNlXQo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDEuMTYyIFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3QuY29udGV4dC5TcHJpbmdCb290VGVzdENvbnRleHRCb290c3RyYXBwZXIgLSBTa2lwcGluZyBjYW5kaWRhdGUgVGVzdEV4ZWN1dGlvbkxpc3RlbmVyIFtvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC5qZGJjLlNxbFNjcmlwdHNUZXN0RXhlY3V0aW9uTGlzdGVuZXJdIGR1ZSB0byBhIG1pc3NpbmcgZGVwZW5kZW5jeS4gU3BlY2lmeSBjdXN0b20gbGlzdGVuZXIgY2xhc3NlcyBvciBtYWtlIHRoZSBkZWZhdWx0IGxpc3RlbmVyIGNsYXNzZXMgYW5kIHRoZWlyIHJlcXVpcmVkIGRlcGVuZGVuY2llcyBhdmFpbGFibGUuIE9mZmVuZGluZyBjbGFzczogW29yZy9zcHJpbmdmcmFtZXdvcmsvdHJhbnNhY3Rpb24vaW50ZXJjZXB0b3IvVHJhbnNhY3Rpb25BdHRyaWJ1dGVdCg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDEuMTc4IFtUZXN0IHdvcmtlcl0gSU5GTyBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5jb250ZXh0LlNwcmluZ0Jvb3RUZXN0Q29udGV4dEJvb3RzdHJhcHBlciAtIFVzaW5nIFRlc3RFeGVjdXRpb25MaXN0ZW5lcnM6IFtvcmcuc3ByaW5nZnJhbWV3b3JrLnRlc3QuY29udGV4dC53ZWIuU2VydmxldFRlc3RFeGVjdXRpb25MaXN0ZW5lckAyYmFiNWM1ZSwgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuc3VwcG9ydC5EaXJ0aWVzQ29udGV4dEJlZm9yZU1vZGVzVGVzdEV4ZWN1dGlvbkxpc3RlbmVyQDM5NThiN2Q0LCBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5tb2NrLm1vY2tpdG8uTW9ja2l0b1Rlc3RFeGVjdXRpb25MaXN0ZW5lckA3MDZjNWFjNSwgb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3QuYXV0b2NvbmZpZ3VyZS5TcHJpbmdCb290RGVwZW5kZW5jeUluamVjdGlvblRlc3RFeGVjdXRpb25MaXN0ZW5lckA0MDQ4MDE0OCwgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuc3VwcG9ydC5EaXJ0aWVzQ29udGV4dFRlc3RFeGVjdXRpb25MaXN0ZW5lckAzMTcwZWNiMywgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuZXZlbnQuRXZlbnRQdWJsaXNoaW5nVGVzdEV4ZWN1dGlvbkxpc3RlbmVyQDRkZWExYjVlLCBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5hdXRvY29uZmlndXJlLnJlc3Rkb2NzLlJlc3REb2NzVGVzdEV4ZWN1dGlvbkxpc3RlbmVyQDVmYzJkYTU0LCBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5hdXRvY29uZmlndXJlLndlYi5jbGllbnQuTW9ja1Jlc3RTZXJ2aWNlU2VydmVyUmVzZXRUZXN0RXhlY3V0aW9uTGlzdGVuZXJANWY4MGMyYTUsIG9yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0LmF1dG9jb25maWd1cmUud2ViLnNlcnZsZXQuTW9ja012Y1ByaW50T25seU9uRmFpbHVyZVRlc3RFeGVjdXRpb25MaXN0ZW5lckA2OTIzYjg5Miwgb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3QuYXV0b2NvbmZpZ3VyZS53ZWIuc2VydmxldC5XZWJEcml2ZXJUZXN0RXhlY3V0aW9uTGlzdGVuZXJANzQwZTZlMDMsIG9yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0Lm1vY2subW9ja2l0by5SZXNldE1vY2tzVGVzdEV4ZWN1dGlvbkxpc3RlbmVyQDNkZDcwYWFjXQo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDEuMTkxIFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuc3VwcG9ydC5BYnN0cmFjdERpcnRpZXNDb250ZXh0VGVzdEV4ZWN1dGlvbkxpc3RlbmVyIC0gQmVmb3JlIHRlc3QgY2xhc3M6IGNvbnRleHQgW0RlZmF1bHRUZXN0Q29udGV4dEA0NGFhMWQ4NiB0ZXN0Q2xhc3MgPSBDb21wZXRyYWNrQXBwbGljYXRpb25UZXN0cywgdGVzdEluc3RhbmNlID0gW251bGxdLCB0ZXN0TWV0aG9kID0gW251bGxdLCB0ZXN0RXhjZXB0aW9uID0gW251bGxdLCBtZXJnZWRDb250ZXh0Q29uZmlndXJhdGlvbiA9IFtXZWJNZXJnZWRDb250ZXh0Q29uZmlndXJhdGlvbkAxZTM4ZThhZiB0ZXN0Q2xhc3MgPSBDb21wZXRyYWNrQXBwbGljYXRpb25UZXN0cywgbG9jYXRpb25zID0gJ3t9JywgY2xhc3NlcyA9ICd7Y2xhc3Mgb3JnLmxhdW5jaGNvZGUuQ29tcGV0cmFjay5Db21wZXRyYWNrQXBwbGljYXRpb259JywgY29udGV4dEluaXRpYWxpemVyQ2xhc3NlcyA9ICdbXScsIGFjdGl2ZVByb2ZpbGVzID0gJ3t9JywgcHJvcGVydHlTb3VyY2VMb2NhdGlvbnMgPSAne30nLCBwcm9wZXJ0eVNvdXJjZVByb3BlcnRpZXMgPSAne29yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0LmNvbnRleHQuU3ByaW5nQm9vdFRlc3RDb250ZXh0Qm9vdHN0cmFwcGVyPXRydWV9JywgY29udGV4dEN1c3RvbWl6ZXJzID0gc2V0W29yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0LmF1dG9jb25maWd1cmUucHJvcGVydGllcy5Qcm9wZXJ0eU1hcHBpbmdDb250ZXh0Q3VzdG9taXplckAwLCBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5hdXRvY29uZmlndXJlLndlYi5zZXJ2bGV0LldlYkRyaXZlckNvbnRleHRDdXN0b21pemVyRmFjdG9yeSRDdXN0b21pemVyQDczYTFlMjU4LCBvcmcuc3ByaW5nZnJhbWV3b3JrLmJvb3QudGVzdC5jb250ZXh0LmZpbHRlci5FeGNsdWRlRmlsdGVyQ29udGV4dEN1c3RvbWl6ZXJAMThlMjI4ODUsIG9yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0Lmpzb24uRHVwbGljYXRlSnNvbk9iamVjdENvbnRleHRDdXN0b21pemVyRmFjdG9yeSREdXBsaWNhdGVKc29uT2JqZWN0Q29udGV4dEN1c3RvbWl6ZXJAMTZjOWU2ZGYsIG9yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0Lm1vY2subW9ja2l0by5Nb2NraXRvQ29udGV4dEN1c3RvbWl6ZXJAMCwgb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3Qud2ViLmNsaWVudC5UZXN0UmVzdFRlbXBsYXRlQ29udGV4dEN1c3RvbWl6ZXJANWYzMmFmY2NdLCByZXNvdXJjZUJhc2VQYXRoID0gJ3NyYy9tYWluL3dlYmFwcCcsIGNvbnRleHRMb2FkZXIgPSAnb3JnLnNwcmluZ2ZyYW1ld29yay5ib290LnRlc3QuY29udGV4dC5TcHJpbmdCb290Q29udGV4dExvYWRlcicsIHBhcmVudCA9IFtudWxsXV0sIGF0dHJpYnV0ZXMgPSBtYXBbJ29yZy5zcHJpbmdmcmFtZXdvcmsudGVzdC5jb250ZXh0LndlYi5TZXJ2bGV0VGVzdEV4ZWN1dGlvbkxpc3RlbmVyLmFjdGl2YXRlTGlzdGVuZXInIC0+IHRydWVdXSwgY2xhc3MgYW5ub3RhdGVkIHdpdGggQERpcnRpZXNDb250ZXh0IFtmYWxzZV0gd2l0aCBtb2RlIFtudWxsXS4K]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjM6NDk6MDEuMjQ3IFtUZXN0IHdvcmtlcl0gREVCVUcgb3JnLnNwcmluZ2ZyYW1ld29yay50ZXN0LmNvbnRleHQuc3VwcG9ydC5UZXN0UHJvcGVydHlTb3VyY2VVdGlscyAtIEFkZGluZyBpbmxpbmVkIHByb3BlcnRpZXMgdG8gZW52aXJvbm1lbnQ6IHtzcHJpbmcuam14LmVuYWJsZWQ9ZmFsc2UsIG9yZy5zcHJpbmdmcmFtZXdvcmsuYm9vdC50ZXN0LmNvbnRleHQuU3ByaW5nQm9vdFRlc3RDb250ZXh0Qm9vdHN0cmFwcGVyPXRydWUsIHNlcnZlci5wb3J0PS0xfQo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[Cg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[ICAuICAgX19fXyAgICAgICAgICBfICAgICAgICAgICAgX18gXyBfCg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[IC9cXCAvIF9fXydfIF9fIF8gXyhfKV8gX18gIF9fIF8gXCBcIFwgXAo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[KCAoIClcX19fIHwgJ18gfCAnX3wgfCAnXyBcLyBfYCB8IFwgXCBcIFwK]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[IFxcLyAgX19fKXwgfF8pfCB8IHwgfCB8IHx8IChffCB8ICApICkgKSApCg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[ICAnICB8X19fX3wgLl9ffF98IHxffF98IHxfXF9fLCB8IC8gLyAvIC8K]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[ID09PT09PT09PXxffD09PT09PT09PT09PT09fF9fXy89L18vXy9fLwo=]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[IDo6IFNwcmluZyBCb290IDo6ICAgICAgICAodjIuMi42LlJFTEVBU0UpCg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[Cg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjAyMC0wNC0yMyAyMzo0OTowMS44NDcgIElORk8gNzE1NTAgLS0tIFsgICAgVGVzdCB3b3JrZXJdIG8ubC5DLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzICAgICAgICAgOiBTdGFydGluZyBDb21wZXRyYWNrQXBwbGljYXRpb25UZXN0cyBvbiBTdXByaXlhcy1NQlAubGFuMSB3aXRoIFBJRCA3MTU1MCAoc3RhcnRlZCBieSBzdXByaXlhbXVraGVyamVlIGluIC9Vc2Vycy9zdXByaXlhbXVraGVyamVlL0Rlc2t0b3AvTGlmdCBPZmYvQ29tcGV0cmFjaykK]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjAyMC0wNC0yMyAyMzo0OTowMS44NDkgIElORk8gNzE1NTAgLS0tIFsgICAgVGVzdCB3b3JrZXJdIG8ubC5DLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzICAgICAgICAgOiBObyBhY3RpdmUgcHJvZmlsZSBzZXQsIGZhbGxpbmcgYmFjayB0byBkZWZhdWx0IHByb2ZpbGVzOiBkZWZhdWx0Cg==]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjAyMC0wNC0yMyAyMzo0OTowNC4xNTcgIElORk8gNzE1NTAgLS0tIFsgICAgVGVzdCB3b3JrZXJdIG8ucy5zLmNvbmN1cnJlbnQuVGhyZWFkUG9vbFRhc2tFeGVjdXRvciAgOiBJbml0aWFsaXppbmcgRXhlY3V0b3JTZXJ2aWNlICdhcHBsaWNhdGlvblRhc2tFeGVjdXRvcicK]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='onOutput'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <event destination='StdOut'><![CDATA[MjAyMC0wNC0yMyAyMzo0OTowNC43NDAgIElORk8gNzE1NTAgLS0tIFsgICAgVGVzdCB3b3JrZXJdIG8ubC5DLkNvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzICAgICAgICAgOiBTdGFydGVkIENvbXBldHJhY2tBcHBsaWNhdGlvblRlc3RzIGluIDMuNDc5IHNlY29uZHMgKEpWTSBydW5uaW5nIGZvciA2LjAzNikK]]></event><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='beforeTest'><ijLogEol/>
+  <test id='1.3' parentId='1.2'><ijLogEol/>
+    <descriptor name='contextLoads()' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='afterTest'><ijLogEol/>
+  <test id='1.3' parentId='1.2'><ijLogEol/>
+    <descriptor name='contextLoads()' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <result resultType='SUCCESS' startTime='1587703744769' endTime='1587703745385'><ijLogEol/>
+      <failureType>error</failureType><ijLogEol/>
+    </result><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='afterSuite'><ijLogEol/>
+  <test id='1.2' parentId='1.1'><ijLogEol/>
+    <descriptor name='org.launchcode.Competrack.CompetrackApplicationTests' className='org.launchcode.Competrack.CompetrackApplicationTests' /><ijLogEol/>
+    <result resultType='SUCCESS' startTime='1587703740494' endTime='1587703745388'><ijLogEol/>
+      <failureType>error</failureType><ijLogEol/>
+    </result><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+<ijLog><event type='afterSuite'><ijLogEol/>
+  <test id='1.1' parentId=':test'><ijLogEol/>
+    <descriptor name='Gradle Test Executor 1' className='' /><ijLogEol/>
+    <result resultType='SUCCESS' startTime='1587703739619' endTime='1587703745393'><ijLogEol/>
+      <failureType>error</failureType><ijLogEol/>
+    </result><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+2020-04-23 23:49:05.422  INFO 71550 --- [extShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+<ijLog><event type='afterSuite'><ijLogEol/>
+  <test id=':test' parentId=''><ijLogEol/>
+    <descriptor name='Gradle Test Run :test' className='' /><ijLogEol/>
+    <result resultType='SUCCESS' startTime='1587703738439' endTime='1587703745483'><ijLogEol/>
+      <failureType>error</failureType><ijLogEol/>
+    </result><ijLogEol/>
+  </test><ijLogEol/>
+</event></ijLog>
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 7.0.
+Use '--warning-mode all' to show the individual deprecation warnings.
+See https://docs.gradle.org/6.3/userguide/command_line_interface.html#sec:command_line_warnings
+
+BUILD SUCCESSFUL in 24s
+4 actionable tasks: 4 executed
+2020-04-23T23:49:05.740-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2020-04-23T23:49:05.753-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:49:05.753-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=57683f8f-eb1e-4e54-a258-1428a39ad0ff, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62423]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@20efbe2f with state Busy
+2020-04-23T23:49:05.753-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=57683f8f-eb1e-4e54-a258-1428a39ad0ff, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62423]
+2020-04-23T23:49:05.754-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-23T23:49:05.754-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:49:05.754-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:49:05.754-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-23T23:49:05.755-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:05.756-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:05.756-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:49:05.756-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@6e0784eb]
+2020-04-23T23:49:05.757-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@6e0784eb]
+2020-04-23T23:49:05.757-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=57683f8f-eb1e-4e54-a258-1428a39ad0ff, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}
+2020-04-23T23:49:05.758-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 47: received class org.gradle.launcher.daemon.protocol.CloseInput
+2020-04-23T23:49:05.758-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 47: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@6686e1f8
+2020-04-23T23:49:05.758-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 47: received class org.gradle.launcher.daemon.protocol.Finished
+2020-04-23T23:49:05.759-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 47: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@68410358
+2020-04-23T23:49:05.759-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@68410358
+2020-04-23T23:49:05.759-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2020-04-23T23:49:05.759-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: stopping connection
+2020-04-23T23:49:05.759-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 47: received null
+2020-04-23T23:49:05.760-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 47: Received end-of-input from client.
+2020-04-23T23:49:05.760-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: stopping connection
+2020-04-23T23:49:12.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:12.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:12.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:12.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:12.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:22.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:22.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:22.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:22.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:22.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:22.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:32.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:32.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:32.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:32.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:32.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:32.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:42.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:42.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:42.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:42.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:42.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:42.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:49:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:51.658-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:62463 to /127.0.0.1:62381.
+2020-04-23T23:49:51.700-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 82: received class org.gradle.launcher.daemon.protocol.Build
+2020-04-23T23:49:51.701-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 82: Received non-IO message from client: Build{id=d4b6f446-8890-4dc5-9a35-efc7ce8743e2, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}
+2020-04-23T23:49:51.702-0500 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=d4b6f446-8890-4dc5-9a35-efc7ce8743e2, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}.
+2020-04-23T23:49:51.702-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=d4b6f446-8890-4dc5-9a35-efc7ce8743e2, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack} with connection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62463.
+2020-04-23T23:49:51.706-0500 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=d4b6f446-8890-4dc5-9a35-efc7ce8743e2, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62463] after 0.0 minutes of idle
+2020-04-23T23:49:51.707-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:49:51.707-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:49:51.709-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-23T23:49:51.713-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:51.716-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:51.718-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-23T23:49:51.720-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:49:51.721-0500 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=d4b6f446-8890-4dc5-9a35-efc7ce8743e2, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}. Dispatching build started information...
+2020-04-23T23:49:51.723-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 20: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@63dda642
+2020-04-23T23:49:51.724-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin, SHELL=/bin/bash, USER=supriyamukherjee, VERSIONER_PYTHON_PREFER_32_BIT=no, TMPDIR=/var/folders/28/gycdj8516q9fvvgzb_3jw0280000gn/T/, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.wA0d84Klbi/Listeners, XPC_FLAGS=0x0, VERSIONER_PYTHON_VERSION=2.7, __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.Mk0sb63aZY/Render, LOGNAME=supriyamukherjee, LC_CTYPE=en_US.UTF-8, XPC_SERVICE_NAME=com.jetbrains.intellij.ce.32712, HOME=/Users/supriyamukherjee}
+2020-04-23T23:49:51.725-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2020-04-23T23:49:51.725-0500 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 71328). The daemon log file: /Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon/6.3/daemon-71328.out.log
+2020-04-23T23:49:51.730-0500 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting 3rd build in daemon [uptime: 1 mins 59.226 secs, performance: 99%, non-heap usage: 23% of 268.4 MB]
+2020-04-23T23:49:51.732-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2020-04-23T23:49:51.733-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=d384845b-4e87-432a-86f5-47ad81a31420,javaHome=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home,daemonRegistryDir=/Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon,pid=71328,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-23 23:49:54.869  INFO 71714 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on Supriyas-MBP.lan1 with PID 71714 (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/build/classes/java/main started by supriyamukherjee in /Users/supriyamukherjee/Desktop/Lift Off/Competrack)
+2020-04-23 23:49:54.876  INFO 71714 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : No active profile set, falling back to default profiles: default
+2020-04-23 23:49:54.990  INFO 71714 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-23 23:49:54.991  INFO 71714 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-23 23:49:56.686  INFO 71714 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-23 23:49:56.719  INFO 71714 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 23:49:56.720  INFO 71714 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-23 23:49:56.952  INFO 71714 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-23 23:49:56.952  INFO 71714 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1961 ms
+2020-04-23 23:49:57.427  INFO 71714 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 23:49:57.707  INFO 71714 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-23 23:49:57.751  INFO 71714 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-04-23 23:49:57.765  INFO 71714 --- [  restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-23 23:49:57.768 ERROR 71714 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-04-23 23:49:57.771  INFO 71714 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+BUILD SUCCESSFUL in 6s
+3 actionable tasks: 1 executed, 2 up-to-date
+2020-04-23T23:49:58.257-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2020-04-23T23:49:58.267-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=d4b6f446-8890-4dc5-9a35-efc7ce8743e2, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62463]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@20efbe2f with state Busy
+2020-04-23T23:49:58.267-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=d4b6f446-8890-4dc5-9a35-efc7ce8743e2, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62463]
+2020-04-23T23:49:58.268-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-23T23:49:58.268-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:49:58.268-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:49:58.268-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-23T23:49:58.269-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:49:58.271-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:49:58.272-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:49:58.272-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@4f74a5c]
+2020-04-23T23:49:58.272-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@4f74a5c]
+2020-04-23T23:49:58.274-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=d4b6f446-8890-4dc5-9a35-efc7ce8743e2, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}
+2020-04-23T23:49:58.275-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 82: received class org.gradle.launcher.daemon.protocol.CloseInput
+2020-04-23T23:49:58.276-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 82: Received IO message from client: org.gradle.launcher.daemon.protocol.CloseInput@602120c2
+2020-04-23T23:49:58.278-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 82: received class org.gradle.launcher.daemon.protocol.Finished
+2020-04-23T23:49:58.278-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 82: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@6ee6c2b6
+2020-04-23T23:49:58.280-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@6ee6c2b6
+2020-04-23T23:49:58.281-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: stopping connection
+2020-04-23T23:49:58.280-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2020-04-23T23:49:58.281-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 82: received null
+2020-04-23T23:49:58.281-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 82: Received end-of-input from client.
+2020-04-23T23:49:58.292-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 17: stopping connection
+2020-04-23T23:50:02.817-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:02.817-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:02.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:02.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:02.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:02.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:12.816-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:12.817-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:12.817-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:12.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:12.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:22.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:22.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:22.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:22.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:32.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:32.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:32.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:32.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:32.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:32.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:32.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:32.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:42.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:42.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:42.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:42.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:52.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:52.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:52.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:52.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:52.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:52.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:50:52.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:50:52.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:50:52.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:02.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:02.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:02.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:02.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:02.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:02.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:12.817-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:12.817-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:12.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:12.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:12.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:12.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:22.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:22.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:22.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:22.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:32.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:32.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:32.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:32.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:32.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:32.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:32.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:32.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:32.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:42.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:42.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:42.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:42.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:42.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:52.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:52.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:52.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:52.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:52.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:52.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:51:52.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:51:52.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:51:52.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:02.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:02.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:02.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:02.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:02.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:02.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:02.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:12.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:12.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:12.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:12.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:12.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:12.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:12.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:12.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:22.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:22.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:22.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:22.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-23T23:52:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:26.445-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.TcpIncomingConnector] Accepted connection from /127.0.0.1:62544 to /127.0.0.1:62381.
+2020-04-23T23:52:26.485-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 104: received class org.gradle.launcher.daemon.protocol.Build
+2020-04-23T23:52:26.485-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 104: Received non-IO message from client: Build{id=5b98a0ba-6b36-4d0f-82d3-63a022062177, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}
+2020-04-23T23:52:26.487-0500 [INFO] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received command: Build{id=5b98a0ba-6b36-4d0f-82d3-63a022062177, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}.
+2020-04-23T23:52:26.487-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Starting executing command: Build{id=5b98a0ba-6b36-4d0f-82d3-63a022062177, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack} with connection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62544.
+2020-04-23T23:52:26.488-0500 [ERROR] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: started DaemonCommandExecution[command = Build{id=5b98a0ba-6b36-4d0f-82d3-63a022062177, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62544] after 2.0 minutes of idle
+2020-04-23T23:52:26.489-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as busy, address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:52:26.489-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-23T23:52:26.490-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-23T23:52:26.494-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-23T23:52:26.504-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-23T23:52:26.506-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-23T23:52:26.508-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-23T23:52:26.512-0500 [INFO] [org.gradle.launcher.daemon.server.exec.StartBuildOrRespondWithBusy] Daemon is about to start building Build{id=5b98a0ba-6b36-4d0f-82d3-63a022062177, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}. Dispatching build started information...
+2020-04-23T23:52:26.514-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 106: dispatching org.gradle.launcher.daemon.protocol.BuildStarted@4f5df71
+2020-04-23T23:52:26.525-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.EstablishBuildEnvironment] Configuring env variables: {PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin, SHELL=/bin/bash, USER=supriyamukherjee, VERSIONER_PYTHON_PREFER_32_BIT=no, TMPDIR=/var/folders/28/gycdj8516q9fvvgzb_3jw0280000gn/T/, SSH_AUTH_SOCK=/private/tmp/com.apple.launchd.wA0d84Klbi/Listeners, XPC_FLAGS=0x0, VERSIONER_PYTHON_VERSION=2.7, __CF_USER_TEXT_ENCODING=0x1F5:0x0:0x0, Apple_PubSub_Socket_Render=/private/tmp/com.apple.launchd.Mk0sb63aZY/Render, LOGNAME=supriyamukherjee, LC_CTYPE=en_US.UTF-8, XPC_SERVICE_NAME=com.jetbrains.intellij.ce.32712, HOME=/Users/supriyamukherjee}
+2020-04-23T23:52:26.526-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.LogToClient] About to start relaying all logs to the client via the connection.
+2020-04-23T23:52:26.527-0500 [INFO] [org.gradle.launcher.daemon.server.exec.LogToClient] The client will now receive all logging from the daemon (pid: 71328). The daemon log file: /Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon/6.3/daemon-71328.out.log
+2020-04-23T23:52:26.528-0500 [INFO] [org.gradle.launcher.daemon.server.exec.LogAndCheckHealth] Starting 4th build in daemon [uptime: 4 mins 34.024 secs, performance: 99%, non-heap usage: 23% of 268.4 MB]
+2020-04-23T23:52:26.532-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has started executing the build.
+2020-04-23T23:52:26.533-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] Executing build with daemon context: DefaultDaemonContext[uid=d384845b-4e87-432a-86f5-47ad81a31420,javaHome=/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home,daemonRegistryDir=/Users/supriyamukherjee/Desktop/Lift Off/CompeTrack/daemon,pid=71328,idleTimeout=10800000,priority=NORMAL,daemonOpts=--add-opens,java.base/java.util=ALL-UNNAMED,--add-opens,java.base/java.lang=ALL-UNNAMED,--add-opens,java.base/java.lang.invoke=ALL-UNNAMED,--add-opens,java.prefs/java.util.prefs=ALL-UNNAMED,-XX:MaxMetaspaceSize=256m,-XX:+HeapDumpOnOutOfMemoryError,-Xms256m,-Xmx512m,-Dfile.encoding=UTF-8,-Duser.country=US,-Duser.language=en,-Duser.variant]
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-23 23:52:29.052  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on Supriyas-MBP.lan1 with PID 72190 (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/build/classes/java/main started by supriyamukherjee in /Users/supriyamukherjee/Desktop/Lift Off/Competrack)
+2020-04-23 23:52:29.059  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : No active profile set, falling back to default profiles: default
+2020-04-23 23:52:29.154  INFO 72190 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-23 23:52:29.155  INFO 72190 --- [  restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-23 23:52:30.412  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-04-23 23:52:30.432  INFO 72190 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-23 23:52:30.432  INFO 72190 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-23 23:52:30.544  INFO 72190 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-23 23:52:30.544  INFO 72190 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1389 ms
+2020-04-23 23:52:30.767  INFO 72190 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-23 23:52:30.961  INFO 72190 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-23 23:52:31.007  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-04-23 23:52:31.012  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Started CompetrackApplication in 2.441 seconds (JVM running for 3.101)
+2020-04-23 23:52:46.536  INFO 72190 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-23 23:52:46.536  INFO 72190 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-23 23:52:46.544  INFO 72190 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-04-24 00:13:45.136  INFO 72190 --- [       Thread-5] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-24 00:13:46.478  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on Supriyas-MBP.lan1 with PID 72190 (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/build/classes/java/main started by supriyamukherjee in /Users/supriyamukherjee/Desktop/Lift Off/Competrack)
+2020-04-24 00:13:46.479  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : No active profile set, falling back to default profiles: default
+2020-04-24 00:13:46.838  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-04-24 00:13:46.840  INFO 72190 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-24 00:13:46.840  INFO 72190 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-24 00:13:46.862  INFO 72190 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-24 00:13:46.862  INFO 72190 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 375 ms
+2020-04-24 00:13:46.938  INFO 72190 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-24 00:13:47.010  INFO 72190 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-24 00:13:47.030  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-04-24 00:13:47.032  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Started CompetrackApplication in 0.589 seconds (JVM running for 1279.12)
+2020-04-24 00:13:47.034  INFO 72190 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-04-24 00:14:09.253  INFO 72190 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-24 00:14:09.254  INFO 72190 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-24 00:14:09.257  INFO 72190 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-04-24 00:15:43.533  INFO 72190 --- [       Thread-8] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-24 00:15:44.872  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on Supriyas-MBP.lan1 with PID 72190 (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/build/classes/java/main started by supriyamukherjee in /Users/supriyamukherjee/Desktop/Lift Off/Competrack)
+2020-04-24 00:15:44.872  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : No active profile set, falling back to default profiles: default
+2020-04-24 00:15:45.196  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-04-24 00:15:45.198  INFO 72190 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-24 00:15:45.199  INFO 72190 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-24 00:15:45.221  INFO 72190 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-24 00:15:45.221  INFO 72190 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 345 ms
+2020-04-24 00:15:45.318  INFO 72190 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-24 00:15:45.388  INFO 72190 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-24 00:15:45.411  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-04-24 00:15:45.414  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Started CompetrackApplication in 0.581 seconds (JVM running for 1397.502)
+2020-04-24 00:15:45.416  INFO 72190 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-04-24 00:15:56.658  INFO 72190 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-24 00:15:56.658  INFO 72190 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-24 00:15:56.662  INFO 72190 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2020-04-24 00:19:10.151  INFO 72190 --- [      Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-24 00:19:11.520  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on Supriyas-MBP.lan1 with PID 72190 (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/build/classes/java/main started by supriyamukherjee in /Users/supriyamukherjee/Desktop/Lift Off/Competrack)
+2020-04-24 00:19:11.521  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : No active profile set, falling back to default profiles: default
+2020-04-24 00:19:11.983  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2020-04-24 00:19:11.987  INFO 72190 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-24 00:19:11.990  INFO 72190 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-24 00:19:12.008  INFO 72190 --- [  restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-24 00:19:12.008  INFO 72190 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 477 ms
+2020-04-24 00:19:12.119  INFO 72190 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-24 00:19:12.206  INFO 72190 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-24 00:19:12.222  INFO 72190 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-04-24 00:19:12.226  INFO 72190 --- [  restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-24 00:19:12.228 ERROR 72190 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+
+2020-04-24 00:19:12.230  INFO 72190 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-24 00:19:29.777  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on Supriyas-MBP.lan1 with PID 72190 (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/build/classes/java/main started by supriyamukherjee in /Users/supriyamukherjee/Desktop/Lift Off/Competrack)
+2020-04-24 00:19:29.777  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : No active profile set, falling back to default profiles: default
+2020-04-24 00:19:30.094  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2020-04-24 00:19:30.095  INFO 72190 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-24 00:19:30.095  INFO 72190 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-24 00:19:30.110  INFO 72190 --- [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-04-24 00:19:30.110  INFO 72190 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 331 ms
+2020-04-24 00:19:30.180  INFO 72190 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-24 00:19:30.227  INFO 72190 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-24 00:19:30.242  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2020-04-24 00:19:30.243  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Started CompetrackApplication in 0.501 seconds (JVM running for 1622.332)
+2020-04-24 00:19:30.245  INFO 72190 --- [  restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-04-24 00:19:42.217  INFO 72190 --- [nio-8081-exec-1] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-24 00:19:42.218  INFO 72190 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-24 00:19:42.220  INFO 72190 --- [nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2020-04-24 00:19:54.800  INFO 72190 --- [      Thread-18] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+ :: Spring Boot ::        (v2.2.6.RELEASE)
+
+2020-04-24 00:19:56.030  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on Supriyas-MBP.lan1 with PID 72190 (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/build/classes/java/main started by supriyamukherjee in /Users/supriyamukherjee/Desktop/Lift Off/Competrack)
+2020-04-24 00:19:56.031  INFO 72190 --- [  restartedMain] o.l.Competrack.CompetrackApplication     : No active profile set, falling back to default profiles: default
+2020-04-24 00:19:56.251  INFO 72190 --- [  restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8082 (http)
+2020-04-24 00:19:56.251  INFO 72190 --- [  restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-24 00:19:56.252  INFO 72190 --- [  restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-24 00:19:56.268  INFO 72190 --- [  restartedMain] o.a.c.c.C.[Tomcat-1].[localhost].[/]     : Initializing Spring embedded WebApplicationContext
+2020-04-24 00:19:56.268  INFO 72190 --- [  restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 227 ms
+2020-04-24 00:19:56.327  INFO 72190 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-24 00:19:56.388  INFO 72190 --- [  restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-24 00:19:56.406  INFO 72190 --- [  restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2020-04-24 00:19:56.409  INFO 72190 --- [  restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2020-04-24 00:19:56.410 ERROR 72190 --- [  restartedMain] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8082 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8082 or configure this application to listen on another port.
+
+2020-04-24 00:19:56.412  INFO 72190 --- [  restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':bootRun'.
+> Build cancelled while executing task ':bootRun'
+
+* Try:
+Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights.
+
+* Get more help at https://help.gradle.org
+
+BUILD FAILED in 31m 36s
+3 actionable tasks: 2 executed, 1 up-to-date
+2020-04-24T00:24:03.113-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ExecuteBuild] The daemon has finished executing the build.
+2020-04-24T00:24:03.376-0500 [DEBUG] [org.gradle.process.internal.DefaultExecHandle] Changing state to: ABORTED
+2020-04-24T00:24:03.376-0500 [DEBUG] [org.gradle.process.internal.DefaultExecHandle] Process 'command '/Library/Java/JavaVirtualMachines/jdk-13.0.1.jdk/Contents/Home/bin/java'' finished with exit value 143 (state: ABORTED)
+2020-04-24T00:24:03.377-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is busy, sleeping until state changes.
+2020-04-24T00:24:03.377-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is busy, sleeping until state changes.
+2020-04-24T00:24:03.378-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: finished waiting for DaemonCommandExecution[command = Build{id=5b98a0ba-6b36-4d0f-82d3-63a022062177, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62544]. Result org.gradle.launcher.daemon.server.DaemonStateCoordinator@20efbe2f with state Canceled
+2020-04-24T00:24:03.378-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Command execution: completed DaemonCommandExecution[command = Build{id=5b98a0ba-6b36-4d0f-82d3-63a022062177, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}, connection = DefaultDaemonConnection: socket connection from /127.0.0.1:62381 to /127.0.0.1:62544]
+2020-04-24T00:24:03.378-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] resetting idle timer
+2020-04-24T00:24:03.378-0500 [INFO] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Marking the daemon as idle, address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-24T00:24:03.379-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Marking busy by address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-24T00:24:03.379-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-24T00:24:03.380-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:03.381-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:03.382-0500 [DEBUG] [org.gradle.launcher.daemon.server.exec.ReturnResult] Daemon is dispatching the build result: Success[value=org.gradle.launcher.exec.BuildActionResult@2322db2d]
+2020-04-24T00:24:03.382-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Cancel: daemon is idle now.
+2020-04-24T00:24:03.383-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon is running. Sleeping until state changes.
+2020-04-24T00:24:03.382-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 103: dispatching Success[value=org.gradle.launcher.exec.BuildActionResult@2322db2d]
+2020-04-24T00:24:03.388-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Finishing executing command: Build{id=5b98a0ba-6b36-4d0f-82d3-63a022062177, currentDir=/Users/supriyamukherjee/Desktop/Lift Off/Competrack}
+2020-04-24T00:24:03.390-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 104: received class org.gradle.launcher.daemon.protocol.Finished
+2020-04-24T00:24:03.390-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 104: Received non-IO message from client: org.gradle.launcher.daemon.protocol.Finished@27c5780b
+2020-04-24T00:24:03.390-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultIncomingConnectionHandler] Received finished message: org.gradle.launcher.daemon.protocol.Finished@27c5780b
+2020-04-24T00:24:03.391-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 103: stopping connection
+2020-04-24T00:24:03.391-0500 [DEBUG] [org.gradle.internal.remote.internal.inet.SocketConnection] Discarding EOFException: java.io.EOFException
+2020-04-24T00:24:03.392-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 104: received null
+2020-04-24T00:24:03.392-0500 [DEBUG] [org.gradle.launcher.daemon.server.DefaultDaemonConnection] thread 104: Received end-of-input from client.
+2020-04-24T00:24:03.393-0500 [DEBUG] [org.gradle.launcher.daemon.server.SynchronizedDispatchConnection] thread 103: stopping connection
+2020-04-24T00:24:04.746-0500 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Lock on artifact cache (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches/modules-2) requested by another process - releasing lock.
+2020-04-24T00:24:04.747-0500 [DEBUG] [org.gradle.cache.internal.LockOnDemandCrossProcessCacheAccess] Releasing file lock for artifact cache (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches/modules-2)
+2020-04-24T00:24:04.747-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on artifact cache (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches/modules-2).
+2020-04-24T00:24:04.752-0500 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 50747 for lock with id 172134128533116118.
+2020-04-24T00:24:04.753-0500 [DEBUG] [org.gradle.cache.internal.locklistener.FileLockCommunicator] Confirming lock release to Gradle process at port 50747 for lock with id 172134128533116118.
+2020-04-24T00:24:12.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:12.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:12.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:12.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:12.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:12.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:22.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:22.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:22.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:22.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:22.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:22.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:22.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:22.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:32.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:32.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:32.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:32.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:32.827-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:32.827-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:32.827-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:42.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:42.818-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:42.819-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:42.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:42.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:52.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:52.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:52.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:52.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:52.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:52.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:24:52.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:24:52.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:24:52.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:02.820-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:25:02.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:02.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:02.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:25:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:25:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:02.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:12.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:25:12.821-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:12.822-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:12.823-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:25:12.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:12.824-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:12.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:25:12.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:12.825-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:12.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire shared lock on daemon addresses registry.
+2020-04-24T00:25:12.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:12.826-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:12.827-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Storing daemon stop event: other compatible daemons were started and after being idle for 1 minutes and not recently used
+2020-04-24T00:25:12.831-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Storing daemon stop event with timestamp 1587705912827
+2020-04-24T00:25:12.832-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-24T00:25:12.833-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:12.833-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:12.834-0500 [LIFECYCLE] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Daemon will be stopped at the end of the build other compatible daemons were started and after being idle for 1 minutes and not recently used
+2020-04-24T00:25:12.835-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] Marking daemon stopped due to other compatible daemons were started and after being idle for 1 minutes and not recently used. The daemon is running a build: false
+2020-04-24T00:25:12.835-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonStateCoordinator] daemon has stopped.
+2020-04-24T00:25:12.835-0500 [DEBUG] [org.gradle.launcher.daemon.server.Daemon] stop() called on daemon
+2020-04-24T00:25:12.835-0500 [INFO] [org.gradle.launcher.daemon.server.Daemon] Stop requested. Daemon is removing its presence from the registry...
+2020-04-24T00:25:12.835-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Removing our presence to clients, eg. removing this address from the registry: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-24T00:25:12.836-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-24T00:25:12.836-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-24T00:25:12.837-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:12.838-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
+2020-04-24T00:25:12.838-0500 [DEBUG] [org.gradle.launcher.daemon.server.DaemonRegistryUpdater] Address removed from registry.
+2020-04-24T00:25:12.840-0500 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache jars (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches/jars-3) was closed 0 times.
+2020-04-24T00:25:12.843-0500 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Artifact transforms cache (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches/transforms-2) was closed 0 times.
+2020-04-24T00:25:12.843-0500 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache artifact cache (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches/modules-2) was closed 2 times.
+2020-04-24T00:25:12.844-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on cache directory workerMain (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches/6.3/workerMain).
+2020-04-24T00:25:12.845-0500 [DEBUG] [org.gradle.cache.internal.DefaultCacheAccess] Cache Generated Gradle JARs cache (/Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches/6.3/generated-gradle-jars) was closed 0 times.
+2020-04-24T00:25:12.870-0500 [DEBUG] [org.gradle.cache.internal.VersionSpecificCacheCleanupAction] Processed version-specific caches at /Users/supriyamukherjee/Desktop/Lift Off/Competrack/caches for cleanup in 0.022 secs
+Daemon vm is shutting down... The daemon has exited normally or was terminated in response to a user interrupt.
+2020-04-24T00:25:12.877-0500 [DEBUG] [org.gradle.launcher.daemon.registry.PersistentDaemonRegistry] Removing daemon address: [c599b9a4-b273-4755-b493-094f7b98efb2 port:62381, addresses:[localhost/127.0.0.1]]
+2020-04-24T00:25:12.877-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Waiting to acquire exclusive lock on daemon addresses registry.
+2020-04-24T00:25:12.878-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Lock acquired on daemon addresses registry.
+2020-04-24T00:25:12.878-0500 [DEBUG] [org.gradle.cache.internal.DefaultFileLockManager] Releasing lock on daemon addresses registry.
