@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Details</title>
+</head>
+<body>
+<h1>All Company Details</h1>
+<ul>
+    <th:block th:each ="companyDetail: ${companyDetails}">
+        <li th:text>"${companyDetail}"</li>li>
+    </th:block>
+</ul>
+</body>
+</html>

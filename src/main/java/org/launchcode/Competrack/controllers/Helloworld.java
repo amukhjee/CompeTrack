@@ -9,6 +9,6 @@ public class Helloworld {
     @ResponseBody
     @GetMapping
     public String hello(){
-        return "Hello Arpita!";
+        return "Hello World!";
     }
 }
