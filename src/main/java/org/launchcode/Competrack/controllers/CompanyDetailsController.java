@@ -4,7 +4,9 @@ import org.launchcode.Competrack.models.CompanyDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.swing.*;
 import java.util.ArrayList;
@@ -21,8 +23,14 @@ public class CompanyDetailsController {
         return "companyDetails/index";
 
     }
-@GetMapping("create")
+    @GetMapping("create")
     public String renderCreateCompanyDetailsForm(Model model){
         return "companyDetails/create";
+    }
+
+    @PostMapping("create")
+    public String processCreateCompanyDetailsForm(@RequestParam  String companyName, @RequestParam String industry){
+    companyDetails.add(new CompanyDetails(companyName,industry));
+        return "redirect:";
     }
 }
