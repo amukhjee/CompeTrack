@@ -1,5 +1,7 @@
 package org.launchcode.Competrack.controllers;
 
+
+import org.launchcode.Competrack.data.CompanyDetailsData;
 import org.launchcode.Competrack.models.CompanyDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -14,23 +16,39 @@ import java.util.List;
 @Controller
 @RequestMapping("companyDetails")
 public class CompanyDetailsController {
-    private static List<CompanyDetails> companyDetails= new ArrayList<>();
+
 
     @GetMapping
-    public String displayallcompanydetails(Model model){
+    public String displayallcompanydetails(Model model) {
         model.addAttribute("title", "All Company Details");
-        model.addAttribute("companyDetails", companyDetails);
+        model.addAttribute("companyDetails", CompanyDetailsData.getAll());
         return "companyDetails/index";
 
     }
+
     @GetMapping("create")
-    public String renderCreateCompanyDetailsForm(Model model){
+    public String renderCreateCompanyDetailsForm(Model model) {
+        model.addAttribute("title", "Create Company");
         return "companyDetails/create";
     }
 
     @PostMapping("create")
-    public String processCreateCompanyDetailsForm(@RequestParam  String companyName, @RequestParam String industry){
-    companyDetails.add(new CompanyDetails(companyName,industry));
+    public String processCreateCompanyDetailsForm(@RequestParam String companyName, @RequestParam String industry) {
+        CompanyDetailsData.add(new CompanyDetails(companyName, industry));
+        return "redirect:";
+    }
+
+    @GetMapping("delete")
+    public String deleteCompanyDetailsForm(Model model) {
+        model.addAttribute("title", "Delete Company");
+        model.addAttribute("companyDetails", CompanyDetailsData.getAll());
+        return "companyDetails/delete";
+    }
+
+    @PostMapping("delete")
+    public String processDeleteCompanyForm(@RequestParam int[] companyDetailId){
+        for(int id:companyDetailId)
+            CompanyDetailsData.remove(id);
         return "redirect:";
     }
 }

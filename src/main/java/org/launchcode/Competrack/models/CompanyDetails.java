@@ -1,6 +1,10 @@
 package org.launchcode.Competrack.models;
 
+import java.util.Objects;
+
 public class CompanyDetails {
+    private int id;
+    private static int nextId=1;
     public String name;
     public String industry;
     public String getIndustry() {
@@ -16,6 +20,8 @@ public class CompanyDetails {
     public CompanyDetails(String name, String industry) {
         this.name = name;
         this.industry=industry;
+        this.id=nextId;
+        nextId++;
     }
 
     public String getName() {
@@ -26,8 +32,25 @@ public class CompanyDetails {
         this.name = name;
     }
 
+    public int getId() {
+        return id;
+    }
+
     @Override
     public String toString() {
         return name;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        CompanyDetails that = (CompanyDetails) o;
+        return id == that.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id);
     }
 }
