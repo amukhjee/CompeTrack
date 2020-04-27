@@ -23,13 +23,9 @@ public class CompanyDetails {
 
 
     public CompanyDetails(String name, String industry) {
-        this();
         this.name = name;
         this.industry=industry;
-    }
-
-    public CompanyDetails() {
-        this.id = nextId;
+        this.id=nextId;
         nextId++;
     }
 

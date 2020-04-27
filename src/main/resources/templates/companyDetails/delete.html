@@ -6,6 +6,7 @@
 </head>
 <body>
 <h1>Delete Company</h1>
+<nav th:replace="fragments :: navigation"></nav>
 <form method="post">
 <th:block th:each="companyDetail:${companyDetails}">
     <div>
