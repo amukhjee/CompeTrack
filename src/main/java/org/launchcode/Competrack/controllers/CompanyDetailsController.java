@@ -46,9 +46,11 @@ public class CompanyDetailsController {
     }
 
     @PostMapping("delete")
-    public String processDeleteCompanyForm(@RequestParam int[] companyDetailIds){
-        for(int id:companyDetailIds)
-            CompanyDetailsData.remove(id);
+    public String processDeleteCompanyForm(@RequestParam(required = false) int[] companyDetailIds){
+        if(companyDetailIds!=null) {
+            for (int id : companyDetailIds)
+                CompanyDetailsData.remove(id);
+        }
         return "redirect:";
     }
 }
