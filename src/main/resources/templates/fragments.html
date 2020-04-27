@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
+<head th:fragment="head" >
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
 <nav th:fragment="navigation">
-    <ul>
-    <li><a href="/companyDetails">All Company Details</a></li>
-    <li><a href="/companyDetails/create">Create Company Details</a></li>
-    <li><a href="/companyDetails/delete">Delete Company Details</a></li>
+    <ul class="nav">
+    <li class="nav-item"><a class="nav-link" href="/companyDetails">All Company Details</a></li>
+    <li class="nav-item"><a class="nav-link" href="/companyDetails/create">Create Company Details</a></li>
+    <li class="nav-item"><a class="nav-link" href="/companyDetails/delete">Delete Company Details</a></li>
     </ul>
 </nav>
 

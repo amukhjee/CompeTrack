@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head>
+<head th:replace="fragments :: head">
     <meta charset="UTF-8">
     <title>Company Details</title>
 </head>
-<body>
+<body class="container">
 <h1>All Company Details</h1>
 <nav th:replace="fragments :: navigation"></nav>
-<table border="blue">
-    <thead>
+<table class="table table-striped">
+    <thead class="thead-dark">
         <tr>
             <th> ID</th>
             <th> Company Name</th>
