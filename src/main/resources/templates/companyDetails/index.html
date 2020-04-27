@@ -6,16 +6,18 @@
 </head>
 <body>
 <h1>All Company Details</h1>
-<table class="table table-striped">
+<table border="blue">
     <thead>
         <tr>
-            <th Company Name></th>
-            <th Industry></th>
+            <th> ID</th>
+            <th> Company Name</th>
+            <th> Industry</th>
         </tr>
     </thead>
     <tr th:each ="companyDetail: ${companyDetails}">
-        <td th:text>"${companyDetail.name}"</td>
-        <td th:text>"${companyDetail.industry}"</td>
+        <td th:text="${companyDetail.id}"></td>
+        <td th:text="${companyDetail.name}"></td>
+        <td th:text="${companyDetail.industry}"></td>
     </tr>
 </table>
 </body>
