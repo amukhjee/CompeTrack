@@ -1,8 +1,13 @@
 package org.launchcode.Competrack.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import java.util.Objects;
 
+
 public class CompanyDetails {
+
     private int id;
     private static int nextId=1;
     public String name;
@@ -18,9 +23,13 @@ public class CompanyDetails {
 
 
     public CompanyDetails(String name, String industry) {
+        this();
         this.name = name;
         this.industry=industry;
-        this.id=nextId;
+    }
+
+    public CompanyDetails() {
+        this.id = nextId;
         nextId++;
     }
 
