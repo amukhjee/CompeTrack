@@ -9,12 +9,22 @@
 <nav th:replace="fragments :: navigation"></nav>
 <form method="post" action="/companyDetails/create">
     <div>
-        <label>Company Name</label>
-    <input type="text" name="name">
+        <label>Company Name
+    <input th:field="${companyDetails.name}" class="form-control" placeholder="Enter Company Name">
+        </label>
+        <p class="error" th:errors="${companyDetails.name}"></p>
     </div>
     <div>
-        <label>Industry</label>
-        <input type="text" name="industry">
+        <label>Industry
+        <input th:field="${companyDetails.industry}" class="form-control" placeholder="Enter Type of Industry">
+        </label>
+        <p class="error" th:errors="${companyDetails.industry}"></p>
+    </div>
+    <div>
+        <label>Sub-industry
+        <input th:field="${companyDetails.subindustry}" class="form-control" placeholder="Enter Sub-industry Types">
+        </label>
+        <p class="error" th:errors="${companyDetails.subindustry}"></p>
     </div>
     <input type="submit" value="Create Company" class="btn btn-primary">
 </form>

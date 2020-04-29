@@ -7,9 +7,11 @@ import org.launchcode.Competrack.models.CompanyDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 import javax.swing.*;
+import javax.validation.Valid;
 import java.util.ArrayList;
 import java.util.List;
 @Controller
@@ -31,11 +33,16 @@ public class CompanyDetailsController {
     @GetMapping("create")
     public String renderCreateCompanyDetailsForm(Model model) {
         model.addAttribute("title", "Create Company");
+        model.addAttribute(new CompanyDetails());
         return "companyDetails/create";
     }
 
     @PostMapping("create")
-    public String processCreateCompanyDetailsForm(@ModelAttribute CompanyDetails newCompanyDetails) {
+    public String processCreateCompanyDetailsForm(@ModelAttribute @Valid CompanyDetails newCompanyDetails, Errors errors, Model model) {
+        if(errors.hasErrors()){
+            model.addAttribute("title", "Create Company");
+            return "companyDetails/create";
+        }
         companyDetailsRepository.save(newCompanyDetails);
         return "redirect:";
     }

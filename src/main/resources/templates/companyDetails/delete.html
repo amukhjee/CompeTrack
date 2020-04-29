@@ -9,7 +9,7 @@
 <nav th:replace="fragments :: navigation"></nav>
 <form method="post">
 <th:block th:each="companyDetail:${companyDetails}">
-    <div>
+    <div class="form-check">
     <label>
     <span th:text="${companyDetail.name}"></span>
     <input type="checkbox" name="companyDetailIds" th:value="${companyDetail.id}">
