@@ -1,8 +1,10 @@
 package org.launchcode.Competrack.controllers;
 
 
-import org.launchcode.Competrack.data.CompanyDetailsData;
+
+import org.launchcode.Competrack.data.CompanyDetailsRepository;
 import org.launchcode.Competrack.models.CompanyDetails;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -14,11 +16,14 @@ import java.util.List;
 @RequestMapping("companyDetails")
 public class CompanyDetailsController {
 
+    @Autowired
+    private CompanyDetailsRepository companyDetailsRepository;
+
 
     @GetMapping
     public String displayallcompanydetails(Model model) {
         model.addAttribute("title", "All Company Details");
-        model.addAttribute("companyDetails", CompanyDetailsData.getAll());
+        model.addAttribute("companyDetails", companyDetailsRepository.findAll());
         return "companyDetails/index";
 
     }
@@ -31,14 +36,14 @@ public class CompanyDetailsController {
 
     @PostMapping("create")
     public String processCreateCompanyDetailsForm(@ModelAttribute CompanyDetails newCompanyDetails) {
-        CompanyDetailsData.add(newCompanyDetails);
+        companyDetailsRepository.save(newCompanyDetails);
         return "redirect:";
     }
 
     @GetMapping("delete")
     public String deleteCompanyDetailsForm(Model model) {
         model.addAttribute("title", "Delete Company");
-        model.addAttribute("companyDetails", CompanyDetailsData.getAll());
+        model.addAttribute("companyDetails", companyDetailsRepository.findAll());
         return "companyDetails/delete";
     }
 
@@ -46,7 +51,7 @@ public class CompanyDetailsController {
     public String processDeleteCompanyForm(@RequestParam(required = false) int[] companyDetailIds){
         if(companyDetailIds!=null) {
             for (int id : companyDetailIds)
-                CompanyDetailsData.remove(id);
+                companyDetailsRepository.deleteById(id);
         }
         return "redirect:";
     }

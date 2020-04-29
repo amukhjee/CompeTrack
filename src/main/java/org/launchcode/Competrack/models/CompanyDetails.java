@@ -5,11 +5,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import java.util.Objects;
 
-
+@Entity
 public class CompanyDetails {
 
+    @Id
+    @GeneratedValue
     private int id;
-    private static int nextId=1;
     public String name;
     public String industry;
     public String getIndustry() {
@@ -25,9 +26,9 @@ public class CompanyDetails {
     public CompanyDetails(String name, String industry) {
         this.name = name;
         this.industry=industry;
-        this.id=nextId;
-        nextId++;
     }
+
+    public CompanyDetails(){}
 
     public String getName() {
         return name;
