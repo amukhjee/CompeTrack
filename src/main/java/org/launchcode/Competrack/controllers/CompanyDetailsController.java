@@ -39,7 +39,7 @@ public class CompanyDetailsController {
 
     @PostMapping("create")
     public String processCreateCompanyDetailsForm(@ModelAttribute @Valid CompanyDetails newCompanyDetails, Errors errors, Model model) {
-        if(errors.hasErrors()){
+        if (errors.hasErrors()) {
             model.addAttribute("title", "Create Company");
             return "companyDetails/create";
         }
@@ -55,11 +55,20 @@ public class CompanyDetailsController {
     }
 
     @PostMapping("delete")
-    public String processDeleteCompanyForm(@RequestParam(required = false) int[] companyDetailIds){
-        if(companyDetailIds!=null) {
+    public String processDeleteCompanyForm(@RequestParam(required = false) int[] companyDetailIds) {
+        if (companyDetailIds != null) {
             for (int id : companyDetailIds)
                 companyDetailsRepository.deleteById(id);
         }
         return "redirect:";
     }
-}
+
+    @PostMapping("map")
+    public String getCompanyLocationMap(@RequestParam int companyDetailIds) {
+        companyDetailsRepository.findById(companyDetailIds);
+        return "companyDetails/map";
+    }
+
+
+    }
+

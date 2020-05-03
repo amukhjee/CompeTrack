@@ -14,13 +14,19 @@
             <th> Company Name</th>
             <th> Industry</th>
             <th>Sub-industry</th>
+            <th>Address</th>
         </tr>
     </thead>
     <tr th:each ="companyDetail: ${companyDetails}">
         <td th:text="${companyDetail.id}"></td>
-        <td th:text="${companyDetail.name}"></td>
+        <td class="nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="${companyDetail.url}" th:text="${companyDetail.name}"></a></td>
         <td th:text="${companyDetail.industry}"></td>
         <td th:text="${companyDetail.subindustry}"></td>
+        <td class="nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="map.html" th:text="${companyDetail.address}"></a></td>
     </tr>
 </table>
 </body>

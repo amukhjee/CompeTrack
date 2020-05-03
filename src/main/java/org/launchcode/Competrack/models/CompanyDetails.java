@@ -1,5 +1,7 @@
 package org.launchcode.Competrack.models;
 
+import org.launchcode.Competrack.annotation.URLValidation;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -26,6 +28,20 @@ public class CompanyDetails {
     @Size(max=100, message="subindustry size is too long")
     public String subindustry;
 
+     @URLValidation(message = "Please provide valid URL")
+    public String url;
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String address;
+
+
 
     public String getIndustry() {
         return industry;
@@ -35,12 +51,19 @@ public class CompanyDetails {
         this.industry = industry;
     }
 
+    public String getAddress() {
+        return address;
+    }
 
+    public void setAddress(String address) {
+        this.address = address;
+    }
 
-    public CompanyDetails(String name, String industry, String subindustry) {
+    public CompanyDetails(String name, String industry, String subindustry, String address) {
         this.name = name;
         this.industry=industry;
         this.subindustry=subindustry;
+        this.address=address;
     }
 
     public CompanyDetails(){}

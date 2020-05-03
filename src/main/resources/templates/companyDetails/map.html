@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta charset="UTF-8">
+    <title>Google Map</title>
+</head>
+<body class="container">
+<h1>Company Location</h1>
+<nav th:replace="fragments :: navigation"></nav>
+<form method="post">
+    <input id="address" type="textbox" value="${companyDetail.address}">
+    <input id="submit" type="button" value="Geocode">
+</form>
+</body>
+
+<script>
+
+function initMap() {
+
+  var input = document.getElementById('pac-input');
+
+  var options = {
+    types: ['establishment']
+  };
+
+  var autocomplete = new google.maps.places.Autocomplete(input, options);
+
+  autocomplete.setFields(['place_id', 'geometry', 'name', 'formatted_address', 'formatted_phone_number', 'opening_hours', 'website', 'photos']);
+
+  autocomplete.addListener('place_changed', placechange);
+
+  function placechange() {
+
+    var place = autocomplete.getPlace();
+    var photos = place.photos;
+
+    document.getElementById('place_name').textContent = place.name;
+    document.getElementById('place_id').textContent = place.place_id;
+    document.getElementById('place_address').textContent = place.formatted_address;
+    document.getElementById('phone_no').textContent = place.formatted_phone_number;
+    document.getElementById('open_time').textContent = place.opening_hours.weekday_text[0];
+    document.getElementById('open_now').textContent = place.opening_hours.open_now;
+    document.getElementById('photo').src = photos[0].getUrl();
+    document.getElementById('photo').style = "width:50%;";
+    document.getElementById('website').textContent = place.website;
+
+
+  }
+}
+</script>
+
+<div>
+  <input id="pac-input" class="controls" type="text" placeholder="Enter a business">
+</div>
+
+<div id="info-table">
+  Name: <span id="place_name"></span><br> Place id: <span id="place_id"></span><br> Address :<span id="place_address"></span><br> Phone : <span id="phone_no"></span><br> Openhours: <span id="open_time"></span><br> Open Now : <span id="open_now"></span><br>  website : <span id="website"></span><br> photo :<br> <img id="photo" src="" style="display:none;" />
+</div>
+
+<div id="map"></div>
+<div id="infowindow-content">
+  <span id="place-name" class="title"></span><br>
+  <strong>Place ID:</strong> <span id="place-id"></span><br>
+  <span id="place-address"></span>
+</div>
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
+</script>    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADYvhBijgiw8gTEPLgqqGjtafQI1MdFhs&callback=initMap">;
+</script>>
+</body>
+</html>

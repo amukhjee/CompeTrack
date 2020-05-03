@@ -15,6 +15,12 @@
         <p class="error" th:errors="${companyDetails.name}"></p>
     </div>
     <div>
+        <label>Company URL
+            <input th:field="${companyDetails.url}" class="form-control" placeholder="Enter Company URL">
+        </label>
+        <p class="error" th:errors="${companyDetails.url}"></p>
+    </div>
+    <div>
         <label>Industry
         <input th:field="${companyDetails.industry}" class="form-control" placeholder="Enter Type of Industry">
         </label>
@@ -25,6 +31,12 @@
         <input th:field="${companyDetails.subindustry}" class="form-control" placeholder="Enter Sub-industry Types">
         </label>
         <p class="error" th:errors="${companyDetails.subindustry}"></p>
+    </div>
+    <div>
+        <label>Address
+            <input th:field="${companyDetails.address}" class="form-control" placeholder="Enter address here">
+        </label>
+        <p class="error" th:errors="${companyDetails.address}"></p>
     </div>
     <input type="submit" value="Create Company" class="btn btn-primary">
 </form>
