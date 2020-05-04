@@ -1,8 +1,9 @@
 .error{
 color: red;}
 
-#map {
+.map {
   height: 100%;
+  width:100%
 }
 
 html, body {
@@ -10,7 +11,7 @@ html, body {
   margin: 0;
   padding: 0;
 }
-#floating-panel {
+.floating-panel {
   position: absolute;
   top: 10px;
   left: 25%;
@@ -23,3 +24,4 @@ html, body {
   line-height: 30px;
   padding-left: 10px;
 }
+

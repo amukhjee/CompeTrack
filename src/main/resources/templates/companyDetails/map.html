@@ -7,64 +7,96 @@
 <body class="container">
 <h1>Company Location</h1>
 <nav th:replace="fragments :: navigation"></nav>
-<form method="post">
-    <input id="address" type="textbox" value="${companyDetail.address}">
-    <input id="submit" type="button" value="Geocode">
-</form>
-</body>
-
-<script>
-
-function initMap() {
-
-  var input = document.getElementById('pac-input');
-
-  var options = {
-    types: ['establishment']
-  };
-
-  var autocomplete = new google.maps.places.Autocomplete(input, options);
-
-  autocomplete.setFields(['place_id', 'geometry', 'name', 'formatted_address', 'formatted_phone_number', 'opening_hours', 'website', 'photos']);
-
-  autocomplete.addListener('place_changed', placechange);
-
-  function placechange() {
-
-    var place = autocomplete.getPlace();
-    var photos = place.photos;
-
-    document.getElementById('place_name').textContent = place.name;
-    document.getElementById('place_id').textContent = place.place_id;
-    document.getElementById('place_address').textContent = place.formatted_address;
-    document.getElementById('phone_no').textContent = place.formatted_phone_number;
-    document.getElementById('open_time').textContent = place.opening_hours.weekday_text[0];
-    document.getElementById('open_now').textContent = place.opening_hours.open_now;
-    document.getElementById('photo').src = photos[0].getUrl();
-    document.getElementById('photo').style = "width:50%;";
-    document.getElementById('website').textContent = place.website;
-
-
-  }
-}
-</script>
-
-<div>
-  <input id="pac-input" class="controls" type="text" placeholder="Enter a business">
-</div>
-
-<div id="info-table">
-  Name: <span id="place_name"></span><br> Place id: <span id="place_id"></span><br> Address :<span id="place_address"></span><br> Phone : <span id="phone_no"></span><br> Openhours: <span id="open_time"></span><br> Open Now : <span id="open_now"></span><br>  website : <span id="website"></span><br> photo :<br> <img id="photo" src="" style="display:none;" />
-</div>
-
+<style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
+</head>
+<h1>Cpmpany Location in Map</h1>
 <div id="map"></div>
-<div id="infowindow-content">
-  <span id="place-name" class="title"></span><br>
-  <strong>Place ID:</strong> <span id="place-id"></span><br>
-  <span id="place-address"></span>
-</div>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap">
-</script>    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyADYvhBijgiw8gTEPLgqqGjtafQI1MdFhs&callback=initMap">;
-</script>>
+<script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom:8,
+        center:{lat:42.3601,lng:-71.0589}
+      }
+
+
+      let map = new google.maps.Map(document.getElementById('map'), options);
+
+      google.maps.event.addListener(map, 'click', function(event){
+
+        addMarker({coords:event.latLng});
+      });
+
+
+      var marker = new google.maps.Marker({
+        position:{lat:42.4668,lng:-70.9495},
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+        content:'<h1>Lynn MA</h1>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+
+
+
+      var markers = [
+        {
+          coords:{lat:42.4668,lng:-70.9495},
+          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
+          content:'<h1>Lynn MA</h1>'
+        },
+        {
+          coords:{lat:42.8584,lng:-70.9300},
+          content:'<h1>Amesbury MA</h1>'
+        },
+        {
+          coords:{lat:42.7762,lng:-71.0773}
+        }
+      ];
+
+
+      for(var i = 0;i < markers.length;i++){
+
+        addMarker(markers[i]);
+      }
+
+
+      function addMarker(props){
+        let marker = new google.maps.Marker({
+          position:props.coords,
+          map:map,
+        });
+
+
+        if(props.iconImage){
+          marker.setIcon(props.iconImage);
+        }
+
+
+        if(props.content){
+          var infoWindow = new google.maps.InfoWindow({
+            content:props.content
+          });
+
+          marker.addListener('click', function(){
+            infoWindow.open(map, marker);
+          });
+        }
+      }
+    }
+  </script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXjJTcvOUa8wmbwlPx7u19u0BiALEK4B8&callback=initMap">
+</script>
 </body>
 </html>

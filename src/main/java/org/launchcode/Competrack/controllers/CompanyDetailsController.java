@@ -63,9 +63,10 @@ public class CompanyDetailsController {
         return "redirect:";
     }
 
-    @PostMapping("map")
-    public String getCompanyLocationMap(@RequestParam int companyDetailIds) {
-        companyDetailsRepository.findById(companyDetailIds);
+    @GetMapping("map")
+    public String getCompanyLocationMap(Model model) {
+        model.addAttribute("title", "Company Location");
+        model.addAttribute("companyDetails", companyDetailsRepository.findAll());
         return "companyDetails/map";
     }
 
