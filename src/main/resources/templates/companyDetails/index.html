@@ -26,7 +26,8 @@
         <td th:text="${companyDetail.subindustry}"></td>
         <td class="nav">
             <li class="nav-item">
-                <a class="nav-link" href="/companyDetails/map" th:text="${companyDetail.address}"></a></td>
+                <a class="nav-link" th:href="@{'/companyDetails/map?search=' + ${companyDetail.id}}" th:text="${companyDetail.address}"  th:name="companyDetailId" th:value="${companyDetail.id}"></a></td>
+
     </tr>
 </table>
 </body>

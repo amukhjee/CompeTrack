@@ -2,6 +2,7 @@ package org.launchcode.Competrack.controllers;
 
 
 
+import com.sun.xml.bind.v2.model.core.ID;
 import org.launchcode.Competrack.data.CompanyDetailsRepository;
 import org.launchcode.Competrack.models.CompanyDetails;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,8 +11,12 @@ import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
+
+import javax.persistence.Id;
 import javax.swing.*;
 import javax.validation.Valid;
+import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 @Controller
@@ -71,5 +76,13 @@ public class CompanyDetailsController {
     }
 
 
+    @PostMapping("map")
+    public String processCompanyLocationMap(@RequestParam int companyDetailId) {
+       companyDetailsRepository.findById(companyDetailId);
+        return "redirect:";
     }
+
+}
+
+
 
