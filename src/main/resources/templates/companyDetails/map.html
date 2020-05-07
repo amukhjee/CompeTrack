@@ -21,12 +21,13 @@
 <h1>Company Location in Map</h1>
 
 
-<div id="location"></div>
+<div id="formatted_address"></div>
 <div id="map"></div>
 <script>
 function initMap(){
        let locationGeometry;
        let locationGeometryResult;
+       let formattedAdress;
        let url_string = window.location.href;
        let url = new URL(url_string);
        let location = url.searchParams.get("search");
@@ -38,16 +39,20 @@ function initMap(){
         }
       })
       .then(function(response){
+
+      console.log(response);
             locationGeometryResult= response.data.results[0].geometry.location;
+            formattedAddress=response.data.results[0].formatted_address;
             let lat = response.data.results[0].geometry.location.lat;
             let lng = response.data.results[0].geometry.location.lng;
-            let geometryOutput = `
-                <ul class="list-group">
-                <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
-                <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
-                </ul> `;
 
-     document.getElementById('location').innerHTML = geometryOutput;
+            let formattedAddressOutput = `
+          <ul class="list-group">
+            <li class="list-group-item">${formattedAddress}</li>
+          </ul>
+        `;
+
+     document.getElementById('formatted_address').innerHTML = formattedAddressOutput;
      let options = {
         zoom:8,
         center:locationGeometryResult,
