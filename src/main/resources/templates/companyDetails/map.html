@@ -55,63 +55,25 @@ function initMap(){
 
      let map = new google.maps.Map(document.getElementById('map'), options);
 
-     google.maps.event.addListener(map, 'click', function(event){
-        addMarker({coords:event.latLng});
-      });
+
 
       let marker = new google.maps.Marker({
-        position:locationGeometryResult,
-        map:map,
-        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
-      });
-        marker.addListener('click', function(){
-        infoWindow.open(map, marker);
-      });
-
-      let markers = [
-        {
-          coords:locationGeometryResult,
-          iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
-          content:location
-        },
-        {
-          coords:locationGeometryResult,
-          content:'<h1>Amesbury MA</h1>'
-        },
-        {
-          coords:locationGeometryResult,
-        }
-      ];
-
-      for(var i = 0;i < markers.length;i++){
-
-        addMarker(markers[i]);
-      }
-
-
-      function addMarker(props){
-        let marker = new google.maps.Marker({
-          position:props.coords,
-          map:map,
+          map: map,
+          animation: google.maps.Animation.DROP,
+          position: locationGeometryResult,
+          title:location,
         });
+        marker.addListener('click', toggleBounce);
 
 
-        if(props.iconImage){
-          marker.setIcon(props.iconImage);
-        }
-
-
-        if(props.content){
-          var infoWindow = new google.maps.InfoWindow({
-            content:props.content
-          });
-
-          marker.addListener('click', function(){
-            infoWindow.open(map, marker);
-          });
+      function toggleBounce() {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
         }
       }
-})
+});
 }
 </script>
 <script async defer
