@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <meta charset="UTF-8">
+    <title>Google Map</title>
+</head>
+<body class="container">
+<h1>Company Location</h1>
+<nav th:replace="fragments :: navigation"></nav>
+<style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<h1>Company Location in Map</h1>
+<th:block th:each ="companyDetail: ${companyDetails}">
+    <div id="${companyDetail.id}"></div>
+    <script>
+function geocode(){
+
+var location = document.getElementById('${companyDetail.id}').value;
+//console.log(location);
+
+axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+params:{
+address:location,
+key:'AIzaSyADYvhBijgiw8gTEPLgqqGjtafQI1MdFhs'
+}
+})
+.then(function(response){
+//Log full response
+//console.log(response);
+
+// Formatted Address
+var formattedAddress = response.data.results[0].formatted_address;
+//console.log(formattedAddress);
+var formattedAddressOutput = `
+<ul class="list-group">
+    <li class="list-group-item">${formattedAddress}</li>
+</ul>
+`;
+
+// Address Components
+var addressComponents = response.data.results[0].address_components;
+var addressComponentsOutput = '<ul class="list-group">';
+    for(var i = 0;i < addressComponents.length;i++){
+    addressComponentsOutput += `
+    <li class="list-group-item"><strong>${addressComponents[i].types[0]}</strong>: ${addressComponents[i].long_name}</li>
+    `;
+    }
+    addressComponentsOutput += '</ul>';
+
+// Geometry
+var lat = response.data.results[0].geometry.location.lat;
+var lng = response.data.results[0].geometry.location.lng;
+var geometry=[lat, lng];
+return geometry;
+})
+}
+</script>
+
+<div id="googleMap" style="width:100%;height:400px;"></div>
+
+    <!DOCTYPE html>
+    <html lang="en" xmlns:th="https://www.thymeleaf.org/">
+    <head th:replace="fragments :: head">
+        <meta charset="UTF-8">
+        <title>Google Map</title>
+    </head>
+    <body class="container">
+    <h1>Company Location</h1>
+    <nav th:replace="fragments :: navigation"></nav>
+    <style>
+    #map{
+      height:400px;
+      width:100%;
+    }
+  </style>
+
+    </head>
+    <h1>Company Location in Map</h1>
+
+
+    <div id="geometry"></div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/axios/dist/axios.min.js">
+    function geocode(){
+let locationGeometry;
+let locationGeometryResult;
+    var url_string = window.location.href;
+var url = new URL(url_string);
+var location = url.searchParams.get("search");
+
+      axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:location,
+          key:'AIzaSyADYvhBijgiw8gTEPLgqqGjtafQI1MdFhs'
+        }
+      })
+      .then(function(response){
+      console.log(response);
+
+    //console.log("response.data.results[0].geometry.location"+response.data.results[0].geometry.location);
+     locationGeometry=response.data.results[0].geometry.location;
+     var lat = response.data.results[0].geometry.location.lat;
+        var lng = response.data.results[0].geometry.location.lng;
+        var geometryOutput = `
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
+            <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
+          </ul>
+
+         // document.getElementById('geometry').innerHTML = geometryOutput;
+//return locationGeometryResult;
+      })
+      .catch(function(error){
+        console.log(error);
+      });
+
+
+     //console.log("locationGeometry 1="+locationGeometryResult);
+//return locationGeometryResult;
+}
+function initMap(){
+let options = {
+        zoom:8,
+        center:gecocode();
+      }
+
+
+      let map = new google.maps.Map(document.getElementById('map'), options);
+
+      google.maps.event.addListener(map, 'click', function(event){
+
+        addMarker({coords:event.latLng});
+      });
+
+
+      var marker = new google.maps.Marker({
+        position:geocode(),
+        map:map,
+        icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
+      });
+
+
+}
+</script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXjJTcvOUa8wmbwlPx7u19u0BiALEK4B8&callback=initMap">
+    </script>
+
+
+
+
+    </body>
+    </html>

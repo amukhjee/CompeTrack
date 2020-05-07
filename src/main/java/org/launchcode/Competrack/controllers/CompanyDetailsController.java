@@ -69,9 +69,10 @@ public class CompanyDetailsController {
     }
 
     @GetMapping("map")
-    public String getCompanyLocationMap(Model model) {
+    public String getCompanyLocationMap(Model model,@RequestParam String search) {
         model.addAttribute("title", "Company Location");
-        model.addAttribute("companyDetails", companyDetailsRepository.findAll());
+        //model.addAttribute("companyDetails", companyDetailsRepository.findAll());
+        //companyDetailsRepository.fi(search);
         return "companyDetails/map";
     }
 

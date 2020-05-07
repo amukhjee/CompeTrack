@@ -13,31 +13,65 @@
       width:100%;
     }
   </style>
-<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js">
+
+
+</script>
 </head>
 <h1>Company Location in Map</h1>
-<th:block th:each ="companyDetail: ${companyDetails}">
-    <div id="${companyDetail.id}"></div>
-
-<script>
-function geocode(){
-      let location = document.getElementById('${companyDetail.id}');
-      //console.log(location);
 
 
-
-}
-</script>
-</th:block>
+<div id="location"></div>
 <div id="map"></div>
 <script>
 
 
-    function initMap(){
-      // Map options
-      let options = {
+
+
+function initMap(){
+let locationGeometry;
+let locationGeometryResult;
+    var url_string = window.location.href;
+var url = new URL(url_string);
+var location = url.searchParams.get("search");
+
+      locationGeometry = axios.get('https://maps.googleapis.com/maps/api/geocode/json',{
+        params:{
+          address:location,
+          key:'AIzaSyADYvhBijgiw8gTEPLgqqGjtafQI1MdFhs'
+        }
+      })
+      .then(function(response){
+
+    //console.log("response.data.results[0].geometry.location"+response.data.results[0].geometry.location);
+     locationGeometryResult= response.data.results[0].geometry.location;
+
+     console.log(locationGeometryResult);
+     var lat = response.data.results[0].geometry.location.lat;
+        var lng = response.data.results[0].geometry.location.lng;
+        var geometryOutput = `
+          <ul class="list-group">
+            <li class="list-group-item"><strong>Latitude</strong>: ${lat}</li>
+            <li class="list-group-item"><strong>Longitude</strong>: ${lng}</li>
+          </ul>
+        `;
+
+     document.getElementById('location').innerHTML = geometryOutput;
+//return locationGeometry;
+
+
+
+    console.log("locationGeometry 1="+locationGeometryResult);
+//return locationGeometryResult;
+
+
+
+//console.log(geocode());
+
+
+let options = {
         zoom:8,
-        center:geocode(),
+        center:locationGeometryResult,
       }
 
 
@@ -50,14 +84,11 @@ function geocode(){
 
 
       var marker = new google.maps.Marker({
-        position:geocode(),
+        position:locationGeometryResult,
         map:map,
         icon:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png'
       });
-
-
-
-      marker.addListener('click', function(){
+ marker.addListener('click', function(){
         infoWindow.open(map, marker);
       });
 
@@ -65,16 +96,16 @@ function geocode(){
 
       var markers = [
         {
-          coords:geocode(),
+          coords:locationGeometryResult,
           iconImage:'https://developers.google.com/maps/documentation/javascript/examples/full/images/beachflag.png',
           content:'<h1>Lynn MA</h1>'
         },
         {
-          coords:geocode(),
+          coords:locationGeometryResult,
           content:'<h1>Amesbury MA</h1>'
         },
         {
-          coords:geocode(),
+          coords:locationGeometryResult,
         }
       ];
 
@@ -107,11 +138,15 @@ function geocode(){
           });
         }
       }
-    }
-  </script>
+})
+}
+</script>
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXjJTcvOUa8wmbwlPx7u19u0BiALEK4B8&callback=initMap">
 </script>
+
+
+
 
 </body>
 </html>
