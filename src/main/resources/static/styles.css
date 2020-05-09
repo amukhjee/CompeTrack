@@ -25,3 +25,10 @@ html, body {
   padding-left: 10px;
 }
 
+table {
+  table-layout: fixed ;
+  width: 100% ;
+}
+td {
+  width: 25% ;
+}
