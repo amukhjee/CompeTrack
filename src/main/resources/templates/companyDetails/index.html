@@ -8,19 +8,19 @@
 <h1>All Company Details</h1>
 <nav th:replace="fragments :: navigation"></nav>
 <table>
-    <tr>
-        <td><label id="lDisplayPerPg" for="lDisplayPerPg">Reports per page</label>
-            <select name="listDisplayPerPg" id="listDisplayPerPg">
-                <option value="2" selected="selected">2</option>
-                <option value="4">4</option>
-                <option value="6">6</option>
-                <option value="8">8</option>
-            </select></td>
-    </tr>
+<tr>
+    <td><label id="lDisplayPerPg" for="lDisplayPerPg">Items per page</label>
+        <select name="listDisplayPerPg" id="listDisplayPerPg" onchange="javascript:pageRecordChange()">
+            <option value="2" selected="selected">2</option>
+            <option value="4">4</option>
+            <option value="6">6</option>
+            <option value="8">8</option>
+        </select></td>
+</tr>
 </table>
 <form method="post" action="">
-<table id="tadminViewReport" class="table table-striped">
-    <thead class="thead-dark">
+    <table id="tadminViewReport" class="table table-striped">
+        <thead class="thead-dark">
         <tr>
             <th> Company Name</th>
             <th> Industry</th>
@@ -29,45 +29,54 @@
             <th>Update Address</th>
 
         </tr>
-    </thead>
-    <tr th:each ="companyDetail: ${companyDetails}">
-        <td class="nav">
-            <li class="nav-item">
-                <a class="nav-link" th:href="${companyDetail.url}" th:text="${companyDetail.name}"></a></td>
-        <td th:text="${companyDetail.industry}"></td>
-        <td th:text="${companyDetail.subindustry}"></td>
-        <td class="nav">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{'/companyDetails/map?search=' + ${companyDetail.address}}" th:text="${companyDetail.address}"  th:name="companyDetailId" th:value="${companyDetail.id}"></a></td>
-        <td class="nav">
+        </thead>
+        <tr th:each ="companyDetail: ${companyDetails}">
+            <td class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="${companyDetail.url}" th:text="${companyDetail.name}"></a></td>
+            <td th:text="${companyDetail.industry}"></td>
+            <td th:text="${companyDetail.subindustry}"></td>
+            <td class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{'/companyDetails/map?search=' + ${companyDetail.address}}" th:text="${companyDetail.address}"  th:name="companyDetailId" th:value="${companyDetail.id}"></a></td>
+            <td class="nav">
             <td class="nav-item">
                 <a class="nav-link" th:href="@{'/companyDetails/update?search=' + ${companyDetail.id}}" th:name="companyDetailId" th:value="${companyDetail.id}" >Update Company Details</a></td>
 
-    </tr>
-</table>
-<div id="pageNavPosition"></div>
+        </tr>
+    </table>
+    <div id="pageNavPosition"></div>
     <br />
 </form>
-    <script type="text/javascript"><!--
+
+<script>
             reportsPerPage = listDisplayPerPg.options[listDisplayPerPg.selectedIndex].value;
             var pager = new Pager('tadminViewReport', reportsPerPage);
             pager.init();
             pager.showPageNav('pager', 'pageNavPosition');
             pager.showPage(1);
 
+function pageRecordChange()
+{
+            //alert("Calling during change");
+            reportsPerPage = listDisplayPerPg.options[listDisplayPerPg.selectedIndex].value;
+            var pager = new Pager('tadminViewReport', reportsPerPage);
+            pager.init();
+            pager.showPageNav('pager', 'pageNavPosition');
+            pager.showPage(1);
+
+}
 
 
 function Pager(tableName, itemsPerPage) {
-//function Pager(tableName, itemsPerPage) {
+    //alert("itemsPerPage="+itemsPerPage)
     this.tableName = tableName;
-//    this.itemsPerPage = itemsPerPage;
     this.currentPage = 1;
     this.pages = 0;
     this.inited = false;
 
     this.showRecords = function(from, to) {
         var rows = document.getElementById(tableName).rows;
-        // i starts from 1 to skip table header row
         for (var i = 1; i < rows.length; i++) {
             if (i < from || i > to)
                 rows[i].style.display = 'none';
