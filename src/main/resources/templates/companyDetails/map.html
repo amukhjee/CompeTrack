@@ -78,7 +78,9 @@ function initMap(){
           marker.setAnimation(google.maps.Animation.BOUNCE);
         }
       }
-});
+}).catch(function(error){
+        console.log(error);
+      });
 }
 </script>
 <script async defer

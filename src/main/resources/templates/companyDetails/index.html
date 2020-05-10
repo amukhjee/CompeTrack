@@ -10,15 +10,15 @@
 <table class="table table-striped">
     <thead class="thead-dark">
         <tr>
-            <th> ID</th>
             <th> Company Name</th>
             <th> Industry</th>
             <th>Sub-industry</th>
             <th>Address</th>
+            <th>Update Address</th>
+
         </tr>
     </thead>
     <tr th:each ="companyDetail: ${companyDetails}">
-        <td th:text="${companyDetail.id}"></td>
         <td class="nav">
             <li class="nav-item">
                 <a class="nav-link" th:href="${companyDetail.url}" th:text="${companyDetail.name}"></a></td>
@@ -27,6 +27,9 @@
         <td class="nav">
             <li class="nav-item">
                 <a class="nav-link" th:href="@{'/companyDetails/map?search=' + ${companyDetail.address}}" th:text="${companyDetail.address}"  th:name="companyDetailId" th:value="${companyDetail.id}"></a></td>
+        <td class="nav">
+            <td class="nav-item">
+                <a class="nav-link" th:href="@{'/companyDetails/update?search=' + ${companyDetail.id}}" th:name="companyDetailId" th:value="${companyDetail.id}" >Update Company Details</a></td>
 
     </tr>
 </table>

@@ -2,23 +2,20 @@ package org.launchcode.Competrack.controllers;
 
 
 
-import com.sun.xml.bind.v2.model.core.ID;
 import org.launchcode.Competrack.data.CompanyDetailsRepository;
 import org.launchcode.Competrack.models.CompanyDetails;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
 
 
-import javax.persistence.Id;
-import javax.swing.*;
 import javax.validation.Valid;
-import java.io.IOException;
-import java.net.URLEncoder;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Collections;
+import java.util.Optional;
+
 @Controller
 @RequestMapping("companyDetails")
 public class CompanyDetailsController {
@@ -68,20 +65,32 @@ public class CompanyDetailsController {
         return "redirect:";
     }
 
+    @GetMapping("update")
+    public String updateCompanyDetailsForm(Model model, @RequestParam int search) {
+        model.addAttribute("companyDetails", companyDetailsRepository.findById(search));
+        return "companyDetails/update";
+    }
+
+    @PostMapping("update")
+    public String processUpdateCompanyDetailsForm(  @ModelAttribute @Valid CompanyDetails newcompanyDetails, Errors errors, Model model) {
+        if (errors.hasErrors()) {
+            model.addAttribute("title", "Update Company");
+            return "companyDetails/update";
+        }
+        //companyDetailsRepository.deleteById(companyDetailIds);
+        companyDetailsRepository.save(newcompanyDetails);
+        return "redirect:";
+    }
+
+
     @GetMapping("map")
     public String getCompanyLocationMap(Model model,@RequestParam String search) {
         model.addAttribute("title", "Company Location");
-        //model.addAttribute("companyDetails", companyDetailsRepository.findAll());
-        //companyDetailsRepository.fi(search);
         return "companyDetails/map";
     }
 
 
-    @PostMapping("map")
-    public String processCompanyLocationMap(@RequestParam int companyDetailId) {
-       companyDetailsRepository.findById(companyDetailId);
-        return "redirect:";
-    }
+
 
 }
 

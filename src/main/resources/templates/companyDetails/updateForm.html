@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:fragment="head" >
+    <meta charset="UTF-8">
+    <title>CompeTrack</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <title>Company Detail Update Form</title>
+</head>
+<body class="container">
+<h1>Company Detail Update Form</h1>
+<nav th:replace="fragments :: navigation"></nav>
+<form method="post" action="/companyDetails/updateForm">
+    <div>
+        <label>Company Name
+            <input th:field=companyDetails.name class="form-control" ></input>
+        </label>
+        <p class="error" th:errors="${companyDetails.name}"></p>
+    </div>
+    <div>
+        <label>Company URL
+            <input th:field="${companyDetails.url}" class="form-control" ></input>
+        </label>
+        <p class="error" th:errors="${companyDetails.url}"></p>
+    </div>
+    <div>
+        <label>Industry
+            <input th:field="${companyDetails.industry}" class="form-control"></input>
+        </label>
+        <p class="error" th:errors="${companyDetails.industry}"></p>
+    </div>
+    <div>
+        <label>Sub-industry
+            <input th:field="${companyDetails.subindustry}" class="form-control"></input>
+        </label>
+        <p class="error" th:errors="${companyDetails.subindustry}"></p>
+    </div>
+    <div>
+        <label>Address
+            <input th:field="${companyDetails.address}" class="form-control" ></input>
+        </label>
+        <p class="error" th:errors="${companyDetails.address}"></p>
+    </div>
+    <input type="submit" value="Update Company" class="btn btn-primary">
+</form>
+
+</body>
+</html>
