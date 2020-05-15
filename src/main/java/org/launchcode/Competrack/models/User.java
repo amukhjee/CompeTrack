@@ -3,9 +3,10 @@ package org.launchcode.Competrack.models;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 
-import javax.management.relation.Role;
+//import javax.management.relation.Role;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -54,7 +55,7 @@ public class User {
 
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-    public User(@NotNull @NotBlank String name, @NotNull @NotBlank String lastName, String email, @NotNull @NotBlank String passwordHash, String mobile, String status, Set<Role> roles) {
+    public User(@NotNull @NotBlank String name, @NotNull @NotBlank String lastName, String email, @NotNull @NotBlank String passwordHash, String mobile, String status, List<Role> roles) {
         this.name = name;
         this.lastName = lastName;
         this.email = email;
@@ -69,7 +70,9 @@ public class User {
 
     @ManyToMany(cascade = CascadeType.ALL)
     @JoinTable(name = "auth_user_role", joinColumns = @JoinColumn(name = "auth_user_id"), inverseJoinColumns = @JoinColumn(name = "auth_role_id"))
-    private Set<Role> roles;
+
+    private List<Role> roles = new ArrayList<>();
+
 
     public int getId() {
         return id;
@@ -119,11 +122,11 @@ public class User {
         this.status = status;
     }
 
-    public Set<Role> getRoles() {
+    public List<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(Set<Role> roles) {
+    public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
 
