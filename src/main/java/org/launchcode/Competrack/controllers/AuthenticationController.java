@@ -1,35 +1,81 @@
 package org.launchcode.Competrack.controllers;
 
+import org.launchcode.Competrack.data.UserRepository;
+import org.launchcode.Competrack.models.DTO.RegisterFormDTO;
+import org.launchcode.Competrack.models.User;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.Errors;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.servlet.ModelAndView;
 
-
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
+import java.util.Optional;
 
 @Controller
+@RequestMapping("user")
 public class AuthenticationController {
 
-    @RequestMapping(value = { "/login" }, method = RequestMethod.GET)
-    public ModelAndView login() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("login"); // resources/template/login.html
-        return modelAndView;
+    @Autowired
+    UserRepository userRepository;
+    private static final String userSessionKey = "user";
+    public User getUserFromSession(HttpSession session) {
+        Integer userId = (Integer) session.getAttribute(userSessionKey);
+        if (userId == null) {
+            return null;
+        }
+        Optional<User> user = userRepository.findById(userId);
+        if (user.isEmpty()) {
+            return null;
+        }
+        return user.get();
+    }
+    private static void setUserInSession(HttpSession session, User user) {
+        session.setAttribute(userSessionKey, user.getId());
     }
 
-    @RequestMapping(value = "/register", method = RequestMethod.GET)
-    public ModelAndView register() {
-        ModelAndView modelAndView = new ModelAndView();
-        // User user = new User();
-        // modelAndView.addObject("user", user);
-        modelAndView.setViewName("register"); // resources/template/register.html
-        return modelAndView;
+    @GetMapping("register")
+    public String displayRegistrationForm(Model model) {
+        model.addAttribute(new RegisterFormDTO());
+        model.addAttribute("title", "Register");
+        return "user/register";
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public ModelAndView home() {
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("home"); // resources/template/home.html
-        return modelAndView;
+    @PostMapping("register")
+    public String processRegistrationForm(@ModelAttribute @Valid RegisterFormDTO registerFormDTO,
+                                          Errors errors, HttpServletRequest request,
+                                          Model model) {
+
+        if (errors.hasErrors()) {
+            model.addAttribute("title", "Register");
+            return "user/register";
+        }
+
+        User existingUser = userRepository.findByUsername(registerFormDTO.getUsername());
+
+        if (existingUser != null) {
+            errors.rejectValue("username", "username.alreadyexists", "A user with that username already exists");
+            model.addAttribute("title", "Register");
+            return "user/register";
+        }
+
+        String password = registerFormDTO.getPassword();
+        String verifyPassword = registerFormDTO.getVerifyPassword();
+        if (!password.equals(verifyPassword)) {
+            errors.rejectValue("password", "passwords.mismatch", "Passwords do not match");
+            model.addAttribute("title", "Register");
+            return "user/register";
+        }
+
+        User newUser = new User(registerFormDTO.getUsername(), registerFormDTO.getPassword());
+        userRepository.save(newUser);
+        setUserInSession(request.getSession(), newUser);
+
+        return "user/index";
     }
 }

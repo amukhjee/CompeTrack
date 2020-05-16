@@ -3,10 +3,8 @@ package org.launchcode.Competrack.models;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
-//import javax.management.relation.Role;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -29,10 +27,11 @@ public class User {
     @Column(name = "auth_user_id")
     private int id;
 
-    @Column(name = "first_name")
+    @Column(name = "username")
     @NotNull
     @NotBlank
-    private String name;
+
+    private String username;
 
     @Column(name = "last_name")
     @NotNull
@@ -55,89 +54,99 @@ public class User {
 
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
-    public User(@NotNull @NotBlank String name, @NotNull @NotBlank String lastName, String email, @NotNull @NotBlank String passwordHash, String mobile, String status, List<Role> roles) {
-        this.name = name;
-        this.lastName = lastName;
-        this.email = email;
-        this.passwordHash = passwordHash;
-        this.mobile = mobile;
-        this.status = status;
-        this.roles = roles;
-    }
+
+    public User(@NotNull @NotBlank String username, @NotNull @NotBlank String lastName, String email, @NotNull @NotBlank String passwordHash, String mobile, String status, Set<org.launchcode.Competrack.models.Role> roles) {
+            this.username = username;
+            this.lastName = lastName;
+            this.email = email;
+            this.passwordHash = encoder.encode(passwordHash);
+            this.mobile = mobile;
+            this.status = status;
+            this.roles = roles;
+        }
 
     public User() {
+        }
+
+        @ManyToMany(cascade = CascadeType.ALL)
+        @JoinTable(name = "auth_user_role", joinColumns = @JoinColumn(name = "auth_user_id"), inverseJoinColumns = @JoinColumn(name = "auth_role_id"))
+        private Set<org.launchcode.Competrack.models.Role> roles;
+
+    public User(String username, String passwordHash) {
+
     }
-
-    @ManyToMany(cascade = CascadeType.ALL)
-    @JoinTable(name = "auth_user_role", joinColumns = @JoinColumn(name = "auth_user_id"), inverseJoinColumns = @JoinColumn(name = "auth_role_id"))
-
-    private List<Role> roles = new ArrayList<>();
-
 
     public int getId() {
-        return id;
-    }
+            return id;
+        }
 
-    public void setId(int id) {
-        this.id = id;
-    }
+        public void setId(int id) {
+            this.id = id;
+        }
 
-    public String getName() {
-        return name;
-    }
+        public String getUsername() {
+            return username;
+        }
 
-    public void setName(String name) {
-        this.name = name;
-    }
+        public void setUsername(String name) {
+            this.username = username;
+        }
 
-    public String getLastName() {
-        return lastName;
-    }
+        public String getLastName() {
+            return lastName;
+        }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+        public void setLastName(String lastName) {
+            this.lastName = lastName;
+        }
 
-    public String getEmail() {
-        return email;
-    }
+        public String getEmail() {
+            return email;
+        }
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+        public boolean isMatchingPassword(String password) {
+            return encoder.matches(password, passwordHash);}
 
-    public String getMobile() {
-        return mobile;
-    }
-
-    public void setMobile(String mobile) {
-        this.mobile = mobile;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public List<Role> getRoles() {
-        return roles;
-    }
-
-    public void setRoles(List<Role> roles) {
-        this.roles = roles;
-    }
+            public void setEmail(String email) {
+                this.email = email;
+            }
 
 
-    public String getPasswordHash() {
-        return passwordHash;
-    }
+                public String getMobile() {
+                    return mobile;
+                }
 
-    public void setPassword(String password) {
-        this.passwordHash = passwordHash;
-    }
+                public void setMobile(String mobile) {
+                    this.mobile = mobile;
+                }
 
 
-}
+                    public String getStatus(){
+                        return status;
+                    }
+
+
+
+                    public void setStatus (String status){
+                        this.status = status;
+                    }
+
+                    public Set<org.launchcode.Competrack.models.Role> getRoles () {
+                        return roles;
+                    }
+
+                    public void setRoles (Set <Role> roles) {
+                        this.roles = roles;
+                    }
+
+
+                    public String getPasswordHash () {
+                        return passwordHash;
+                    }
+
+                    public void setPasswordHash (String password){
+                        this.passwordHash = passwordHash;
+                    }
+
+
+                }
