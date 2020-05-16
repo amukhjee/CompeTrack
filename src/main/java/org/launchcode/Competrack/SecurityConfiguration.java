@@ -3,14 +3,18 @@ package org.launchcode.Competrack;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.builders.WebSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.core.userdetails.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
+import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 
 import javax.sql.DataSource;
 
@@ -43,28 +47,33 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
 
-        http.authorizeRequests()
-                // URLs matching for access rights
-                .antMatchers("/").permitAll()
-                .antMatchers("/login").permitAll()
-                .antMatchers("/register").permitAll()
-                .antMatchers("/home/**").hasAnyAuthority("SUPER_USER", "ADMIN_USER", "SITE_USER")
+        http
+                .authorizeRequests()
+                .antMatchers("/", "/home").permitAll()
                 .anyRequest().authenticated()
                 .and()
-                // form login
-                .csrf().disable().formLogin()
+                .formLogin()
                 .loginPage("/login")
-                .failureUrl("/login?error=true")
-                .defaultSuccessUrl("/home")
-                .usernameParameter("email")
-                .passwordParameter("password")
+                .permitAll()
                 .and()
-                // logout
                 .logout()
-                .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
-                .logoutSuccessUrl("/").and()
-                .exceptionHandling()
-                .accessDeniedPage("/access-denied");
+                .permitAll();
+    }
+    @Bean
+    public BCryptPasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+    @Bean
+    @Override
+    public UserDetailsService userDetailsService() {
+        UserDetails user =
+                User.withDefaultPasswordEncoder()
+                        .username("user")
+                        .password("password")
+                        .roles("USER")
+                        .build();
+
+        return new InMemoryUserDetailsManager(user);
     }
 
     @Override
