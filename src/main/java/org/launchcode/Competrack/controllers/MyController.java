@@ -32,7 +32,7 @@ public class MyController {
         }
 
         @PostMapping("register")
-        public String processRegistrationForm(@ModelAttribute @Valid User newUser, Errors errors, Model model) {
+        public String processRegistrationForm(@ModelAttribute User newUser, Errors errors, Model model) {
 
             userRepository.save(newUser);
             return "redirect:";

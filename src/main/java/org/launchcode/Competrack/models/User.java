@@ -28,22 +28,19 @@ public class User {
     private int id;
 
     @Column(name = "username")
-    @NotNull
-    @NotBlank
+
 
     private String username;
 
     @Column(name = "last_name")
-    @NotNull
-    @NotBlank
+
     private String lastName;
 
     @Column(name = "email")
     private String email;
 
     @Column(name = "password")
-    @NotNull
-    @NotBlank
+
     private String passwordHash;
 
 
@@ -51,7 +48,7 @@ public class User {
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
 
-    public User(@NotNull @NotBlank String username, @NotNull @NotBlank String lastName, String email, @NotNull @NotBlank String passwordHash,  Set<org.launchcode.Competrack.models.Role> roles) {
+    public User( String username, String lastName, String email, String passwordHash,  Set<org.launchcode.Competrack.models.Role> roles) {
             this.username = username;
             this.lastName = lastName;
             this.email = email;
