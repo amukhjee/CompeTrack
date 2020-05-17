@@ -3,11 +3,17 @@ package org.launchcode.Competrack.models;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 @Entity
 public class User {
+
+    @Id
+    @GeneratedValue
+    private int id;
 
     @NotNull
     @NotBlank
@@ -39,6 +45,13 @@ public class User {
         this.username = username;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
     public String getPasswordHash() {
         return passwordHash;
     }
