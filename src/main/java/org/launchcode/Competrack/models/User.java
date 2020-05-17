@@ -46,22 +46,17 @@ public class User {
     @NotBlank
     private String passwordHash;
 
-    @Column(name = "mobile")
-    private String mobile;
 
-    @Column(name = "status")
-    private String status;
 
     private static final BCryptPasswordEncoder encoder = new BCryptPasswordEncoder();
 
 
-    public User(@NotNull @NotBlank String username, @NotNull @NotBlank String lastName, String email, @NotNull @NotBlank String passwordHash, String mobile, String status, Set<org.launchcode.Competrack.models.Role> roles) {
+    public User(@NotNull @NotBlank String username, @NotNull @NotBlank String lastName, String email, @NotNull @NotBlank String passwordHash,  Set<org.launchcode.Competrack.models.Role> roles) {
             this.username = username;
             this.lastName = lastName;
             this.email = email;
             this.passwordHash = encoder.encode(passwordHash);
-            this.mobile = mobile;
-            this.status = status;
+
             this.roles = roles;
         }
 
@@ -112,24 +107,11 @@ public class User {
             }
 
 
-                public String getMobile() {
-                    return mobile;
-                }
-
-                public void setMobile(String mobile) {
-                    this.mobile = mobile;
-                }
-
-
-                    public String getStatus(){
-                        return status;
-                    }
 
 
 
-                    public void setStatus (String status){
-                        this.status = status;
-                    }
+
+
 
                     public Set<org.launchcode.Competrack.models.Role> getRoles () {
                         return roles;
