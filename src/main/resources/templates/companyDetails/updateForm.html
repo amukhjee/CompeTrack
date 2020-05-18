@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head th:fragment="head" >
-    <meta charset="UTF-8">
-    <title>CompeTrack</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-    <title>Company Detail Update Form</title>
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: header">
+        <title>Company Details Update Form</title>
+    </header>
 </head>
 <body class="container">
 <h1>Company Detail Update Form</h1>

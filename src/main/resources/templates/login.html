@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-
-<body class="container">
-
-
-
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: header">
+        <title>User Login</title>
+    </header>
+</head>
+<div class="container">
+    <h2>User Login</h2>
 <form method="post">
     <div class="form-group">
         <label th:for="username">Username
@@ -24,5 +26,5 @@
 
 <p>Don't have an account? <a href="/register">Register for one.</a></p>
 
-</body>
+</div>
 </html>

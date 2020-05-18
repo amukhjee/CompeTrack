@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-
-<body class="container">
-
-
-
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: header">
+    <title>User Registration</title>
+</header>
+</head>
+<div class="container">
+    <h2>Create An Account</h2>
 <form method="post">
     <div class="form-group">
-        <label>Username
+        <label th:for="username">Username
             <input class="form-control" th:field="${registerFormDTO.username}" />
         </label>
         <p class="error" th:errors="${registerFormDTO.username}"></p>
     </div>
     <div class="form-group">
-        <label>Password
+        <label >Password
             <input class="form-control" th:field="${registerFormDTO.password}" type="password" />
         </label>
         <p class="error" th:errors="${registerFormDTO.password}"></p>
@@ -27,5 +29,5 @@
     <input type="submit" class="btn btn-primary" value="Register" />
 </form>
 
-</body>
+</div>
 </html>
