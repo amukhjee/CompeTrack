@@ -2,34 +2,38 @@ package org.launchcode.Competrack.models;
 
 import org.launchcode.Competrack.annotation.URLValidation;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.List;
 import java.util.Objects;
 
 @Entity
-public class CompanyDetails {
-
-    @Id
-    @GeneratedValue
-    private int id;
-
-    @Size(min=2, max=30, message = "Name must be between 2 to 30 characters long")
-    @NotBlank(message = "Name can not be blank")
-    public String name;
+public class CompanyDetails extends AbstractEntity{
 
     @Size(min=2, max=20, message = "Industry must be between 2 to 20 characters long")
     @NotBlank(message="Industry can not be left blank.")
-    public String industry;
+    @ManyToOne
+    public Industry industry;
 
+    @ManyToMany
+    private List<Subindustry> subindustries;
 
-    @Size(max=100, message="subindustry size is too long")
-    public String subindustry;
+    public List<Subindustry> getSubindustries() {
+        return subindustries;
+    }
 
-     @URLValidation(message = "Please provide valid URL")
+    public void setSubindustries(List<Subindustry> subindustries) {
+        this.subindustries = subindustries;
+    }
+
+    @URLValidation(message = "Please provide valid URL")
     public String url;
+
+    @NotBlank(message="Location can not be left blank.")
+    @NotNull
+     public String location;
 
     public String getUrl() {
         return url;
@@ -39,74 +43,31 @@ public class CompanyDetails {
         this.url = url;
     }
 
-    public String address;
 
 
-
-    public String getIndustry() {
+    public Industry getIndustry() {
         return industry;
     }
 
-    public void setIndustry(String industry) {
+    public void setIndustry(Industry industry) {
         this.industry = industry;
     }
 
-    public String getAddress() {
-        return address;
+    public String getLocation() {
+        return location;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setLocation(String location) {
+        this.location = location;
     }
 
-    public CompanyDetails(String name, String industry, String subindustry, String address) {
-        this.name = name;
+    public CompanyDetails(Industry industry, String url, String location) {
+        super();
         this.industry=industry;
-        this.subindustry=subindustry;
-        this.address=address;
+        this.location=location;
+        this.url=url;
     }
 
     public CompanyDetails(){}
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getSubindustry() {
-        return subindustry;
-    }
-
-    public void setSubindustry(String subindustry) {
-        this.subindustry = subindustry;
-    }
-
-    @Override
-    public String toString() {
-        return name;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CompanyDetails that = (CompanyDetails) o;
-        return id == that.id;
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
-    }
 }

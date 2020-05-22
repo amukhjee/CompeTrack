@@ -3,7 +3,13 @@ package org.launchcode.Competrack.controllers;
 
 
 import org.launchcode.Competrack.data.CompanyDetailsRepository;
+import org.launchcode.Competrack.data.IndustryRepository;
+import org.launchcode.Competrack.data.SubindustryRepository;
+import org.launchcode.Competrack.data.UserRepository;
 import org.launchcode.Competrack.models.CompanyDetails;
+import org.launchcode.Competrack.models.DTO.CompanyDetailsSubindustryDTO;
+import org.launchcode.Competrack.models.Industry;
+import org.launchcode.Competrack.models.Subindustry;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
@@ -14,7 +20,10 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.Collections;
+import java.util.HashMap;
+import java.util.List;
 import java.util.Optional;
+import static org.launchcode.Competrack.controllers.ListController.columnChoices;
 
 @Controller
 @RequestMapping("companyDetails")
@@ -22,6 +31,13 @@ public class CompanyDetailsController {
 
     @Autowired
     private CompanyDetailsRepository companyDetailsRepository;
+
+    @Autowired
+    private IndustryRepository industryRepository;
+
+    @Autowired
+    private SubindustryRepository subindustryRepository;
+
 
 
     @GetMapping
@@ -36,22 +52,46 @@ public class CompanyDetailsController {
     public String renderCreateCompanyDetailsForm(Model model) {
         model.addAttribute("title", "Create Company");
         model.addAttribute(new CompanyDetails());
+        model.addAttribute("industries", industryRepository.findAll());
+        model.addAttribute("subindustries", subindustryRepository.findAll());
+        model.addAttribute("companyDetailsSubindustry", new CompanyDetailsSubindustryDTO());
         return "companyDetails/create";
     }
 
     @PostMapping("create")
-    public String processCreateCompanyDetailsForm(@ModelAttribute @Valid CompanyDetails newCompanyDetails, Errors errors, Model model) {
+    public String processCreateCompanyDetailsForm(@ModelAttribute @Valid CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam int industryId, @RequestParam List<Subindustry> subindustries, @ModelAttribute @Valid CompanyDetailsSubindustryDTO companyDetailsSubindustryDTO) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Company");
             return "companyDetails/create";
         }
-        companyDetailsRepository.save(newCompanyDetails);
+        else{
+            Optional optIndustry = industryRepository.findById(industryId);
+            if (optIndustry.isPresent()) {
+                Industry industry = (Industry) optIndustry.get();
+                newCompanyDetails.setIndustry(industry);}
+            newCompanyDetails.setSubindustries(subindustries);
+            companyDetailsRepository.save(newCompanyDetails);
+        }
+
         return "redirect:";
     }
+
+    @GetMapping("view/{companyDetailsId}")
+    public String displayViewCompanyDetails(Model model, @PathVariable int companyDetailsId) {
+        Optional<CompanyDetails> result= companyDetailsRepository.findById(companyDetailsId);
+        CompanyDetails companyDetails=(CompanyDetails) result.get();
+        model.addAttribute("companyDetails", companyDetails);
+
+        return "view";
+    }
+
 
     @GetMapping("delete")
     public String deleteCompanyDetailsForm(Model model) {
         model.addAttribute("title", "Delete Company");
+        model.addAttribute(new CompanyDetails());
+        model.addAttribute("industries", industryRepository.findAll());
+        model.addAttribute("subindustries", subindustryRepository.findAll());
         model.addAttribute("companyDetails", companyDetailsRepository.findAll());
         return "companyDetails/delete";
     }

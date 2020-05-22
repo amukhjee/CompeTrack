@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
-    <header th:replace="fragments :: header">
+    <nav th:replace="fragments :: headernotloggedin"></nav>
     <title>User Registration</title>
 </header>
 </head>
@@ -28,6 +28,6 @@
 
     <input type="submit" class="btn btn-primary" value="Register" />
 </form>
-
+    <p>Do you already have an account? <a href="/login">Skip to login.</a></p>
 </div>
 </html>

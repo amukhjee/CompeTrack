@@ -29,6 +29,7 @@ public class User {
         this.username = username;
         this.passwordHash=encoder.encode(password);;
     }
+    
 
     public boolean isMatchingPassword(String password) {
         return encoder.matches(password, passwordHash);
