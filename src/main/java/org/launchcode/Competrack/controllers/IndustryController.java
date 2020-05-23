@@ -39,7 +39,7 @@ public class IndustryController {
     }
 
     @GetMapping("view/{industryId}")
-    public String displayViewEmployer(Model model, @PathVariable int industryId ) {
+    public String displayViewEmployer(Model model, @PathVariable int industryId) {
 
         Optional optIndustry = industryRepository.findById(industryId);
         if (optIndustry.isPresent()) {

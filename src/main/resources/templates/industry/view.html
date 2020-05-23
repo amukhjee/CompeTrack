@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: headerloggedin">
+        <title>View Industries</title>
+    </header>
+</head>
+<nav th:replace="fragments :: navigation"></nav>
+<body class="container  body-content">
+<h1 th:text="${'Industry: ' + industry.name}">Default Title</h1>
+<div class="companyDetails-listing">
+    <p th:text="${'Name: ' + industry.name}"></p>
+</div>
+</body>
+</html>

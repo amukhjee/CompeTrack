@@ -44,6 +44,8 @@ public class CompanyDetailsController {
     public String displayallcompanydetails(Model model) {
         model.addAttribute("title", "All Company Details");
         model.addAttribute("companyDetails", companyDetailsRepository.findAll());
+       model.addAttribute("industries", industryRepository.findAll());
+        model.addAttribute("subindustries", subindustryRepository.findAll());
         return "companyDetails/index";
 
     }
@@ -59,22 +61,25 @@ public class CompanyDetailsController {
     }
 
     @PostMapping("create")
-    public String processCreateCompanyDetailsForm(@ModelAttribute @Valid CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam int industryId, @RequestParam List<Subindustry> subindustries, @ModelAttribute @Valid CompanyDetailsSubindustryDTO companyDetailsSubindustryDTO) {
+    public String processCreateCompanyDetailsForm(@ModelAttribute CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam Industry industry, @RequestParam List<Subindustry> subindustries, @ModelAttribute @Valid CompanyDetailsSubindustryDTO companyDetailsSubindustryDTO, @RequestParam String url, @RequestParam String address, @RequestParam String name ) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Company");
             return "companyDetails/create";
-        }
-        else{
-            Optional optIndustry = industryRepository.findById(industryId);
-            if (optIndustry.isPresent()) {
-                Industry industry = (Industry) optIndustry.get();
-                newCompanyDetails.setIndustry(industry);}
+        } else {
+            // Optional optIndustry = industryRepository.findById(industryId);
+            // if (optIndustry.isPresent()) {
+            // Industry industry = (Industry) optIndustry.get();
+            newCompanyDetails.setName(name);
+            newCompanyDetails.setUrl(url);
+            newCompanyDetails.setAddress(address);
+            newCompanyDetails.setIndustry(industry);
             newCompanyDetails.setSubindustries(subindustries);
             companyDetailsRepository.save(newCompanyDetails);
-        }
 
-        return "redirect:";
+            return "redirect:";
+        }
     }
+
 
     @GetMapping("view/{companyDetailsId}")
     public String displayViewCompanyDetails(Model model, @PathVariable int companyDetailsId) {

@@ -26,9 +26,9 @@
         <thead class="thead-dark">
         <tr>
             <th> Company Name</th>
-            <th> Industry</th>
+            <th> Location</th>
+            <th>Industry</th>
             <th>Sub-industry</th>
-            <th>Address</th>
             <th>Update Company Details</th>
 
         </tr>
@@ -37,12 +37,14 @@
             <td class="nav">
                 <li class="nav-item">
                     <a class="nav-link" th:href="${companyDetail.url}" th:text="${companyDetail.name}"></a></td>
-            <td th:text="${companyDetail.industry}"></td>
-            <td th:text="${companyDetail.subindustry}"></td>
             <td class="nav">
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{'/companyDetails/map?search=' + ${companyDetail.address}}" th:text="${companyDetail.address}"  th:name="companyDetailId" th:value="${companyDetail.id}"></a></td>
-            <td class="nav">
+            <td  th:each="industry : ${companyDetail.industry}">
+                <ul th:text="${industry.name}"></ul></td>
+            <td th:each="subindustry : ${companyDetail.subindustries}">
+                <ul th:text="${subindustries.name}"></ul></td>
+            <td th:each ="companyDetail: ${companyDetails}">
             <td class="nav-item">
                 <a class="nav-link" th:href="@{'/companyDetails/update?search=' + ${companyDetail.id}}" th:name="companyDetailId" th:value="${companyDetail.id}" >Update Company Details</a></td>
 

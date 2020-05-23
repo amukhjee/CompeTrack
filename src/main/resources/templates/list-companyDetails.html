@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: headerloggedin">
+        <title>Add Industry</title>
+    </header>
+</head>
+<body class="container">
+<h1>Add Industry</h1>
+<nav th:replace="fragments :: navigation"></nav>
+<div class="container body-content">
+
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+
+    <table class="companyDetails-listing">
+        <tr th:each="companyDetail : ${companyDetails}">
+            <td>
+                <p>
+                    Company Id:
+                    <a th:href="@{'/view/' + ${companyDetail.id}}" th:text="${companyDetail.id}"></a>
+                </p>
+                <p th:text="${'Name: ' + companyDetail.name}"></p>
+                <p>
+                    Industry:
+                    <a th:href="@{'/industries/view/' + ${companyDetail.industry.id}}" th:text="${companyDetail.industry.name}"></a>
+                </p>
+                <p>
+                    Subindustry:
+                <ul th:each="subindustry : ${companyDetail.subindustries}">
+                    <li>
+                        <a th:href="@{'/subindustries/view/' + ${subindustry.id}}" th:text="${subindustry.name}"></a>
+                    </li>
+                </ul>
+                </p>
+            </td>
+        </tr>
+    </table>
+
+</div>
+</body>
+</html>

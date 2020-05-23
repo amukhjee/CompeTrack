@@ -31,9 +31,9 @@ public class CompanyDetails extends AbstractEntity{
     @URLValidation(message = "Please provide valid URL")
     public String url;
 
-    @NotBlank(message="Location can not be left blank.")
+    @NotBlank(message="Address can not be left blank.")
     @NotNull
-     public String location;
+     public String address;
 
     public String getUrl() {
         return url;
@@ -53,19 +53,20 @@ public class CompanyDetails extends AbstractEntity{
         this.industry = industry;
     }
 
-    public String getLocation() {
-        return location;
+    public String getAddress() {
+        return address;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
-    public CompanyDetails(Industry industry, String url, String location) {
+    public CompanyDetails(Industry industry, String url, String address, List<Subindustry> subindustry) {
         super();
         this.industry=industry;
-        this.location=location;
+        this.address=address;
         this.url=url;
+        this.subindustries=subindustry;
     }
 
     public CompanyDetails(){}

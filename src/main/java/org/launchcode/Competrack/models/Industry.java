@@ -17,11 +17,13 @@ public class Industry extends AbstractEntity {
     }
 
     public Industry(List<CompanyDetails> companyDetails) {
+        super();
         this.companyDetails = companyDetails;
     }
 
     public Industry() {
     }
+
 
     public void setCompanyDetails(List<CompanyDetails> companyDetails) {
         this.companyDetails = companyDetails;

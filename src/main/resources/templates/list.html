@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: headerloggedin">
+        <title>View Companies by Category</title>
+    </header>
+</head>
+<body class="container">
+<nav th:replace="fragments :: navigation"></nav>
+<div class="container body-content">
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <h2 class = "centered">View Companies By Category</h2>
+</div>
+
+<table class="centeredTable">
+    <tr>
+        <th>All</th>
+        <th>Industry</th>
+        <th>Subindustry</th>
+    </tr>
+
+    <tr>
+        <td>
+            <li>
+                <a th:href="@{/list/companyDetails(column='All',value='View All')}">View All</a>
+            </li>
+        </td>
+        <td>
+            <li th:each="industry : ${industries}">
+                <a th:href="@{/list/jobs(column=industry,value=${industry.name})}" th:text="${industry.name}"></a>
+            </li>
+        </td>
+        <td>
+            <li th:each="subindustry : ${subindustries}">
+                <a th:href="@{/list/companyDetails(column=subindustries,value=${subindustries.name})}" th:text="${subindustries.name}"></a>
+            </li>
+        </td>
+    </tr>
+</table>
+
+</body>
+</html>

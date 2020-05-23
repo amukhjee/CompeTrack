@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: headerloggedin">
+        <title>Add Subindustry</title>
+    </header>
+</head>
+<body class="container">
+<h1>Add Subindustry</h1>
+<nav th:replace="fragments :: navigation"></nav>
+<form method="post" style="max-width:600px;">
+    <div class="form-group">
+        <label th:for="name">Subindustry Name</label>
+        <input class="form-control" th:field="${subindustry.name}" />
+        <span th:errors="${subindustry.name}" class="error"></span>
+    </div>
+
+
+    <input type="submit" value="Add Subindustry" />
+</form>
+</body>
+</html>

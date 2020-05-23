@@ -11,6 +11,7 @@ public class Subindustry extends AbstractEntity{
     private List<CompanyDetails> jobs= new ArrayList<>();
 
     public Subindustry(List<CompanyDetails> jobs) {
+        super();
         this.jobs = jobs;
     }
 
