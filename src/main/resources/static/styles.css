@@ -26,7 +26,7 @@ html, body {
 }
 
 .tadminViewReport {
-  table-layout: fixed ;
+  table-layout: floating ;
   width: 100% ;
 }
 
@@ -47,4 +47,9 @@ td {
   @include hover-focus {
     text-decoration: none;
   }
+}
+
+.centeredTable {
+    margin-left: auto;
+    margin-right: auto;
 }

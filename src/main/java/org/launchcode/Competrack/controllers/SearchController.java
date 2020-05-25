@@ -32,7 +32,8 @@ public class SearchController {
         if (searchTerm.toLowerCase().equals("all") || searchTerm.equals("")){
             companyDetails = companyDetailsRepository.findAll();
         } else {
-            companyDetails = CompanyDetailsData.findByColumnAndValue(searchType, searchTerm, companyDetailsRepository.findAll());
+            CompanyDetailsData companyDetails1 = new CompanyDetailsData();
+            companyDetails = companyDetails1.findByColumnAndValue(searchType, searchTerm,companyDetailsRepository);
         }
         model.addAttribute("columns", columnChoices);
         model.addAttribute("title", "Companies with " + columnChoices.get(searchType) + ": " + searchTerm);

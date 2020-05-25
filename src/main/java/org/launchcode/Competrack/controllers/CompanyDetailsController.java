@@ -5,13 +5,10 @@ package org.launchcode.Competrack.controllers;
 import org.launchcode.Competrack.data.CompanyDetailsRepository;
 import org.launchcode.Competrack.data.IndustryRepository;
 import org.launchcode.Competrack.data.SubindustryRepository;
-import org.launchcode.Competrack.data.UserRepository;
 import org.launchcode.Competrack.models.CompanyDetails;
-import org.launchcode.Competrack.models.DTO.CompanyDetailsSubindustryDTO;
 import org.launchcode.Competrack.models.Industry;
 import org.launchcode.Competrack.models.Subindustry;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
@@ -19,11 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 
 import javax.validation.Valid;
-import java.util.Collections;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Optional;
-import static org.launchcode.Competrack.controllers.ListController.columnChoices;
+import java.util.*;
 
 @Controller
 @RequestMapping("companyDetails")
@@ -44,6 +37,7 @@ public class CompanyDetailsController {
     public String displayallcompanydetails(Model model) {
         model.addAttribute("title", "All Company Details");
         model.addAttribute("companyDetails", companyDetailsRepository.findAll());
+        ArrayList<CompanyDetails> allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
        model.addAttribute("industries", industryRepository.findAll());
         model.addAttribute("subindustries", subindustryRepository.findAll());
         return "companyDetails/index";
@@ -56,12 +50,11 @@ public class CompanyDetailsController {
         model.addAttribute(new CompanyDetails());
         model.addAttribute("industries", industryRepository.findAll());
         model.addAttribute("subindustries", subindustryRepository.findAll());
-        model.addAttribute("companyDetailsSubindustry", new CompanyDetailsSubindustryDTO());
         return "companyDetails/create";
     }
 
     @PostMapping("create")
-    public String processCreateCompanyDetailsForm(@ModelAttribute CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam Industry industry, @RequestParam List<Subindustry> subindustries, @ModelAttribute @Valid CompanyDetailsSubindustryDTO companyDetailsSubindustryDTO, @RequestParam String url, @RequestParam String address, @RequestParam String name ) {
+    public String processCreateCompanyDetailsForm(@ModelAttribute CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam @Valid String industry, @RequestParam String subindustry, @RequestParam String url, @RequestParam String address, @RequestParam String name ) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Company");
             return "companyDetails/create";
@@ -73,7 +66,7 @@ public class CompanyDetailsController {
             newCompanyDetails.setUrl(url);
             newCompanyDetails.setAddress(address);
             newCompanyDetails.setIndustry(industry);
-            newCompanyDetails.setSubindustries(subindustries);
+            newCompanyDetails.setSubindustry(subindustry);
             companyDetailsRepository.save(newCompanyDetails);
 
             return "redirect:";
@@ -113,11 +106,13 @@ public class CompanyDetailsController {
     @GetMapping("update")
     public String updateCompanyDetailsForm(Model model, @RequestParam int search) {
         model.addAttribute("companyDetails", companyDetailsRepository.findById(search));
+        model.addAttribute("industries", industryRepository.findAll());
+        model.addAttribute("subindustries", subindustryRepository.findAll());
         return "companyDetails/update";
     }
 
     @PostMapping("update")
-    public String processUpdateCompanyDetailsForm(  @ModelAttribute @Valid CompanyDetails newcompanyDetails, Errors errors, Model model) {
+    public String processUpdateCompanyDetailsForm(  @ModelAttribute @Valid CompanyDetails newcompanyDetails, Errors errors, Model model, @RequestParam @Valid Industry industry, @RequestParam List<Subindustry> subindustries, @RequestParam String url, @RequestParam String address, @RequestParam String name ) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Update Company");
             return "companyDetails/update";

@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
     <header th:replace="fragments :: headerloggedin">
-        <title>Add Industry</title>
+        <title>Companies with Category</title>
     </header>
 </head>
 <body class="container">
-<h1>Add Industry</h1>
 <nav th:replace="fragments :: navigation"></nav>
 <div class="container body-content">
 
@@ -22,7 +21,9 @@
                 <p th:text="${'Name: ' + companyDetail.name}"></p>
                 <p>
                     Industry:
-                    <a th:href="@{'/industries/view/' + ${companyDetail.industry.id}}" th:text="${companyDetail.industry.name}"></a>
+                    <ul th:each="industry : ${companyDetail.industry}">
+                    <a th:href="@{'/industries/view/' + ${industry.id}}" th:text="${industry.name}"></a>
+            </ul>
                 </p>
                 <p>
                     Subindustry:
