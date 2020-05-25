@@ -72,7 +72,7 @@ public class ListController extends CompanyDetailsActionController{
         ArrayList<CompanyDetails> companyDetails;
         CompanyDetailsData companyDetails1 = new CompanyDetailsData();
             companyDetails = findByColumnAndValue(column, value, companyDetailsRepository);
-            model.addAttribute("title", "Companies with " + columnChoices.get(column) + ": " + value);
+            model.addAttribute("title", "Companies with Search term :"  + value);
         model.addAttribute("companyDetails", companyDetails);
         model.addAttribute("companyDetailsListHeads", companyDetailsListHeads);
         model.addAttribute("actions", actionChoices);

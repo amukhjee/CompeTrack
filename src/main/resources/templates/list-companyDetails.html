@@ -11,27 +11,35 @@
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
 
-    <table class="companyDetails-listing">
+    <table id="tadminViewReport" class="table table-striped">
         <tr th:each="companyDetail : ${companyDetails}">
             <td>
                 <p>
-                    Company Id:
-                    <a th:href="@{'/view/' + ${companyDetail.id}}" th:text="${companyDetail.id}"></a>
+                    Company Name:
+                    <a th:href="${companyDetail.url}" th:text="${companyDetail.name}"></a>
                 </p>
-                <p th:text="${'Name: ' + companyDetail.name}"></p>
+
                 <p>
                     Industry:
-                    <ul th:each="industry : ${companyDetail.industry}">
-                    <a th:href="@{'/industries/view/' + ${industry.id}}" th:text="${industry.name}"></a>
-            </ul>
+
+                    <a  th:text="${companyDetail.industry}"></a>
+
                 </p>
                 <p>
                     Subindustry:
-                <ul th:each="subindustry : ${companyDetail.subindustries}">
-                    <li>
-                        <a th:href="@{'/subindustries/view/' + ${subindustry.id}}" th:text="${subindustry.name}"></a>
-                    </li>
-                </ul>
+
+
+                        <a  th:text="${companyDetail.subindustry}"></a>
+
+
+                </p>
+                <p>
+                    Location:
+
+
+                <a th:href="@{'/companyDetails/map?search=' + ${companyDetail.address}}" th:text="${companyDetail.address}"></a>
+
+
                 </p>
             </td>
         </tr>

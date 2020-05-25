@@ -112,7 +112,7 @@ public class CompanyDetailsController {
     }
 
     @PostMapping("update")
-    public String processUpdateCompanyDetailsForm(  @ModelAttribute @Valid CompanyDetails newcompanyDetails, Errors errors, Model model, @RequestParam @Valid Industry industry, @RequestParam List<Subindustry> subindustries, @RequestParam String url, @RequestParam String address, @RequestParam String name ) {
+    public String processUpdateCompanyDetailsForm(  @ModelAttribute @Valid CompanyDetails newcompanyDetails, Errors errors, Model model, @RequestParam @Valid String industry, @RequestParam String subindustry, @RequestParam String url, @RequestParam String address, @RequestParam String name ) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Update Company");
             return "companyDetails/update";

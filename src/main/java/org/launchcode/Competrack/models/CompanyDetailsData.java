@@ -32,15 +32,14 @@ public class CompanyDetailsData {
 
     public ArrayList<CompanyDetails> findByColumnAndValue(String column, String value, CompanyDetailsRepository companyDetailsRepository) {
 
-
+        allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
         ArrayList<CompanyDetails> companyDetails = new ArrayList<>();
 
         if (column.equals("company")){
             companyDetails = findByValue(value,companyDetailsRepository);
             return companyDetails;
-        }
+        }else{
         for (CompanyDetails companyDetail : allCompanyDetails) {
-
             String aValue = getFieldValue(companyDetail, column);
 
             if (aValue != null && aValue.toLowerCase().contains(value.toLowerCase())) {
@@ -49,7 +48,7 @@ public class CompanyDetailsData {
         }
 
         return companyDetails;
-    }
+    }}
 
     public String getFieldValue(CompanyDetails companyDetails, String fieldName){
         String theValue;
