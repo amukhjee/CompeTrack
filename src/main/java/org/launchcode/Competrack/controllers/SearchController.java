@@ -29,7 +29,7 @@ public class SearchController {
     @PostMapping("results")
     public String displaySearchResults(Model model, @RequestParam String searchType, @RequestParam String searchTerm){
         Iterable<CompanyDetails> companyDetails;
-        if (searchTerm.toLowerCase().equals("all") || searchTerm.equals("")){
+        if (searchTerm.toLowerCase().equals("") || searchTerm.equals("")){
             companyDetails = companyDetailsRepository.findAll();
         } else {
             CompanyDetailsData companyDetails1 = new CompanyDetailsData();
@@ -39,6 +39,6 @@ public class SearchController {
         model.addAttribute("title", "Companies with " + columnChoices.get(searchType) + ": " + searchTerm);
         model.addAttribute("companyDetails", companyDetails);
 
-        return "search";
+        return "list-companyDetails";
     }
 }

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: headerloggedin">
+        <title>Seach Companies by KeyWord</title>
+    </header>
+</head>
+<body class="container">
+<nav th:replace="fragments :: navigation"></nav>
+
+<div class="container body-content">
+
+    <form th:action="@{/search/results}" method = "post">
+        <h2>Search Company by:</h2>
+
+        <p>
+            <span th:each="column : ${columns}">
+                <input
+                        type="radio"
+                        name="searchType"
+                        th:id="${column.key}"
+                        th:value="${column.key}"
+                        th:checked="${column.key==searchType}"/>
+                <label th:for="${column.key}" th:text="${column.value}"></label>
+            </span>
+        </p>
+
+        <p>
+            <label for="searchTerm">Keyword:</label>
+            <input type="text" name="searchTerm" id="searchTerm" />
+        </p>
+
+        <input type="submit" value="Search" />
+    </form>
+</div>
+
+
+</body>
+</body>
+</html>

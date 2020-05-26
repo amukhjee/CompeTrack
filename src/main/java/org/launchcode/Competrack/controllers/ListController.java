@@ -35,7 +35,7 @@ public class ListController extends CompanyDetailsActionController{
 
 
     public ListController () {
-        columnChoices.put("company", "CompanyDetails");
+        columnChoices.put("company", "Company");
         columnChoices.put("industry", "Industry");
         columnChoices.put("subindustry", "Subindustry");
         columnChoices.put("location", "Address");

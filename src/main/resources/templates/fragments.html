@@ -55,5 +55,40 @@
     </ul>
 </nav>
 
+<div th:fragment="companyDetails-lister">
+    <table id="tadminViewReport" class="table table-striped">
+        <tr th:each="companyDetail : ${companyDetails}">
+            <td>
+                <p>
+                    Company Name:
+                    <a th:href="${companyDetail.url}" th:text="${companyDetail.name}"></a>
+                </p>
+
+                <p>
+                    Industry:
+
+                    <a  th:text="${companyDetail.industry}"></a>
+
+                </p>
+                <p>
+                    Subindustry:
+
+
+                    <a  th:text="${companyDetail.subindustry}"></a>
+
+
+                </p>
+                <p>
+                    Location:
+
+
+                    <a th:href="@{'/companyDetails/map?search=' + ${companyDetail.address}}" th:text="${companyDetail.address}"></a>
+
+
+                </p>
+            </td>
+        </tr>
+    </table>
+</div>
 </body>
 </html>

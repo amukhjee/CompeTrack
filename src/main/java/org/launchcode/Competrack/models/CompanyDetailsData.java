@@ -55,9 +55,9 @@ public class CompanyDetailsData {
         if (fieldName.equals("company")){
             theValue = companyDetails.getName();
         } else if (fieldName.equals("industry")){
-            theValue = companyDetails.getIndustry().toString();
+            theValue = companyDetails.getIndustry();
         }else if (fieldName.equals("subindustry")){
-            theValue = companyDetails.getSubindustry().toString();
+            theValue = companyDetails.getSubindustry();
         }else if (fieldName.equals("location")){
             theValue = companyDetails.getAddress();
         } else {
