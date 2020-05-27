@@ -4,9 +4,9 @@
     <header th:replace="fragments :: headerloggedin">
         <title>Update Company Details</title>
     </header>
-<body>
+<body class="container">
+<div><nav th:replace="fragments :: navigation"></nav></div>
 <h1>Update Company</h1>
-<nav th:replace="fragments :: navigation"></nav>
 <form method="post" action="/companyDetails/update">
         <div>
             <label>Company Id

@@ -33,21 +33,20 @@ public class IndustryController {
             return "industry/add";
         }
         industryRepository.save(newIndustry);
-        return "redirect:../";
+        model.addAttribute("industries", industryRepository.findAll());
+        return "industry/view";
 
 
     }
 
-    @GetMapping("view/{industryId}")
-    public String displayViewEmployer(Model model, @PathVariable int industryId) {
+    @GetMapping("view")
+    public String viewIndustries(Model model) {
 
-        Optional optIndustry = industryRepository.findById(industryId);
-        if (optIndustry.isPresent()) {
-            Industry industry = (Industry) optIndustry.get();
-            model.addAttribute("industry", industry);
-            return "industry/view";
-        } else {
-            return "industry/add";
-        }
+        model.addAttribute("industries", industryRepository.findAll());
+        return "industry/view";
+
+
     }
+
+
 }

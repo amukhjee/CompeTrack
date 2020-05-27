@@ -7,9 +7,10 @@
 </head>
 <nav th:replace="fragments :: navigation"></nav>
 <body class="container  body-content">
-<h1 th:text="${'Industry: ' + industry.name}">Default Title</h1>
-<div class="companyDetails-listing">
-    <p th:text="${'Name: ' + industry.name}"></p>
+<h1>Available Industries</h1>
+<div class="industry-listing">
+    <li th:each="industry: ${industries}">
+        <a th:href="@{/list/companyDetails(column=industry,value=${industry.name})}" th:text="${industry.name}" th:value="${industry.id}"></a>
 </div>
 </body>
 </html>

@@ -72,7 +72,7 @@ public class ListController extends CompanyDetailsActionController{
         ArrayList<CompanyDetails> companyDetails;
         CompanyDetailsData companyDetails1 = new CompanyDetailsData();
             companyDetails = findByColumnAndValue(column, value, companyDetailsRepository);
-            model.addAttribute("title", "Companies with Search term :"  + value);
+            model.addAttribute("title", "Companies with keyword :"  + value);
         model.addAttribute("companyDetails", companyDetails);
         model.addAttribute("companyDetailsListHeads", companyDetailsListHeads);
         model.addAttribute("actions", actionChoices);
@@ -87,7 +87,7 @@ public class ListController extends CompanyDetailsActionController{
         ArrayList<CompanyDetails> companyDetails = new ArrayList<>();
         allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
 
-        if ("subindustry".equals(column)|| "industry".equals(column)){
+        if ("subindustry".equals(column)|| "industry".equals(column)|| "address".equals(column)){
             companyDetails = findByValue(value,companyDetailsRepository);
             return companyDetails;
         }
@@ -135,9 +135,9 @@ public class ListController extends CompanyDetailsActionController{
                 companyDetails.add(companyDetail);
             } else if (companyDetail.getIndustry() != null && companyDetail.getIndustry().toLowerCase().contains(value.toLowerCase())) {
                 companyDetails.add(companyDetail);
-            } else if (companyDetail.getSubindustry()!=null && companyDetail.getSubindustry().contains(value.toLowerCase())) {
+            } else if (companyDetail.getSubindustry()!=null && companyDetail.getSubindustry().toLowerCase().contains(value.toLowerCase())) {
                 companyDetails.add(companyDetail);
-            } else if (companyDetail.getAddress()!=null && companyDetail.getAddress().contains(value.toLowerCase())) {
+            } else if (companyDetail.getAddress()!=null && companyDetail.getAddress().toLowerCase().contains(value.toLowerCase())) {
                 companyDetails.add(companyDetail);
             } else if (companyDetails.toString().toLowerCase().contains(value.toLowerCase())) {
                 companyDetails.add(companyDetail);

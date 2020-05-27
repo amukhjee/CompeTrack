@@ -9,6 +9,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" th:href="@{/styles.css}">
 </head>
+<body>
     <nav th:fragment="headernotloggedin">
         <nav class="navbar navbar-inverse">
             <div class="container-fluid">
@@ -27,6 +28,7 @@
             </div>
         </nav>
     </nav>
+
 <nav th:fragment="headerloggedin">
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -45,15 +47,41 @@
         </div>
     </nav>
 </nav>
-<body>
-<nav th:fragment="navigation">
-    <ul class="nav nav-tabs">
-    <li class="nav-item"><a class="nav-link" href="/companyDetails">All Company Details</a></li>
-    <li class="nav-item"><a class="nav-link" href="/companyDetails/create">Create Company Details</a></li>
-    <li class="nav-item"><a class="nav-link" href="/companyDetails/delete">Delete Company Details</a></li>
 
-    </ul>
-</nav>
+<div th:fragment="navigation">
+    <div class="container-fluid">
+        <tr>
+            <td>
+                <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Company Details Menu
+                <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                <li><a class="nav-link" href="/companyDetails">All Company Details</a>
+                <li><a class="nav-link" href="/companyDetails/create">Create Company Details</a>
+                    <li><a class="nav-link" href="/companyDetails/delete">Delete Company Details</a>
+        </ul>
+                </div></td>
+            <td>
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Industry Menu
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="/industry/view">All Industries</a>
+                    <li><a class="nav-link" href="/industry/add">Add Industries</a>
+                </ul>
+            </div></td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sub-industry Menu
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="/subindustry/view">All Sub-industries</a>
+                        <li><a class="nav-link" href="/subindustry/add">Add Sub-industries</a>
+                    </ul>
+                </div></td>
+        </tr>
+    </div>
+</div>
 
 <div th:fragment="companyDetails-lister">
     <table id="tadminViewReport" class="table table-striped">
@@ -89,6 +117,21 @@
             </td>
         </tr>
     </table>
+</div>
+
+<div th:fragment="list-per-page">
+<table>
+    <tr>
+        <td><label id="lDisplayPerPg" for="lDisplayPerPg">Items per page</label>
+            <select name="listDisplayPerPg" id="listDisplayPerPg" onchange="javascript:pageRecordChange()">
+                <option value="5" selected="selected">5</option>
+                <option value="10">10</option>
+                <option value="15">15</option>
+                <option value="20">20</option>
+                <option value="25">25</option>
+            </select></td>
+    </tr>
+</table>
 </div>
 </body>
 </html>

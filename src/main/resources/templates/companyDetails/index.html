@@ -5,22 +5,13 @@
         <title>All Company Details</title>
     </header>
 </head>
-<body class="container">
+<body>
+<div class="container">
+<div><nav th:replace="fragments :: navigation"></nav></div>
 <h1>All Company Details</h1>
 
-<nav th:replace="fragments :: navigation"></nav>
-<table>
-<tr>
-    <td><label id="lDisplayPerPg" for="lDisplayPerPg">Items per page</label>
-        <select name="listDisplayPerPg" id="listDisplayPerPg" onchange="javascript:pageRecordChange()">
-            <option value="5" selected="selected">5</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="25">25</option>
-        </select></td>
-</tr>
-</table>
+
+<div th:replace="fragments :: list-per-page"></div>
 <form method="post" action="">
     <div class="table responsive">
     <table id="tadminViewReport" class="table table-striped">

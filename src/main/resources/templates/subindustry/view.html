@@ -8,20 +8,10 @@
 
 <nav th:replace="fragments :: navigation"></nav>
 <body class="container  body-content">
-<h1>View Subindustry</h1>
-<h1 th:text="${'Subindustry: ' + subindustry.name}">Default Title</h1>
-
-<nav th:replace="fragments :: page-header"></nav>
-
-<div class="job-listing">
-    <p th:text="${'Name: ' + subindustry.name}"></p>
-    <p> Jobs:
-    <ul>
-        <li th:each="companyDetail : ${subindustry.companyDetails}">
-            <a th:href="@{'/view/' + ${companyDetail.id}}" th:text="${companyDetail.name}"></a>
-        </li>
-    </ul>
-    </p>
+<h1>Available Sub-industries</h1>
+<div class="subindustry-listing">
+    <li th:each="subindustry: ${subindustries}">
+        <a th:href="@{/list/companyDetails(column=subindustry,value=${subindustry.name})}" th:text="${subindustry.name}" th:value="${subindustry.id}"></a>
 </div>
 </body>
 </html>

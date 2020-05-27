@@ -26,7 +26,7 @@ html, body {
 }
 
 .tadminViewReport {
-  table-layout: floating ;
+  table-layout: fixed ;
   width: 100% ;
 }
 

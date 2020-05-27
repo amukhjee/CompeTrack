@@ -35,20 +35,17 @@ public class SubindustryController {
             return "subindustry/add";
         }
         subindustryRepository.save(newSubindustry);
-        return "redirect:../";
+        model.addAttribute("subindustries", subindustryRepository.findAll());
+        return "subindustry/view";
     }
 
-        @GetMapping("view/{subindustryId}")
-        public String displayViewSkill(Model model, @PathVariable int subindustryId) {
+    @GetMapping("view")
+    public String viewIndustries(Model model) {
 
-            Optional optSkill = subindustryRepository.findById(subindustryId);
-            if (optSkill.isPresent()) {
-                Subindustry subindustry = (Subindustry) optSkill.get();
-                model.addAttribute("subindustry", subindustry);
-                return "subindustry/view";
-            } else {
-                return "subindustry/add";
-            }
-        }
+        model.addAttribute("subindustries", subindustryRepository.findAll());
+        return "subindustry/view";
+
+
+    }
     }
 
