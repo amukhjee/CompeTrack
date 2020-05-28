@@ -18,8 +18,9 @@
                 </div>
                 <ul class="nav navbar-nav">
                     <li><a href="/register"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                    <li><a href="#">About Us</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-home"></span> About US</a></li>
                     <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact US</a></li>
+
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -37,8 +38,42 @@
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="/register"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                <li><a href="#">About Us</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-home"></span> About US</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact US</a></li>
+                <div class="btn-group">
+                    <div class="btn-group">
+                <li class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown">Company Details Menu
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="/companyDetails">All Company Details</a>
+                        <li><a class="nav-link" href="/companyDetails/create">Create Company Details</a>
+                        <li><a class="nav-link" href="/companyDetails/delete">Delete Company Details</a>
+                    </ul>
+                </li>
+                    </div>
+                    <div class="btn-group">
+                <li class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown">Industry Menu
+                        <span class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                        <li><a class="nav-link" href="/industry/view">All Industries</a>
+                        <li><a class="nav-link" href="/industry/add">Add Industries</a>
+                    </ul>
+                </li>
+                    </div>
+                    <div class="btn-group">
+                <li class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle dropdown-toggle-split" type="button" data-toggle="dropdown">Sub-industry Menu
+                    <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="/subindustry/view">All Sub-industries</a>
+                    <li><a class="nav-link" href="/subindustry/add">Add Sub-industries</a>
+                </ul>
+            </li>
+                </div>
+                </div>
+            </ul>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
@@ -48,40 +83,7 @@
     </nav>
 </nav>
 
-<div th:fragment="navigation">
-    <div class="container-fluid">
-        <tr>
-            <td>
-                <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Company Details Menu
-                <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                <li><a class="nav-link" href="/companyDetails">All Company Details</a>
-                <li><a class="nav-link" href="/companyDetails/create">Create Company Details</a>
-                    <li><a class="nav-link" href="/companyDetails/delete">Delete Company Details</a>
-        </ul>
-                </div></td>
-            <td>
-            <div class="dropdown">
-                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Industry Menu
-                    <span class="caret"></span></button>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="/industry/view">All Industries</a>
-                    <li><a class="nav-link" href="/industry/add">Add Industries</a>
-                </ul>
-            </div></td>
-            <td>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Sub-industry Menu
-                        <span class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a class="nav-link" href="/subindustry/view">All Sub-industries</a>
-                        <li><a class="nav-link" href="/subindustry/add">Add Sub-industries</a>
-                    </ul>
-                </div></td>
-        </tr>
-    </div>
-</div>
+
 
 <div th:fragment="companyDetails-lister">
     <table id="tadminViewReport" class="table table-striped">
@@ -133,5 +135,6 @@
     </tr>
 </table>
 </div>
+
 </body>
 </html>
