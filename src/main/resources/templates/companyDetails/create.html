@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html"
+      xmlns:form="http://www.w3.org/1999/xhtml">
 <head th:replace="fragments :: head">
-    <header th:replace="fragments :: header">
+    <header th:replace="fragments :: headerloggedin">
         <title>Create Company Details</title>
     </header>
 </head>
 <body class="container">
+<div>
+
 <h1>Create Company Details</h1>
-<nav th:replace="fragments :: navigation"></nav>
+
 <form method="post" action="/companyDetails/create">
     <div>
         <label>Company Name
-    <input th:field="${companyDetails.name}" class="form-control" placeholder="Enter Company Name">
+            <input th:field="${companyDetails.name}" class="form-control" placeholder="Enter Company Name">
         </label>
         <p class="error" th:errors="${companyDetails.name}"></p>
     </div>
@@ -23,15 +26,23 @@
     </div>
     <div>
         <label>Industry
-        <input th:field="${companyDetails.industry}" class="form-control" placeholder="Enter Type of Industry">
+            <td><div class="form-group blu-margin">
+                <select class="form-control" th:field="${companyDetails.industry}"  id="dropIndustry">
+                    <option value="">Select Industry</option>
+                    <option th:each="industry : ${industries}" th:value="${industry.name}" th:text="${industry.name}"></option>
+                </select>
+            </div></td>
         </label>
-        <p class="error" th:errors="${companyDetails.industry}"></p>
     </div>
     <div>
         <label>Sub-industry
-        <input th:field="${companyDetails.subindustry}" class="form-control" placeholder="Enter Sub-industry Types">
+            <td><div class="form-group blu-margin">
+                <select class="form-control" th:field="${companyDetails.subindustry}"  id="dropSubIndustry">
+                    <option value="">Select Sub-industry</option>
+                    <option th:each="subindustry : ${subindustries}" th:value="${subindustry.name}" th:text="${subindustry.name}"></option>
+                </select>
+            </div></td>
         </label>
-        <p class="error" th:errors="${companyDetails.subindustry}"></p>
     </div>
     <div>
         <label>Address

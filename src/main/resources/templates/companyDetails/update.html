@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 <head th:replace="fragments :: head">
-    <header th:replace="fragments :: header">
+    <header th:replace="fragments :: headerloggedin">
         <title>Update Company Details</title>
     </header>
-<body>
+<body class="container">
+
 <h1>Update Company</h1>
-<nav th:replace="fragments :: navigation"></nav>
 <form method="post" action="/companyDetails/update">
         <div>
             <label>Company Id
@@ -25,23 +25,32 @@
         </div>
         <div>
             <label>Industry
-                <input th:field="${companyDetails.industry}" class="form-control">
+                <div class="form-group blu-margin">
+                    <select class="form-control" th:field="${companyDetails.industry}"  id="dropIndustry">
+                        <option value="">Select Industry</option>
+                        <option th:each="industry : ${industries}" th:value="${industry.name}" th:text="${industry.name}"></option>
+                    </select></div>
             </label>
             <p class="error" th:errors="${companyDetails.industry}"></p>
-        </div>
+                </div></td>
         <div>
             <label>Sub-industry
-                <input th:field="${companyDetails.subindustry}" class="form-control" >
+                <div class="form-group blu-margin">
+                    <select class="form-control" th:field="${companyDetails.subindustry}"  id="dropUpdateSubIndustry">
+                        <option value="">Select Sub-industry</option>
+                        <option th:each="subindustry : ${subindustries}" th:value="${subindustry.name}" th:text="${subindustry.name}"></option>
+                    </select></div>
             </label>
+
             <p class="error" th:errors="${companyDetails.subindustry}"></p>
-        </div>
+                </div></td>
         <div>
             <label>Address
                 <input th:field="${companyDetails.address}" class="form-control" >
             </label>
             <p class="error" th:errors="${companyDetails.address}"></p>
         </div>
-    <input type="submit"  value="Update Company" class="btn btn-primary">
-    </form>
+                <input type="submit"  value="Update Company" class="btn btn-primary">
+</form>
 </body>
 </html>

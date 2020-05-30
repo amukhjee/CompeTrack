@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: headerloggedin">
+        <title>View Companies by Category</title>
+    </header>
+</head>
+<body class="container">
+
+<div class="container body-content">
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <h2 class = "centered">View Companies By Category</h2>
+</div>
+<form method="post" action="">
+    <div class="table responsive">
+        <table id="tadminViewReport" class="table table-striped">
+            <thead class="thead-dark">
+    <tr>
+        <th>Companies</th>
+        <th>Industry</th>
+        <th>Subindustry</th>
+        <th>Location</th>
+    </tr>
+    <tr >
+        <td>
+            <li th:each="companyDetail:${companyDetails}">
+                <a th:href="@{/list/companyDetails(column=company,value=${companyDetail.name})}" th:text="${companyDetail.name}" th:value="${companyDetail.id}"></a>
+            </li>
+        </td>
+        <td>
+            <li th:each="industry: ${industries}">
+                <a th:href="@{/list/companyDetails(column=industry,value=${industry.name})}" th:text="${industry.name}" th:value="${industry.id}"></a>
+            </li>
+        </td>
+        <td>
+            <li th:each="subindustry : ${subindustries}">
+                <a th:href="@{/list/companyDetails(column=subindustry,value=${subindustry.name})}" th:text="${subindustry.name}" th:value="${subindustry.id}"></a>
+            </li>
+        </td>
+        <td>
+            <li th:each="companyDetail : ${companyDetails}">
+                <a th:href="@{/list/companyDetails(column=address,value=${companyDetail.address})}" th:text="${companyDetail.address}" th:value="${companyDetail.id}"></a>
+            </li>
+        </td>
+    </tr>
+
+</table>
+    </div>
+</form>
+
+</body>
+
+</html>

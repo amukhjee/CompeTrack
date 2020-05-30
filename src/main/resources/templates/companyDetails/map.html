@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
-    <header th:replace="fragments :: header">
+    <header th:replace="fragments :: headerloggedin">
         <title>Google Map Locator</title>
     </header>
 </head>
 <body class="container">
+
 <h1>Company Location</h1>
-<nav th:replace="fragments :: navigation"></nav>
 <style>
     #map{
       height:400px;
@@ -18,8 +18,6 @@
 
 
 </script>
-</head>
-<h1>Company Location in Map</h1>
 
 
 <div id="formatted_address"></div>

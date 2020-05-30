@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
-    <header th:replace="fragments :: header">
+    <header th:replace="fragments :: headerloggedin">
         <title>Delete Company Details</title>
     </header>
 </head>
 <body class="container">
 <h1>Delete Company</h1>
-<nav th:replace="fragments :: navigation"></nav>
 <form method="post">
 <th:block th:each="companyDetail:${companyDetails}">
     <div class="form-check">

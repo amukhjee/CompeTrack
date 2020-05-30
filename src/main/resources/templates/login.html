@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
-    <header th:replace="fragments :: header">
+    <nav th:replace="fragments ::headernotloggedin"></nav>
         <title>User Login</title>
     </header>
 </head>
@@ -10,7 +10,7 @@
 <form method="post">
     <div class="form-group">
         <label th:for="username">Username
-            <input class="form-control" th:field="${loginFormDTO.username}">
+            <input class="form-control" th:field="${loginFormDTO.username}" name="username">
         </label>
         <p class="error" th:errors="${loginFormDTO.username}"></p>
     </div>

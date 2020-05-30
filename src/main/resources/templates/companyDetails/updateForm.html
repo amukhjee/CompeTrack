@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
-    <header th:replace="fragments :: header">
+    <header th:replace="fragments :: headerloggedin">
         <title>Company Details Update Form</title>
     </header>
 </head>
 <body class="container">
+<div><nav th:replace="fragments :: navigation"></nav></div>
 <h1>Company Detail Update Form</h1>
-<nav th:replace="fragments :: navigation"></nav>
+
 <form method="post" action="/companyDetails/updateForm">
     <div>
         <label>Company Name

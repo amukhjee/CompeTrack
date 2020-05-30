@@ -2,46 +2,17 @@ package org.launchcode.Competrack.models;
 
 import org.launchcode.Competrack.annotation.URLValidation;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.Size;
-import java.util.Objects;
+import javax.validation.constraints.NotNull;
 
 @Entity
-public class CompanyDetails {
-
-    @Id
-    @GeneratedValue
-    private int id;
-
-    @Size(min=2, max=30, message = "Name must be between 2 to 30 characters long")
-    @NotBlank(message = "Name can not be blank")
-    public String name;
-
-    @Size(min=2, max=20, message = "Industry must be between 2 to 20 characters long")
-    @NotBlank(message="Industry can not be left blank.")
-    public String industry;
+public class CompanyDetails extends AbstractEntity{
 
 
-    @Size(max=100, message="subindustry size is too long")
-    public String subindustry;
-
-     @URLValidation(message = "Please provide valid URL")
-    public String url;
-
-    public String getUrl() {
-        return url;
-    }
-
-    public void setUrl(String url) {
-        this.url = url;
-    }
-
-    public String address;
 
 
+    private String industry;
 
     public String getIndustry() {
         return industry;
@@ -49,39 +20,6 @@ public class CompanyDetails {
 
     public void setIndustry(String industry) {
         this.industry = industry;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public CompanyDetails(String name, String industry, String subindustry, String address) {
-        this.name = name;
-        this.industry=industry;
-        this.subindustry=subindustry;
-        this.address=address;
-    }
-
-    public CompanyDetails(){}
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
     }
 
     public String getSubindustry() {
@@ -92,21 +30,41 @@ public class CompanyDetails {
         this.subindustry = subindustry;
     }
 
-    @Override
-    public String toString() {
-        return name;
+    private String subindustry;
+
+
+    @URLValidation(message = "Please provide valid URL")
+    private String url;
+
+    @NotBlank(message="Address can not be left blank.")
+    @NotNull
+    private String address;
+
+    public String getUrl() {
+        return url;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        CompanyDetails that = (CompanyDetails) o;
-        return id == that.id;
+    public void setUrl(String url) {
+        this.url = url;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id);
+
+    public String getAddress() {
+        return address;
     }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public CompanyDetails(String industry, String url, String address, String subindustry) {
+        super();
+        this.industry=industry;
+        this.address=address;
+        this.url=url;
+        this.subindustry =subindustry;
+    }
+
+    public CompanyDetails(){}
+
 }

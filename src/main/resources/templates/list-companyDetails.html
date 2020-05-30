@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: headerloggedin">
+        <title>Companies with Category</title>
+    </header>
+</head>
+<body class="container">
+<div class="container body-content">
+
+    <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
+    <div th:replace="fragments :: list-per-page"></div>
+    <div th:replace="fragments :: companyDetails-lister"></div>
+
+</div>
+</body>
+</html>

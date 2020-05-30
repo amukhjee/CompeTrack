@@ -1,55 +1,48 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 <head th:replace="fragments :: head">
-    <header th:replace="fragments :: header">
+    <header th:replace="fragments :: headerloggedin">
         <title>All Company Details</title>
     </header>
 </head>
-<body class="container">
+<body>
+<div class="container">
 <h1>All Company Details</h1>
-<nav th:replace="fragments :: navigation"></nav>
-<table>
-<tr>
-    <td><label id="lDisplayPerPg" for="lDisplayPerPg">Items per page</label>
-        <select name="listDisplayPerPg" id="listDisplayPerPg" onchange="javascript:pageRecordChange()">
-            <option value="2" selected="selected">2</option>
-            <option value="4">4</option>
-            <option value="6">6</option>
-            <option value="8">8</option>
-            <option value="10">10</option>
-        </select></td>
-</tr>
-</table>
+
+<div th:replace="fragments :: list-per-page"></div>
 <form method="post" action="">
+    <div class="table responsive">
     <table id="tadminViewReport" class="table table-striped">
         <thead class="thead-dark">
         <tr>
             <th> Company Name</th>
+            <th> Location</th>
             <th> Industry</th>
-            <th>Sub-industry</th>
-            <th>Address</th>
-            <th>Update Company Details</th>
-
+            <th> Sub-industry</th>
+            <th> Update Company Details</th>
         </tr>
         </thead>
         <tr th:each ="companyDetail: ${companyDetails}">
             <td class="nav">
                 <li class="nav-item">
                     <a class="nav-link" th:href="${companyDetail.url}" th:text="${companyDetail.name}"></a></td>
-            <td th:text="${companyDetail.industry}"></td>
-            <td th:text="${companyDetail.subindustry}"></td>
             <td class="nav">
                 <li class="nav-item">
                     <a class="nav-link" th:href="@{'/companyDetails/map?search=' + ${companyDetail.address}}" th:text="${companyDetail.address}"  th:name="companyDetailId" th:value="${companyDetail.id}"></a></td>
             <td class="nav">
-            <td class="nav-item">
-                <a class="nav-link" th:href="@{'/companyDetails/update?search=' + ${companyDetail.id}}" th:name="companyDetailId" th:value="${companyDetail.id}" >Update Company Details</a></td>
+                <ul th:text="${companyDetail.industry}" th:value="${companyDetail.industry}"></ul></td>
+            <td class="nav">
+                <ul  th:text="${companyDetail.subindustry}" th:value="${companyDetail.subindustry}"></ul></td>
+            <td class="nav">
+            <li class="nav-item">
+                <a class="nav-link" th:href="@{'/companyDetails/update?search=' + ${companyDetail.id}}" th:name="companyDetailId" th:value="${companyDetail.id}" >Update Company Details</a></li>
 
         </tr>
-    </table>
+    </table></div>
     <div id="pageNavPosition"></div>
     <br />
 </form>
+
 
 <script>
             reportsPerPage = listDisplayPerPg.options[listDisplayPerPg.selectedIndex].value;
