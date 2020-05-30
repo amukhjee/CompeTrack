@@ -15,6 +15,6 @@ global:
   platform_name: null
   platform_version: null
   profile: eb-cli
-  repository: CompeTrackNew
+  repository: codecommit-origin
   sc: git
   workspace_type: Application
