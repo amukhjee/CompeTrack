@@ -1,0 +1,8 @@
+applications:
+  - name: CompeTrack
+    buildpack: java_buildpack
+    path: build/libs/Competrack-0.0.1-SNAPSHOT.jar
+    services:
+      - comptest-DB
+    env:
+      JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 14.0.1_8}}'
