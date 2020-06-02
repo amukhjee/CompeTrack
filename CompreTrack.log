@@ -1,0 +1,641 @@
+Retrieving logs for app CompeTrack in org CompeTrack / space development as amukhjee1@gmail.com...
+
+   2020-06-01T18:38:20.21-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 creating container for instance 29c565ee-132e-45a2-6422-0505
+   2020-06-01T18:38:21.11-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 successfully created container for instance 29c565ee-132e-45a2-6422-0505
+   2020-06-01T18:38:21.24-0500 [CELL/0] OUT Downloading droplet...
+   2020-06-01T18:38:26.04-0500 [CELL/0] OUT Downloaded droplet (96.1M)
+   2020-06-01T18:38:26.04-0500 [CELL/0] OUT Starting health monitoring of container
+   2020-06-01T18:38:27.25-0500 [APP/PROC/WEB/0] OUT JVM Memory Configuration: -Xmx384848K -Xss1M -XX:ReservedCodeCacheSize=240M -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=151727K
+   2020-06-01T18:38:29.37-0500 [APP/PROC/WEB/0] OUT   .   ____          _            __ _ _
+   2020-06-01T18:38:29.37-0500 [APP/PROC/WEB/0] OUT  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+   2020-06-01T18:38:29.37-0500 [APP/PROC/WEB/0] OUT ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+   2020-06-01T18:38:29.37-0500 [APP/PROC/WEB/0] OUT  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+   2020-06-01T18:38:29.37-0500 [APP/PROC/WEB/0] OUT   '  |____| .__|_| |_|_| |_\__, | / / / /
+   2020-06-01T18:38:29.37-0500 [APP/PROC/WEB/0] OUT  =========|_|==============|___/=/_/_/_/
+   2020-06-01T18:38:29.37-0500 [APP/PROC/WEB/0] OUT  :: Spring Boot ::        (v2.2.6.RELEASE)
+   2020-06-01T18:38:29.56-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:29.564  INFO 25 --- [           main] pertySourceApplicationContextInitializer : 'cloud' property source added
+   2020-06-01T18:38:29.56-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:29.568  INFO 25 --- [           main] nfigurationApplicationContextInitializer : Reconfiguration enabled
+   2020-06-01T18:38:29.58-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:29.581  INFO 25 --- [           main] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on 29c565ee-132e-45a2-6422-0505 with PID 25 (/home/vcap/app/BOOT-INF/classes started by vcap in /home/vcap/app)
+   2020-06-01T18:38:29.58-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:29.582  INFO 25 --- [           main] o.l.Competrack.CompetrackApplication     : The following profiles are active: cloud
+   2020-06-01T18:38:31.27-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:31.272  INFO 25 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+   2020-06-01T18:38:31.49-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:31.494  INFO 25 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 207ms. Found 4 JPA repository interfaces.
+   2020-06-01T18:38:32.15-0500 [APP/PROC/WEB/0] ERR Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+   2020-06-01T18:38:32.16-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:32.162  INFO 25 --- [           main] o.c.r.o.s.c.s.r.PooledDataSourceCreator  : Found HikariCP on the classpath. Using it for DataSource connection pooling.
+   2020-06-01T18:38:32.19-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:32.198  INFO 25 --- [           main] o.c.reconfiguration.CloudServiceUtils    : 'dataSource' bean of type with 'javax.sql.DataSource' reconfigured with 'CompeTrackNew-db' bean
+   2020-06-01T18:38:33.38-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:33.380  INFO 25 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+   2020-06-01T18:38:33.41-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:33.418  INFO 25 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+   2020-06-01T18:38:33.41-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:33.419  INFO 25 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+   2020-06-01T18:38:33.54-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:33.543  INFO 25 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+   2020-06-01T18:38:33.54-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:33.543  INFO 25 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3878 ms
+   2020-06-01T18:38:33.85-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:33.856  INFO 25 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+   2020-06-01T18:38:33.87-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:33.873  INFO 25 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+   2020-06-01T18:38:33.88-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:33.883  WARN 25 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+   2020-06-01T18:38:34.49-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:34.496  INFO 25 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:38:34.49-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:34.497  INFO 25 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:38:34.52-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:34.522  INFO 25 --- [tificates.crt-0] org.cloudfoundry.security.FileWatcher    : Start watching /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:38:34.82-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:34.826  INFO 25 --- [           main] c.s.FileWatchingX509ExtendedTrustManager : Initialized TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:38:35.39-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:35.388  INFO 25 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+   2020-06-01T18:38:35.41-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:35.417  INFO 25 --- [onnection adder] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:38:35.58-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:35.580  INFO 25 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://us-cdbr-east-05.cleardb.net/ad_0f6da3c52cedb22 (MySQL 5.5)
+   2020-06-01T18:38:35.88-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:35.885  INFO 25 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `ad_0f6da3c52cedb22`: 1
+   2020-06-01T18:38:35.91-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:35.915  WARN 25 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:38:35.92-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:35.923  INFO 25 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+   2020-06-01T18:38:35.97-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:35.972  INFO 25 --- [           main] ConditionEvaluationReportLoggingListener : 
+   2020-06-01T18:38:35.97-0500 [APP/PROC/WEB/0] OUT Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:38:35.987 ERROR 25 --- [           main] o.s.boot.SpringApplication               : Application run failed
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.launchcode.Competrack.CompetrackApplication.main(CompetrackApplication.java:10) ~[classes/:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[app/:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[app/:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[app/:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[app/:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT Caused by: org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:229) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:164) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:147) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:155) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:139) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1395) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.execute(Flyway.java:1711) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.migrate(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:38:36.00-0500 [APP/PROC/WEB/0] OUT 	... 26 common frames omitted
+   2020-06-01T18:38:36.41-0500 [APP/PROC/WEB/0] OUT Exit status 1
+   2020-06-01T18:38:36.41-0500 [CELL/SSHD/0] OUT Exit status 0
+   2020-06-01T18:38:41.76-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 stopping instance 29c565ee-132e-45a2-6422-0505
+   2020-06-01T18:38:41.76-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 destroying container for instance 29c565ee-132e-45a2-6422-0505
+   2020-06-01T18:38:41.78-0500 [API/20] OUT Process has crashed with type: "web"
+   2020-06-01T18:38:41.79-0500 [API/20] OUT App instance exited with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 payload: {"instance"=>"29c565ee-132e-45a2-6422-0505", "index"=>0, "cell_id"=>"9aa90abe-6a8f-4485-90d1-71da907de9a3", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 1", "crash_count"=>15, "crash_timestamp"=>1591054721757479527, "version"=>"fbe6271c-8a6c-4041-9326-aae66ee9ef13"}
+   2020-06-01T18:38:42.08-0500 [PROXY/0] OUT Exit status 137
+   2020-06-01T18:38:42.68-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 successfully destroyed container for instance 29c565ee-132e-45a2-6422-0505
+   2020-06-01T18:54:51.93-0500 [API/5] OUT Updated app with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 ({"buildpack"=>"java_buildpack", "disk_quota"=>1024, "environment_json"=>"[PRIVATE DATA HIDDEN]", "health_check_http_endpoint"=>"", "health_check_type"=>"port", "instances"=>1, "memory"=>1024, "name"=>"CompeTrack", "space_guid"=>"e0d4f690-9b31-4bfd-945e-b03e4c5cbb93"})
+   2020-06-01T18:54:55.61-0500 [API/14] OUT Uploading bits for app with guid 970f1cb4-b37d-4853-911d-5e39b4e08288
+   2020-06-01T18:55:04.26-0500 [CELL/0] OUT Cell a32a5e3a-75de-4118-9041-9e2be7c61855 creating container for instance 84264b8d-aadc-4abd-5d88-985a
+   2020-06-01T18:55:05.19-0500 [CELL/0] OUT Cell a32a5e3a-75de-4118-9041-9e2be7c61855 successfully created container for instance 84264b8d-aadc-4abd-5d88-985a
+   2020-06-01T18:55:05.46-0500 [CELL/0] OUT Downloading droplet...
+   2020-06-01T18:55:08.41-0500 [CELL/0] OUT Cell a32a5e3a-75de-4118-9041-9e2be7c61855 stopping instance 84264b8d-aadc-4abd-5d88-985a
+   2020-06-01T18:55:08.42-0500 [API/12] OUT Updated app with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 ({"state"=>"STOPPED"})
+   2020-06-01T18:55:08.80-0500 [API/20] OUT Creating build for app with guid 970f1cb4-b37d-4853-911d-5e39b4e08288
+   2020-06-01T18:55:09.10-0500 [API/20] OUT Updated app with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 ({"state"=>"STARTED"})
+   2020-06-01T18:55:09.25-0500 [STG/0] OUT Downloading java_buildpack...
+   2020-06-01T18:55:09.37-0500 [STG/0] OUT Downloaded java_buildpack
+   2020-06-01T18:55:09.37-0500 [STG/0] OUT Cell 5c80f28a-4087-4fc7-8dd7-782cca9a7b8e creating container for instance 48d9d84c-a7d6-4d07-86ee-ebccc226f322
+   2020-06-01T18:55:10.28-0500 [STG/0] OUT Cell 5c80f28a-4087-4fc7-8dd7-782cca9a7b8e successfully created container for instance 48d9d84c-a7d6-4d07-86ee-ebccc226f322
+   2020-06-01T18:55:10.46-0500 [STG/0] OUT Downloading app package...
+   2020-06-01T18:55:10.46-0500 [STG/0] OUT Downloading build artifacts cache...
+   2020-06-01T18:55:10.46-0500 [CELL/0] OUT Downloaded droplet (96.1M)
+   2020-06-01T18:55:10.46-0500 [CELL/0] OUT Starting health monitoring of container
+   2020-06-01T18:55:10.64-0500 [STG/0] OUT Downloaded build artifacts cache (129B)
+   2020-06-01T18:55:11.42-0500 [APP/PROC/WEB/0] OUT JVM Memory Configuration: -Xmx384848K -Xss1M -XX:ReservedCodeCacheSize=240M -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=151727K
+   2020-06-01T18:55:11.94-0500 [STG/0] OUT Downloaded app package (35.1M)
+   2020-06-01T18:55:13.31-0500 [APP/PROC/WEB/0] OUT   .   ____          _            __ _ _
+   2020-06-01T18:55:13.31-0500 [APP/PROC/WEB/0] OUT  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+   2020-06-01T18:55:13.31-0500 [APP/PROC/WEB/0] OUT ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+   2020-06-01T18:55:13.31-0500 [APP/PROC/WEB/0] OUT  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+   2020-06-01T18:55:13.31-0500 [APP/PROC/WEB/0] OUT   '  |____| .__|_| |_|_| |_\__, | / / / /
+   2020-06-01T18:55:13.31-0500 [APP/PROC/WEB/0] OUT  =========|_|==============|___/=/_/_/_/
+   2020-06-01T18:55:13.31-0500 [APP/PROC/WEB/0] OUT  :: Spring Boot ::        (v2.2.6.RELEASE)
+   2020-06-01T18:55:13.56-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:13.562  INFO 18 --- [           main] pertySourceApplicationContextInitializer : 'cloud' property source added
+   2020-06-01T18:55:13.56-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:13.567  INFO 18 --- [           main] nfigurationApplicationContextInitializer : Reconfiguration enabled
+   2020-06-01T18:55:13.57-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:13.579  INFO 18 --- [           main] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on 84264b8d-aadc-4abd-5d88-985a with PID 18 (/home/vcap/app/BOOT-INF/classes started by vcap in /home/vcap/app)
+   2020-06-01T18:55:13.58-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:13.580  INFO 18 --- [           main] o.l.Competrack.CompetrackApplication     : The following profiles are active: cloud
+   2020-06-01T18:55:13.65-0500 [CELL/SSHD/0] OUT Exit status 0
+   2020-06-01T18:55:13.88-0500 [STG/0] OUT [1m[31m----->[0m[22m [1m[34mJava Buildpack[0m[22m [34mv4.30[0m [34m(offline)[0m | https://github.com/cloudfoundry/java-buildpack.git#6986fd5
+   2020-06-01T18:55:13.96-0500 [STG/0] OUT [1m[31m----->[0m[22m Downloading [1m[34mJvmkill Agent[0m[22m [34m1.16.0_RELEASE[0m from https://java-buildpack.cloudfoundry.org/jvmkill/bionic/x86_64/jvmkill-1.16.0-RELEASE.so [3m[32m(found in cache)[0m[23m
+   2020-06-01T18:55:14.00-0500 [STG/0] OUT [1m[31m----->[0m[22m Downloading [1m[34mOpen Jdk JRE[0m[22m [34m14.0.1_8[0m from https://java-buildpack.cloudfoundry.org/openjdk/bionic/x86_64/bellsoft-jre14.0.1%2B8-linux-amd64.tar.gz [3m[32m(found in cache)[0m[23m
+   2020-06-01T18:55:14.74-0500 [APP/PROC/WEB/0] OUT Exit status 143
+   2020-06-01T18:55:14.77-0500 [CELL/0] OUT Cell a32a5e3a-75de-4118-9041-9e2be7c61855 destroying container for instance 84264b8d-aadc-4abd-5d88-985a
+   2020-06-01T18:55:15.01-0500 [PROXY/0] OUT Exit status 137
+   2020-06-01T18:55:15.39-0500 [CELL/0] OUT Cell a32a5e3a-75de-4118-9041-9e2be7c61855 successfully destroyed container for instance 84264b8d-aadc-4abd-5d88-985a
+   2020-06-01T18:55:16.25-0500 [STG/0] OUT        Expanding Open Jdk JRE to .java-buildpack/open_jdk_jre [3m[32m(2.2s)[0m[23m
+   2020-06-01T18:55:16.25-0500 [STG/0] OUT        JVM DNS caching disabled in lieu of BOSH DNS caching
+   2020-06-01T18:55:16.25-0500 [STG/0] OUT [1m[31m----->[0m[22m Downloading [1m[34mOpen JDK Like Memory Calculator[0m[22m [34m3.13.0_RELEASE[0m from https://java-buildpack.cloudfoundry.org/memory-calculator/bionic/x86_64/memory-calculator-3.13.0-RELEASE.tar.gz [3m[32m(found in cache)[0m[23m
+   2020-06-01T18:55:17.24-0500 [STG/0] OUT        Loaded Classes: 23580, Threads: 250
+   2020-06-01T18:55:17.26-0500 [STG/0] OUT [1m[31m----->[0m[22m Downloading [1m[34mClient Certificate Mapper[0m[22m [34m1.11.0_RELEASE[0m from https://java-buildpack.cloudfoundry.org/client-certificate-mapper/client-certificate-mapper-1.11.0-RELEASE.jar [3m[32m(found in cache)[0m[23m
+   2020-06-01T18:55:17.26-0500 [STG/0] OUT [1m[31m----->[0m[22m Downloading [1m[34mContainer Security Provider[0m[22m [34m1.18.0_RELEASE[0m from https://java-buildpack.cloudfoundry.org/container-security-provider/container-security-provider-1.18.0-RELEASE.jar [3m[32m(found in cache)[0m[23m
+   2020-06-01T18:55:17.27-0500 [STG/0] OUT [1m[31m----->[0m[22m Downloading [1m[34mSpring Auto Reconfiguration[0m[22m [34m2.11.0_RELEASE[0m from https://java-buildpack.cloudfoundry.org/auto-reconfiguration/auto-reconfiguration-2.11.0-RELEASE.jar [3m[32m(found in cache)[0m[23m
+   2020-06-01T18:55:35.42-0500 [STG/0] OUT Exit status 0
+   2020-06-01T18:55:35.42-0500 [STG/0] OUT Uploading droplet, build artifacts cache...
+   2020-06-01T18:55:35.42-0500 [STG/0] OUT Uploading droplet...
+   2020-06-01T18:55:35.42-0500 [STG/0] OUT Uploading build artifacts cache...
+   2020-06-01T18:55:35.54-0500 [STG/0] OUT Uploaded build artifacts cache (129B)
+   2020-06-01T18:55:36.82-0500 [API/4] OUT Creating droplet for app with guid 970f1cb4-b37d-4853-911d-5e39b4e08288
+   2020-06-01T18:55:42.05-0500 [STG/0] OUT Uploaded droplet (96.1M)
+   2020-06-01T18:55:42.07-0500 [STG/0] OUT Uploading complete
+   2020-06-01T18:55:42.65-0500 [STG/0] OUT Cell 5c80f28a-4087-4fc7-8dd7-782cca9a7b8e stopping instance 48d9d84c-a7d6-4d07-86ee-ebccc226f322
+   2020-06-01T18:55:42.65-0500 [STG/0] OUT Cell 5c80f28a-4087-4fc7-8dd7-782cca9a7b8e destroying container for instance 48d9d84c-a7d6-4d07-86ee-ebccc226f322
+   2020-06-01T18:55:43.28-0500 [CELL/0] OUT Cell 060515ff-8fea-4d78-a989-adcec15c84fe creating container for instance 652e5b6d-e5fc-44f3-6c3b-8196
+   2020-06-01T18:55:43.68-0500 [STG/0] OUT Cell 5c80f28a-4087-4fc7-8dd7-782cca9a7b8e successfully destroyed container for instance 48d9d84c-a7d6-4d07-86ee-ebccc226f322
+   2020-06-01T18:55:44.31-0500 [CELL/0] OUT Cell 060515ff-8fea-4d78-a989-adcec15c84fe successfully created container for instance 652e5b6d-e5fc-44f3-6c3b-8196
+   2020-06-01T18:55:44.43-0500 [CELL/0] OUT Downloading droplet...
+   2020-06-01T18:55:48.94-0500 [CELL/0] OUT Downloaded droplet (96.1M)
+   2020-06-01T18:55:48.94-0500 [CELL/0] OUT Starting health monitoring of container
+   2020-06-01T18:55:50.06-0500 [APP/PROC/WEB/0] OUT JVM Memory Configuration: -Xmx384848K -Xss1M -XX:ReservedCodeCacheSize=240M -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=151727K
+   2020-06-01T18:55:51.94-0500 [APP/PROC/WEB/0] OUT   .   ____          _            __ _ _
+   2020-06-01T18:55:51.94-0500 [APP/PROC/WEB/0] OUT  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+   2020-06-01T18:55:51.94-0500 [APP/PROC/WEB/0] OUT ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+   2020-06-01T18:55:51.94-0500 [APP/PROC/WEB/0] OUT  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+   2020-06-01T18:55:51.94-0500 [APP/PROC/WEB/0] OUT   '  |____| .__|_| |_|_| |_\__, | / / / /
+   2020-06-01T18:55:51.94-0500 [APP/PROC/WEB/0] OUT  =========|_|==============|___/=/_/_/_/
+   2020-06-01T18:55:51.95-0500 [APP/PROC/WEB/0] OUT  :: Spring Boot ::        (v2.2.6.RELEASE)
+   2020-06-01T18:55:52.30-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:52.304  INFO 11 --- [           main] pertySourceApplicationContextInitializer : 'cloud' property source added
+   2020-06-01T18:55:52.31-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:52.310  INFO 11 --- [           main] nfigurationApplicationContextInitializer : Reconfiguration enabled
+   2020-06-01T18:55:52.32-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:52.323  INFO 11 --- [           main] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on 652e5b6d-e5fc-44f3-6c3b-8196 with PID 11 (/home/vcap/app/BOOT-INF/classes started by vcap in /home/vcap/app)
+   2020-06-01T18:55:52.32-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:52.324  INFO 11 --- [           main] o.l.Competrack.CompetrackApplication     : The following profiles are active: cloud
+   2020-06-01T18:55:54.99-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:54.987  INFO 11 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+   2020-06-01T18:55:55.16-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:55.168  INFO 11 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 164ms. Found 4 JPA repository interfaces.
+   2020-06-01T18:55:55.64-0500 [APP/PROC/WEB/0] ERR Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+   2020-06-01T18:55:55.65-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:55.650  INFO 11 --- [           main] o.c.r.o.s.c.s.r.PooledDataSourceCreator  : Found HikariCP on the classpath. Using it for DataSource connection pooling.
+   2020-06-01T18:55:55.67-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:55.672  INFO 11 --- [           main] o.c.reconfiguration.CloudServiceUtils    : 'dataSource' bean of type with 'javax.sql.DataSource' reconfigured with 'CompeTrackNew-db' bean
+   2020-06-01T18:55:57.02-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.021  INFO 11 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+   2020-06-01T18:55:57.04-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.041  INFO 11 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+   2020-06-01T18:55:57.04-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.042  INFO 11 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+   2020-06-01T18:55:57.17-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.170  INFO 11 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+   2020-06-01T18:55:57.17-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.171  INFO 11 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4730 ms
+   2020-06-01T18:55:57.45-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.451  INFO 11 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+   2020-06-01T18:55:57.46-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.462  INFO 11 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+   2020-06-01T18:55:57.47-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.471  WARN 11 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+   2020-06-01T18:55:57.98-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.983  INFO 11 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:55:57.98-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.983  INFO 11 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:55:57.99-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:57.987  INFO 11 --- [tificates.crt-0] org.cloudfoundry.security.FileWatcher    : Start watching /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:55:58.26-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:58.265  INFO 11 --- [           main] c.s.FileWatchingX509ExtendedTrustManager : Initialized TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:55:58.72-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:58.720  INFO 11 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+   2020-06-01T18:55:58.73-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:58.730  INFO 11 --- [onnection adder] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:55:58.82-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:58.822  INFO 11 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://us-cdbr-east-05.cleardb.net/ad_0f6da3c52cedb22 (MySQL 5.5)
+   2020-06-01T18:55:59.04-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:59.041  INFO 11 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `ad_0f6da3c52cedb22`: 1
+   2020-06-01T18:55:59.06-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:59.063  WARN 11 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:55:59.06-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:59.067  INFO 11 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+   2020-06-01T18:55:59.10-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:59.108  INFO 11 --- [           main] ConditionEvaluationReportLoggingListener : 
+   2020-06-01T18:55:59.10-0500 [APP/PROC/WEB/0] OUT Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:55:59.115 ERROR 11 --- [           main] o.s.boot.SpringApplication               : Application run failed
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.launchcode.Competrack.CompetrackApplication.main(CompetrackApplication.java:10) ~[classes/:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[app/:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[app/:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[app/:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[app/:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT Caused by: org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:229) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:164) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:147) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:155) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:139) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1395) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.execute(Flyway.java:1711) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.migrate(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:55:59.11-0500 [APP/PROC/WEB/0] OUT 	... 26 common frames omitted
+   2020-06-01T18:55:59.50-0500 [APP/PROC/WEB/0] OUT Exit status 1
+   2020-06-01T18:55:59.51-0500 [CELL/SSHD/0] OUT Exit status 0
+   2020-06-01T18:56:05.29-0500 [API/6] OUT Process has crashed with type: "web"
+   2020-06-01T18:56:05.29-0500 [CELL/0] OUT Cell 060515ff-8fea-4d78-a989-adcec15c84fe stopping instance 652e5b6d-e5fc-44f3-6c3b-8196
+   2020-06-01T18:56:05.29-0500 [CELL/0] OUT Cell 060515ff-8fea-4d78-a989-adcec15c84fe destroying container for instance 652e5b6d-e5fc-44f3-6c3b-8196
+   2020-06-01T18:56:05.30-0500 [API/6] OUT App instance exited with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 payload: {"instance"=>"652e5b6d-e5fc-44f3-6c3b-8196", "index"=>0, "cell_id"=>"060515ff-8fea-4d78-a989-adcec15c84fe", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 1", "crash_count"=>1, "crash_timestamp"=>1591055765268911355, "version"=>"e5e8516b-1982-4e41-9301-562fd09fa8d4"}
+   2020-06-01T18:56:05.49-0500 [CELL/0] OUT Cell 017765bf-28cb-4d24-b3d5-b52be99a3239 creating container for instance 8d0d78b8-3dc1-4142-59d4-f102
+   2020-06-01T18:56:05.55-0500 [PROXY/0] OUT Exit status 137
+   2020-06-01T18:56:05.92-0500 [CELL/0] OUT Cell 060515ff-8fea-4d78-a989-adcec15c84fe successfully destroyed container for instance 652e5b6d-e5fc-44f3-6c3b-8196
+   2020-06-01T18:56:06.36-0500 [CELL/0] OUT Cell 017765bf-28cb-4d24-b3d5-b52be99a3239 successfully created container for instance 8d0d78b8-3dc1-4142-59d4-f102
+   2020-06-01T18:56:06.48-0500 [CELL/0] OUT Downloading droplet...
+   2020-06-01T18:56:10.67-0500 [CELL/0] OUT Downloaded droplet (96.1M)
+   2020-06-01T18:56:10.67-0500 [CELL/0] OUT Starting health monitoring of container
+   2020-06-01T18:56:12.12-0500 [APP/PROC/WEB/0] OUT JVM Memory Configuration: -Xmx384848K -Xss1M -XX:ReservedCodeCacheSize=240M -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=151727K
+   2020-06-01T18:56:15.20-0500 [APP/PROC/WEB/0] OUT   .   ____          _            __ _ _
+   2020-06-01T18:56:15.20-0500 [APP/PROC/WEB/0] OUT  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+   2020-06-01T18:56:15.20-0500 [APP/PROC/WEB/0] OUT ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+   2020-06-01T18:56:15.20-0500 [APP/PROC/WEB/0] OUT  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+   2020-06-01T18:56:15.20-0500 [APP/PROC/WEB/0] OUT   '  |____| .__|_| |_|_| |_\__, | / / / /
+   2020-06-01T18:56:15.20-0500 [APP/PROC/WEB/0] OUT  =========|_|==============|___/=/_/_/_/
+   2020-06-01T18:56:15.20-0500 [APP/PROC/WEB/0] OUT  :: Spring Boot ::        (v2.2.6.RELEASE)
+   2020-06-01T18:56:15.51-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:15.514  INFO 21 --- [           main] pertySourceApplicationContextInitializer : 'cloud' property source added
+   2020-06-01T18:56:15.52-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:15.520  INFO 21 --- [           main] nfigurationApplicationContextInitializer : Reconfiguration enabled
+   2020-06-01T18:56:15.55-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:15.549  INFO 21 --- [           main] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on 8d0d78b8-3dc1-4142-59d4-f102 with PID 21 (/home/vcap/app/BOOT-INF/classes started by vcap in /home/vcap/app)
+   2020-06-01T18:56:15.55-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:15.551  INFO 21 --- [           main] o.l.Competrack.CompetrackApplication     : The following profiles are active: cloud
+   2020-06-01T18:56:17.44-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:17.441  INFO 21 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+   2020-06-01T18:56:17.66-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:17.665  INFO 21 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 187ms. Found 4 JPA repository interfaces.
+   2020-06-01T18:56:18.34-0500 [APP/PROC/WEB/0] ERR Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+   2020-06-01T18:56:18.35-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:18.350  INFO 21 --- [           main] o.c.r.o.s.c.s.r.PooledDataSourceCreator  : Found HikariCP on the classpath. Using it for DataSource connection pooling.
+   2020-06-01T18:56:18.40-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:18.409  INFO 21 --- [           main] o.c.reconfiguration.CloudServiceUtils    : 'dataSource' bean of type with 'javax.sql.DataSource' reconfigured with 'CompeTrackNew-db' bean
+   2020-06-01T18:56:19.23-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:19.235  INFO 21 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+   2020-06-01T18:56:19.24-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:19.248  INFO 21 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+   2020-06-01T18:56:19.24-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:19.248  INFO 21 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+   2020-06-01T18:56:19.33-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:19.335  INFO 21 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+   2020-06-01T18:56:19.33-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:19.335  INFO 21 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3593 ms
+   2020-06-01T18:56:19.52-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:19.528  INFO 21 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+   2020-06-01T18:56:19.54-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:19.541  INFO 21 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+   2020-06-01T18:56:19.55-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:19.551  WARN 21 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+   2020-06-01T18:56:20.13-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:20.138  INFO 21 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:56:20.13-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:20.139  INFO 21 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:56:20.14-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:20.143  INFO 21 --- [tificates.crt-0] org.cloudfoundry.security.FileWatcher    : Start watching /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:56:20.48-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:20.481  INFO 21 --- [           main] c.s.FileWatchingX509ExtendedTrustManager : Initialized TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:56:21.17-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:21.175  INFO 21 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+   2020-06-01T18:56:21.19-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:21.190  INFO 21 --- [onnection adder] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:56:21.31-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:21.311  INFO 21 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://us-cdbr-east-05.cleardb.net/ad_0f6da3c52cedb22 (MySQL 5.5)
+   2020-06-01T18:56:21.52-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:21.520  INFO 21 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `ad_0f6da3c52cedb22`: 1
+   2020-06-01T18:56:21.54-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:21.548  WARN 21 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:56:21.55-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:21.553  INFO 21 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:21.579  INFO 21 --- [           main] ConditionEvaluationReportLoggingListener : 
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:21.586 ERROR 21 --- [           main] o.s.boot.SpringApplication               : Application run failed
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.launchcode.Competrack.CompetrackApplication.main(CompetrackApplication.java:10) ~[classes/:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[app/:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[app/:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[app/:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[app/:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT Caused by: org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:229) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:164) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:147) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:155) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:139) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1395) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.execute(Flyway.java:1711) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.migrate(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:21.58-0500 [APP/PROC/WEB/0] OUT 	... 26 common frames omitted
+   2020-06-01T18:56:21.98-0500 [APP/PROC/WEB/0] OUT Exit status 1
+   2020-06-01T18:56:21.98-0500 [CELL/SSHD/0] OUT Exit status 0
+   2020-06-01T18:56:27.29-0500 [CELL/0] OUT Cell 017765bf-28cb-4d24-b3d5-b52be99a3239 stopping instance 8d0d78b8-3dc1-4142-59d4-f102
+   2020-06-01T18:56:27.29-0500 [CELL/0] OUT Cell 017765bf-28cb-4d24-b3d5-b52be99a3239 destroying container for instance 8d0d78b8-3dc1-4142-59d4-f102
+   2020-06-01T18:56:27.29-0500 [API/5] OUT Process has crashed with type: "web"
+   2020-06-01T18:56:27.31-0500 [API/5] OUT App instance exited with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 payload: {"instance"=>"8d0d78b8-3dc1-4142-59d4-f102", "index"=>0, "cell_id"=>"017765bf-28cb-4d24-b3d5-b52be99a3239", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 1", "crash_count"=>2, "crash_timestamp"=>1591055787270940159, "version"=>"e5e8516b-1982-4e41-9301-562fd09fa8d4"}
+   2020-06-01T18:56:27.49-0500 [CELL/0] OUT Cell 2402f91a-ab04-47d6-b50a-931cb40ec9d8 creating container for instance 11bc5cad-5746-48e9-719b-fbae
+   2020-06-01T18:56:27.55-0500 [PROXY/0] OUT Exit status 137
+   2020-06-01T18:56:28.11-0500 [CELL/0] OUT Cell 017765bf-28cb-4d24-b3d5-b52be99a3239 successfully destroyed container for instance 8d0d78b8-3dc1-4142-59d4-f102
+   2020-06-01T18:56:28.48-0500 [CELL/0] OUT Cell 2402f91a-ab04-47d6-b50a-931cb40ec9d8 successfully created container for instance 11bc5cad-5746-48e9-719b-fbae
+   2020-06-01T18:56:28.85-0500 [CELL/0] OUT Downloading droplet...
+   2020-06-01T18:56:33.32-0500 [CELL/0] OUT Downloaded droplet (96.1M)
+   2020-06-01T18:56:33.32-0500 [CELL/0] OUT Starting health monitoring of container
+   2020-06-01T18:56:34.60-0500 [APP/PROC/WEB/0] OUT JVM Memory Configuration: -Xmx384848K -Xss1M -XX:ReservedCodeCacheSize=240M -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=151727K
+   2020-06-01T18:56:36.82-0500 [APP/PROC/WEB/0] OUT   .   ____          _            __ _ _
+   2020-06-01T18:56:36.82-0500 [APP/PROC/WEB/0] OUT  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+   2020-06-01T18:56:36.82-0500 [APP/PROC/WEB/0] OUT ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+   2020-06-01T18:56:36.82-0500 [APP/PROC/WEB/0] OUT  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+   2020-06-01T18:56:36.82-0500 [APP/PROC/WEB/0] OUT   '  |____| .__|_| |_|_| |_\__, | / / / /
+   2020-06-01T18:56:36.82-0500 [APP/PROC/WEB/0] OUT  =========|_|==============|___/=/_/_/_/
+   2020-06-01T18:56:36.82-0500 [APP/PROC/WEB/0] OUT  :: Spring Boot ::        (v2.2.6.RELEASE)
+   2020-06-01T18:56:37.06-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:37.061  INFO 19 --- [           main] pertySourceApplicationContextInitializer : 'cloud' property source added
+   2020-06-01T18:56:37.06-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:37.065  INFO 19 --- [           main] nfigurationApplicationContextInitializer : Reconfiguration enabled
+   2020-06-01T18:56:37.07-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:37.076  INFO 19 --- [           main] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on 11bc5cad-5746-48e9-719b-fbae with PID 19 (/home/vcap/app/BOOT-INF/classes started by vcap in /home/vcap/app)
+   2020-06-01T18:56:37.07-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:37.078  INFO 19 --- [           main] o.l.Competrack.CompetrackApplication     : The following profiles are active: cloud
+   2020-06-01T18:56:38.22-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:38.227  INFO 19 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+   2020-06-01T18:56:38.34-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:38.341  INFO 19 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 99ms. Found 4 JPA repository interfaces.
+   2020-06-01T18:56:38.70-0500 [APP/PROC/WEB/0] ERR Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+   2020-06-01T18:56:38.70-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:38.704  INFO 19 --- [           main] o.c.r.o.s.c.s.r.PooledDataSourceCreator  : Found HikariCP on the classpath. Using it for DataSource connection pooling.
+   2020-06-01T18:56:38.74-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:38.739  INFO 19 --- [           main] o.c.reconfiguration.CloudServiceUtils    : 'dataSource' bean of type with 'javax.sql.DataSource' reconfigured with 'CompeTrackNew-db' bean
+   2020-06-01T18:56:39.55-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:39.558  INFO 19 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+   2020-06-01T18:56:39.58-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:39.582  INFO 19 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+   2020-06-01T18:56:39.58-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:39.583  INFO 19 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+   2020-06-01T18:56:39.67-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:39.670  INFO 19 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+   2020-06-01T18:56:39.67-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:39.671  INFO 19 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2503 ms
+   2020-06-01T18:56:39.91-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:39.913  INFO 19 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+   2020-06-01T18:56:39.92-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:39.925  INFO 19 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+   2020-06-01T18:56:39.93-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:39.935  WARN 19 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+   2020-06-01T18:56:40.40-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:40.406  INFO 19 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:56:40.40-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:40.408  INFO 19 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:56:40.42-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:40.419  INFO 19 --- [tificates.crt-0] org.cloudfoundry.security.FileWatcher    : Start watching /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:56:40.66-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:40.665  INFO 19 --- [           main] c.s.FileWatchingX509ExtendedTrustManager : Initialized TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:56:41.06-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:41.063  INFO 19 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+   2020-06-01T18:56:41.07-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:41.078  INFO 19 --- [onnection adder] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:56:41.21-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:41.210  INFO 19 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://us-cdbr-east-05.cleardb.net/ad_0f6da3c52cedb22 (MySQL 5.5)
+   2020-06-01T18:56:41.60-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:41.602  INFO 19 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `ad_0f6da3c52cedb22`: 1
+   2020-06-01T18:56:41.63-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:41.633  WARN 19 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:56:41.63-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:41.639  INFO 19 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+   2020-06-01T18:56:41.70-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:41.699  INFO 19 --- [           main] ConditionEvaluationReportLoggingListener : 
+   2020-06-01T18:56:41.70-0500 [APP/PROC/WEB/0] OUT Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:56:41.717 ERROR 19 --- [           main] o.s.boot.SpringApplication               : Application run failed
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.launchcode.Competrack.CompetrackApplication.main(CompetrackApplication.java:10) ~[classes/:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[app/:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[app/:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[app/:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[app/:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT Caused by: org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:229) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:164) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:147) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:155) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:139) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1395) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.execute(Flyway.java:1711) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.migrate(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:56:41.71-0500 [APP/PROC/WEB/0] OUT 	... 26 common frames omitted
+   2020-06-01T18:56:42.16-0500 [APP/PROC/WEB/0] OUT Exit status 1
+   2020-06-01T18:56:42.16-0500 [CELL/SSHD/0] OUT Exit status 0
+   2020-06-01T18:56:47.70-0500 [CELL/0] OUT Cell 2402f91a-ab04-47d6-b50a-931cb40ec9d8 stopping instance 11bc5cad-5746-48e9-719b-fbae
+   2020-06-01T18:56:47.70-0500 [CELL/0] OUT Cell 2402f91a-ab04-47d6-b50a-931cb40ec9d8 destroying container for instance 11bc5cad-5746-48e9-719b-fbae
+   2020-06-01T18:56:47.71-0500 [API/16] OUT Process has crashed with type: "web"
+   2020-06-01T18:56:47.73-0500 [API/16] OUT App instance exited with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 payload: {"instance"=>"11bc5cad-5746-48e9-719b-fbae", "index"=>0, "cell_id"=>"2402f91a-ab04-47d6-b50a-931cb40ec9d8", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 1", "crash_count"=>3, "crash_timestamp"=>1591055807696760999, "version"=>"e5e8516b-1982-4e41-9301-562fd09fa8d4"}
+   2020-06-01T18:56:47.94-0500 [PROXY/0] OUT Exit status 137
+   2020-06-01T18:56:48.37-0500 [CELL/0] OUT Cell 2402f91a-ab04-47d6-b50a-931cb40ec9d8 successfully destroyed container for instance 11bc5cad-5746-48e9-719b-fbae
+   2020-06-01T18:57:40.57-0500 [CELL/0] OUT Cell 85cc6bca-89ad-40d5-b05e-bafb6f2a8b5c creating container for instance b675384f-393f-42d5-63e8-8ea0
+   2020-06-01T18:57:41.46-0500 [CELL/0] OUT Cell 85cc6bca-89ad-40d5-b05e-bafb6f2a8b5c successfully created container for instance b675384f-393f-42d5-63e8-8ea0
+   2020-06-01T18:57:41.67-0500 [CELL/0] OUT Downloading droplet...
+   2020-06-01T18:57:45.49-0500 [CELL/0] OUT Downloaded droplet (96.1M)
+   2020-06-01T18:57:45.49-0500 [CELL/0] OUT Starting health monitoring of container
+   2020-06-01T18:57:46.95-0500 [APP/PROC/WEB/0] OUT JVM Memory Configuration: -Xmx384848K -Xss1M -XX:ReservedCodeCacheSize=240M -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=151727K
+   2020-06-01T18:57:49.11-0500 [APP/PROC/WEB/0] OUT   .   ____          _            __ _ _
+   2020-06-01T18:57:49.11-0500 [APP/PROC/WEB/0] OUT  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+   2020-06-01T18:57:49.11-0500 [APP/PROC/WEB/0] OUT ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+   2020-06-01T18:57:49.11-0500 [APP/PROC/WEB/0] OUT  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+   2020-06-01T18:57:49.11-0500 [APP/PROC/WEB/0] OUT   '  |____| .__|_| |_|_| |_\__, | / / / /
+   2020-06-01T18:57:49.11-0500 [APP/PROC/WEB/0] OUT  =========|_|==============|___/=/_/_/_/
+   2020-06-01T18:57:49.11-0500 [APP/PROC/WEB/0] OUT  :: Spring Boot ::        (v2.2.6.RELEASE)
+   2020-06-01T18:57:49.36-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:49.363  INFO 37 --- [           main] pertySourceApplicationContextInitializer : 'cloud' property source added
+   2020-06-01T18:57:49.36-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:49.367  INFO 37 --- [           main] nfigurationApplicationContextInitializer : Reconfiguration enabled
+   2020-06-01T18:57:49.38-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:49.387  INFO 37 --- [           main] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on b675384f-393f-42d5-63e8-8ea0 with PID 37 (/home/vcap/app/BOOT-INF/classes started by vcap in /home/vcap/app)
+   2020-06-01T18:57:49.38-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:49.388  INFO 37 --- [           main] o.l.Competrack.CompetrackApplication     : The following profiles are active: cloud
+   2020-06-01T18:57:51.06-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:51.059  INFO 37 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+   2020-06-01T18:57:51.23-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:51.237  INFO 37 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 157ms. Found 4 JPA repository interfaces.
+   2020-06-01T18:57:51.73-0500 [APP/PROC/WEB/0] ERR Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+   2020-06-01T18:57:51.74-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:51.742  INFO 37 --- [           main] o.c.r.o.s.c.s.r.PooledDataSourceCreator  : Found HikariCP on the classpath. Using it for DataSource connection pooling.
+   2020-06-01T18:57:51.77-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:51.776  INFO 37 --- [           main] o.c.reconfiguration.CloudServiceUtils    : 'dataSource' bean of type with 'javax.sql.DataSource' reconfigured with 'CompeTrackNew-db' bean
+   2020-06-01T18:57:52.72-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:52.728  INFO 37 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+   2020-06-01T18:57:52.74-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:52.748  INFO 37 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+   2020-06-01T18:57:52.74-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:52.748  INFO 37 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+   2020-06-01T18:57:52.91-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:52.910  INFO 37 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+   2020-06-01T18:57:52.91-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:52.910  INFO 37 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3423 ms
+   2020-06-01T18:57:53.16-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:53.163  INFO 37 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+   2020-06-01T18:57:53.17-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:53.177  INFO 37 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+   2020-06-01T18:57:53.18-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:53.187  WARN 37 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+   2020-06-01T18:57:53.77-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:53.772  INFO 37 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:57:53.77-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:53.773  INFO 37 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:57:53.78-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:53.778  INFO 37 --- [tificates.crt-0] org.cloudfoundry.security.FileWatcher    : Start watching /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:57:54.17-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.167  INFO 37 --- [           main] c.s.FileWatchingX509ExtendedTrustManager : Initialized TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:57:54.54-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.546  INFO 37 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+   2020-06-01T18:57:54.56-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.561  INFO 37 --- [onnection adder] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:57:54.68-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.684  INFO 37 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://us-cdbr-east-05.cleardb.net/ad_0f6da3c52cedb22 (MySQL 5.5)
+   2020-06-01T18:57:54.90-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.907  INFO 37 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `ad_0f6da3c52cedb22`: 1
+   2020-06-01T18:57:54.94-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.942  WARN 37 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:57:54.94-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.946  INFO 37 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+   2020-06-01T18:57:54.96-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.967  INFO 37 --- [           main] ConditionEvaluationReportLoggingListener : 
+   2020-06-01T18:57:54.96-0500 [APP/PROC/WEB/0] OUT Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:57:54.974 ERROR 37 --- [           main] o.s.boot.SpringApplication               : Application run failed
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.launchcode.Competrack.CompetrackApplication.main(CompetrackApplication.java:10) ~[classes/:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[app/:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[app/:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[app/:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[app/:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT Caused by: org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:229) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:164) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:147) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:155) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:139) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1395) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.execute(Flyway.java:1711) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.migrate(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:57:54.97-0500 [APP/PROC/WEB/0] OUT 	... 26 common frames omitted
+   2020-06-01T18:57:55.37-0500 [APP/PROC/WEB/0] OUT Exit status 1
+   2020-06-01T18:57:55.38-0500 [CELL/SSHD/0] OUT Exit status 0
+   2020-06-01T18:58:00.62-0500 [CELL/0] OUT Cell 85cc6bca-89ad-40d5-b05e-bafb6f2a8b5c stopping instance b675384f-393f-42d5-63e8-8ea0
+   2020-06-01T18:58:00.62-0500 [CELL/0] OUT Cell 85cc6bca-89ad-40d5-b05e-bafb6f2a8b5c destroying container for instance b675384f-393f-42d5-63e8-8ea0
+   2020-06-01T18:58:00.63-0500 [API/10] OUT Process has crashed with type: "web"
+   2020-06-01T18:58:00.65-0500 [API/10] OUT App instance exited with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 payload: {"instance"=>"b675384f-393f-42d5-63e8-8ea0", "index"=>0, "cell_id"=>"85cc6bca-89ad-40d5-b05e-bafb6f2a8b5c", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 1", "crash_count"=>4, "crash_timestamp"=>1591055880614388406, "version"=>"e5e8516b-1982-4e41-9301-562fd09fa8d4"}
+   2020-06-01T18:58:00.86-0500 [PROXY/0] OUT Exit status 137
+   2020-06-01T18:58:01.76-0500 [CELL/0] OUT Cell 85cc6bca-89ad-40d5-b05e-bafb6f2a8b5c successfully destroyed container for instance b675384f-393f-42d5-63e8-8ea0
+   2020-06-01T18:59:14.75-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 creating container for instance 1d626bdd-5b5b-4852-75db-570c
+   2020-06-01T18:59:15.81-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 successfully created container for instance 1d626bdd-5b5b-4852-75db-570c
+   2020-06-01T18:59:16.12-0500 [CELL/0] OUT Downloading droplet...
+   2020-06-01T18:59:20.63-0500 [CELL/0] OUT Downloaded droplet (96.1M)
+   2020-06-01T18:59:20.63-0500 [CELL/0] OUT Starting health monitoring of container
+   2020-06-01T18:59:21.81-0500 [APP/PROC/WEB/0] OUT JVM Memory Configuration: -Xmx384848K -Xss1M -XX:ReservedCodeCacheSize=240M -XX:MaxDirectMemorySize=10M -XX:MaxMetaspaceSize=151727K
+   2020-06-01T18:59:23.75-0500 [APP/PROC/WEB/0] OUT   .   ____          _            __ _ _
+   2020-06-01T18:59:23.75-0500 [APP/PROC/WEB/0] OUT  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+   2020-06-01T18:59:23.75-0500 [APP/PROC/WEB/0] OUT ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+   2020-06-01T18:59:23.75-0500 [APP/PROC/WEB/0] OUT  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+   2020-06-01T18:59:23.75-0500 [APP/PROC/WEB/0] OUT   '  |____| .__|_| |_|_| |_\__, | / / / /
+   2020-06-01T18:59:23.75-0500 [APP/PROC/WEB/0] OUT  =========|_|==============|___/=/_/_/_/
+   2020-06-01T18:59:23.75-0500 [APP/PROC/WEB/0] OUT  :: Spring Boot ::        (v2.2.6.RELEASE)
+   2020-06-01T18:59:25.06-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:25.056  INFO 6 --- [           main] pertySourceApplicationContextInitializer : 'cloud' property source added
+   2020-06-01T18:59:25.06-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:25.064  INFO 6 --- [           main] nfigurationApplicationContextInitializer : Reconfiguration enabled
+   2020-06-01T18:59:25.08-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:25.083  INFO 6 --- [           main] o.l.Competrack.CompetrackApplication     : Starting CompetrackApplication on 1d626bdd-5b5b-4852-75db-570c with PID 6 (/home/vcap/app/BOOT-INF/classes started by vcap in /home/vcap/app)
+   2020-06-01T18:59:25.08-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:25.086  INFO 6 --- [           main] o.l.Competrack.CompetrackApplication     : The following profiles are active: cloud
+   2020-06-01T18:59:26.66-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:26.665  INFO 6 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+   2020-06-01T18:59:26.80-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:26.799  INFO 6 --- [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121ms. Found 4 JPA repository interfaces.
+   2020-06-01T18:59:27.23-0500 [APP/PROC/WEB/0] ERR Loading class `com.mysql.jdbc.Driver'. This is deprecated. The new driver class is `com.mysql.cj.jdbc.Driver'. The driver is automatically registered via the SPI and manual loading of the driver class is generally unnecessary.
+   2020-06-01T18:59:27.23-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:27.238  INFO 6 --- [           main] o.c.r.o.s.c.s.r.PooledDataSourceCreator  : Found HikariCP on the classpath. Using it for DataSource connection pooling.
+   2020-06-01T18:59:27.27-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:27.272  INFO 6 --- [           main] o.c.reconfiguration.CloudServiceUtils    : 'dataSource' bean of type with 'javax.sql.DataSource' reconfigured with 'CompeTrackNew-db' bean
+   2020-06-01T18:59:28.12-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.121  INFO 6 --- [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+   2020-06-01T18:59:28.13-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.135  INFO 6 --- [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+   2020-06-01T18:59:28.13-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.136  INFO 6 --- [           main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+   2020-06-01T18:59:28.24-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.246  INFO 6 --- [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+   2020-06-01T18:59:28.24-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.247  INFO 6 --- [           main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2809 ms
+   2020-06-01T18:59:28.44-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.448  INFO 6 --- [           main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 5.2.4 by Boxfuse
+   2020-06-01T18:59:28.46-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.462  INFO 6 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+   2020-06-01T18:59:28.47-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.473  WARN 6 --- [           main] com.zaxxer.hikari.util.DriverDataSource  : Registered driver with driverClassName=com.mysql.jdbc.Driver was not found, trying direct instantiation.
+   2020-06-01T18:59:28.87-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.876  INFO 6 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:59:28.87-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.876  INFO 6 --- [           main] ContainerTrustManagerFactory$PKIXFactory : Adding TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:59:28.88-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:28.880  INFO 6 --- [tificates.crt-0] org.cloudfoundry.security.FileWatcher    : Start watching /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:59:29.10-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.105  INFO 6 --- [           main] c.s.FileWatchingX509ExtendedTrustManager : Initialized TrustManager for /etc/ssl/certs/ca-certificates.crt
+   2020-06-01T18:59:29.51-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.510  INFO 6 --- [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+   2020-06-01T18:59:29.52-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.519  INFO 6 --- [onnection adder] ContainerTrustManagerFactory$PKIXFactory : Adding System Trust Manager
+   2020-06-01T18:59:29.60-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.604  INFO 6 --- [           main] o.f.c.internal.database.DatabaseFactory  : Database: jdbc:mysql://us-cdbr-east-05.cleardb.net/ad_0f6da3c52cedb22 (MySQL 5.5)
+   2020-06-01T18:59:29.83-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.834  INFO 6 --- [           main] o.f.core.internal.command.DbMigrate      : Current version of schema `ad_0f6da3c52cedb22`: 1
+   2020-06-01T18:59:29.85-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.853  WARN 6 --- [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:59:29.85-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.859  INFO 6 --- [           main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+   2020-06-01T18:59:29.88-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.884  INFO 6 --- [           main] ConditionEvaluationReportLoggingListener : 
+   2020-06-01T18:59:29.88-0500 [APP/PROC/WEB/0] OUT Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 2020-06-01 23:59:29.891 ERROR 6 --- [           main] o.s.boot.SpringApplication               : Application run failed
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1108) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:868) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550) ~[spring-context-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215) ~[spring-boot-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.launchcode.Competrack.CompetrackApplication.main(CompetrackApplication.java:10) ~[classes/:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at java.base/java.lang.reflect.Method.invoke(Unknown Source) ~[na:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48) ~[app/:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:87) ~[app/:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.Launcher.launch(Launcher.java:51) ~[app/:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:52) ~[app/:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT Caused by: org.flywaydb.core.api.FlywayException: Schema `ad_0f6da3c52cedb22` contains a failed migration to version 1 !
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:229) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.access$100(DbMigrate.java:54) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:164) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate$2.call(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLNamedLockTemplate.execute(MySQLNamedLockTemplate.java:60) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.database.mysql.MySQLConnection.lock(MySQLConnection.java:147) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:155) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:161) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:139) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1395) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway$1.execute(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.execute(Flyway.java:1711) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.flywaydb.core.Flyway.migrate(Flyway.java:1356) ~[flyway-core-5.2.4.jar:na]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:65) ~[spring-boot-autoconfigure-2.2.6.RELEASE.jar:2.2.6.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792) ~[spring-beans-5.2.5.RELEASE.jar:5.2.5.RELEASE]
+   2020-06-01T18:59:29.89-0500 [APP/PROC/WEB/0] OUT 	... 26 common frames omitted
+   2020-06-01T18:59:30.28-0500 [APP/PROC/WEB/0] OUT Exit status 1
+   2020-06-01T18:59:30.29-0500 [CELL/SSHD/0] OUT Exit status 0
+   2020-06-01T18:59:35.63-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 stopping instance 1d626bdd-5b5b-4852-75db-570c
+   2020-06-01T18:59:35.63-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 destroying container for instance 1d626bdd-5b5b-4852-75db-570c
+   2020-06-01T18:59:35.65-0500 [API/14] OUT Process has crashed with type: "web"
+   2020-06-01T18:59:35.67-0500 [API/14] OUT App instance exited with guid 970f1cb4-b37d-4853-911d-5e39b4e08288 payload: {"instance"=>"1d626bdd-5b5b-4852-75db-570c", "index"=>0, "cell_id"=>"9aa90abe-6a8f-4485-90d1-71da907de9a3", "reason"=>"CRASHED", "exit_description"=>"APP/PROC/WEB: Exited with status 1", "crash_count"=>5, "crash_timestamp"=>1591055975621541974, "version"=>"e5e8516b-1982-4e41-9301-562fd09fa8d4"}
+   2020-06-01T18:59:35.89-0500 [PROXY/0] OUT Exit status 137
+   2020-06-01T18:59:36.26-0500 [CELL/0] OUT Cell 9aa90abe-6a8f-4485-90d1-71da907de9a3 successfully destroyed container for instance 1d626bdd-5b5b-4852-75db-570c
