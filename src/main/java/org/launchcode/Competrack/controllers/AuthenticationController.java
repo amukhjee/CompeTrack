@@ -15,7 +15,7 @@ import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.Optional;
 
-@RequestMapping("/")
+@RequestMapping("")
 @Controller
 public class AuthenticationController {
 
