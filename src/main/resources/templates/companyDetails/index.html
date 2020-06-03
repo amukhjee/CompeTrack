@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <head th:replace="fragments :: head">
     <header th:replace="fragments :: headerloggedin">
         <title>All Company Details</title>
     </header>
 </head>
 <body>
-<div class="container">
-<h1>All Company Details</h1>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="src/main/resources/static/js/greeting.js"></script>
-    </head>
-    <body>
-    <div>
-        <p class="greeting-id">The ID is </p>
-        <p class="greeting-content">The content is </p>
-    </div>
-    </body></div>
+
+<div id="user_id"></div>
+    <script>
+       axios.get('http://localhost:8081/greeting?name=Arpita&description=description',{
+
+        })
+
+        .then(function (response) {
+    console.log(response);
+    let user=response.data.content;
+    let userIdOutput = `
+          <ul class="list-group">
+            <li class="list-group-item">${user}</li>
+          </ul>
+        `;
+    document.getElementById('user_id').innerHTML = userIdOutput;
+     })
+     .catch(function(error){
+        console.log(error);
+      });
+</script>
+
+    <div class="container">
+        <h1>All Company Details</h1>
+
 
 <div th:replace="fragments :: list-per-page"></div>
 <form method="post" action="">

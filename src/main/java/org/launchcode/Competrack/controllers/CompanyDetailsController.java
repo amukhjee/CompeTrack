@@ -8,6 +8,7 @@ import org.launchcode.Competrack.data.SubindustryRepository;
 import org.launchcode.Competrack.models.CompanyDetails;
 import org.launchcode.Competrack.models.Industry;
 import org.launchcode.Competrack.models.Subindustry;
+import org.launchcode.Competrack.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
