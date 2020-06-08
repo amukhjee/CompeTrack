@@ -17,9 +17,9 @@ public class CompanyDetails extends AbstractEntity{
 
     private String subindustry;
 
-    private double revenue;
+    private String revenue;
 
-    private double earnings;
+    private String earnings;
 
     @URLValidation(message = "Please provide valid URL")
     private String url;
@@ -48,19 +48,19 @@ public class CompanyDetails extends AbstractEntity{
         this.url = url;
     }
 
-    public double getRevenue() {
+    public String getRevenue() {
         return revenue;
     }
 
-    public void setRevenue(double revenue) {
+    public void setRevenue(String revenue) {
         this.revenue = revenue;
     }
 
-    public double getEarnings() {
+    public String getEarnings() {
         return earnings;
     }
 
-    public void setEarnings(double earnings) {
+    public void setEarnings(String earnings) {
         this.earnings = earnings;
     }
 
@@ -72,7 +72,7 @@ public class CompanyDetails extends AbstractEntity{
         this.address = address;
     }
 
-    public CompanyDetails(String industry, String url, String address, String subindustry, double revenue, double earnings ) {
+    public CompanyDetails(String industry, String url, String address, String subindustry, String revenue, String earnings ) {
         super();
         this.industry=industry;
         this.address=address;

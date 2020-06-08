@@ -50,8 +50,12 @@ public class CompanyDetailsController {
             response = restServiceInvoker(companyDetail.getName());
             if("SUCCESS".equalsIgnoreCase(response.getResponseType()))
             {
-                companyDetail.setRevenue(response.getFinance().getRevenue());
-                companyDetail.setEarnings(response.getFinance().getEarnings());
+                companyDetail.setRevenue(String.valueOf(response.getFinance().getRevenue()));
+                companyDetail.setEarnings(String.valueOf(response.getFinance().getEarnings()));
+            }else
+            {
+                companyDetail.setEarnings("No data available");
+                companyDetail.setRevenue("No data avaialble");
             }
         }
 
