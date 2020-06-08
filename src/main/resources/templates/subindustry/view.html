@@ -12,9 +12,6 @@
     <li th:each="subindustry: ${subindustries}">
         <a th:href="@{/list/companyDetails(column=subindustry,value=${subindustry.name})}" th:text="${subindustry.name}" th:value="${subindustry.id}"></a>
 </div>
-
-<footer>
-    <p th:replace="fragments :: footer"></p>
-</footer>
+</div>
 </body>
 </html>

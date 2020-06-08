@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="https://www.thymeleaf.org/">
-<head th:replace="fragments :: head">
-    <header th:replace="fragments :: headerloggedin">
-        <title>Add Industry</title>
-    </header>
-</head>
-<body class="container body-content">
-<div id="content-wrap">
-<h1>Add Industry</h1>
 
+<head th:replace="fragments :: head">
+
+    <header th:replace="fragments :: headerloggedin"> </header>
+</head>
+<body>
+        <div class="container body-content">
+            <title>Add Industry</title>
+
+
+<h1>Add Industry</h1>
 <form method="post" style="max-width:600px;">
     <div class="form-group">
         <label th:for="name">Industry Name</label>
@@ -18,8 +20,7 @@
 
     <input type="submit" value="Add Industry" />
 </form>
-</div>
-    <p th:replace="fragments :: footer"></p>
 
+        </div>
 </body>
 </html>
