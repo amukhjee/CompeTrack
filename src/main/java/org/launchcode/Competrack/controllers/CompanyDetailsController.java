@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
 import java.util.*;
 
@@ -73,9 +74,11 @@ public class CompanyDetailsController {
     }
 
     @PostMapping("create")
-    public String processCreateCompanyDetailsForm(@ModelAttribute CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam @Valid String industry, @RequestParam String subindustry, @RequestParam String url, @RequestParam String address, @RequestParam String name ) {
+    public String processCreateCompanyDetailsForm(@ModelAttribute @Valid CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam String industry, @RequestParam String subindustry, @RequestParam String url, @RequestParam String address, @RequestParam String name) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Company");
+            model.addAttribute("industries", industryRepository.findAll());
+            model.addAttribute("subindustries", subindustryRepository.findAll());
             return "companyDetails/create";
         } else {
             // Optional optIndustry = industryRepository.findById(industryId);
@@ -147,8 +150,6 @@ public class CompanyDetailsController {
         model.addAttribute("title", "Company Location");
         return "companyDetails/map";
     }
-
-
 
     public ServiceResponse restServiceInvoker(String name)
     {

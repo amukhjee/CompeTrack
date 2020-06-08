@@ -1,30 +1,15 @@
 package org.launchcode.Competrack.models;
-
 import org.launchcode.Competrack.annotation.URLValidation;
-
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
 
 @Entity
 public class CompanyDetails extends AbstractEntity{
 
 
-
-
     private String industry;
-
-    public String getIndustry() {
-        return industry;
-    }
-
-    public void setIndustry(String industry) {
-        this.industry = industry;
-    }
-
-    public String getSubindustry() {
-        return subindustry;
-    }
 
     public void setSubindustry(String subindustry) {
         this.subindustry = subindustry;
@@ -43,6 +28,18 @@ public class CompanyDetails extends AbstractEntity{
     @NotNull
     private String address;
 
+
+    public String getIndustry() {
+        return industry;
+    }
+
+    public void setIndustry(String industry) {
+        this.industry = industry;
+    }
+
+    public String getSubindustry() {
+        return subindustry;
+    }
     public String getUrl() {
         return url;
     }

@@ -28,7 +28,7 @@
         <label>Industry
             <td><div class="form-group blu-margin">
                 <select class="form-control" th:field="${companyDetails.industry}"  id="dropIndustry">
-                    <option value="">Select Industry</option>
+                    <option value=""></option>
                     <option th:each="industry : ${industries}" th:value="${industry.name}" th:text="${industry.name}"></option>
                 </select>
             </div></td>
@@ -38,7 +38,7 @@
         <label>Sub-industry
             <td><div class="form-group blu-margin">
                 <select class="form-control" th:field="${companyDetails.subindustry}"  id="dropSubIndustry">
-                    <option value="">Select Sub-industry</option>
+                    <option value=""></option>
                     <option th:each="subindustry : ${subindustries}" th:value="${subindustry.name}" th:text="${subindustry.name}"></option>
                 </select>
             </div></td>
