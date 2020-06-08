@@ -60,7 +60,7 @@ public class CompanyDetails extends AbstractEntity{
         return earnings;
     }
 
-    public void setEarnings(double earning) {
+    public void setEarnings(double earnings) {
         this.earnings = earnings;
     }
 

@@ -37,7 +37,7 @@ public class Finance {
         return revenue;
     }
 
-    public void setRevenue(Long revenue) {
+    public void setRevenue(double revenue) {
         this.revenue = revenue;
     }
 
@@ -45,7 +45,7 @@ public class Finance {
         return earnings;
     }
 
-    public void setEarnings(Long earnings) {
+    public void setEarnings(double earnings) {
         this.earnings = earnings;
     }
 

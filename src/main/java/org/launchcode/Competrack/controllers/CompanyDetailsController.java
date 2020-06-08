@@ -46,6 +46,7 @@ public class CompanyDetailsController {
         ServiceResponse response;
         for(CompanyDetails companyDetail:companyDetails)
         {
+            response = new ServiceResponse();
             response = restServiceInvoker(companyDetail.getName());
             if("SUCCESS".equalsIgnoreCase(response.getResponseType()))
             {
