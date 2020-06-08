@@ -5,7 +5,8 @@
         <title>User Login</title>
     </header>
 </head>
-<div class="container">
+<body class="container body-content">
+<div id="content-wrap">
     <h2>User Login</h2>
 <form method="post">
     <div class="form-group">
@@ -23,11 +24,12 @@
 
     <input type="submit" class="btn btn-primary" value="Log In" />
 </form>
-
+</div>
 <p>Don't have an account? <a href="/register">Register for one.</a></p>
 
-</div>
+
 <footer>
     <p th:replace="fragments :: footer"></p>
 </footer>
+</body>
 </html>

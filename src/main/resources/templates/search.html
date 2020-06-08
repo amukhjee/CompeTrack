@@ -5,10 +5,8 @@
         <title>Seach Companies by KeyWord</title>
     </header>
 </head>
-<body class="container">
-
-
-<div class="container body-content">
+<body class="container body-content">
+<div id="content-wrap">
 
     <form th:action="@{/search/results}" method = "post">
         <h2>Search Company by:</h2>
@@ -34,9 +32,7 @@
     </form>
 </div>
 
-
-</body>
 <footer>
     <p th:replace="fragments :: footer"></p>
-</footer>
+</footer></body>
 </html>

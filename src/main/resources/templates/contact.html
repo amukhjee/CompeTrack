@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html"
+      xmlns:form="http://www.w3.org/1999/xhtml">
+<head th:replace="fragments :: head">
+    <header th:replace="fragments :: headerloggedin">
+        <title>Contact US</title>
+    </header>
+</head>
+<body class="container body-content">
+<div id="content-wrap">
+    <h1>Contact US</h1>
+    <p style="margin: 1%;">Competrack Inc.’s headquarter is located in the heart of Overland Park, Kansas. <br><br> Our Address is: <br>
+        7940, W 132nd Ct, <br> Overland Park, Kansas-66213 <br> United States </p>
+    <p>Phone:+1-818-912-0940</p>
+</div>
+</article>
+<artcle id="Social Media">
+    <div class="Social Media">
+        <p>Follow Us in Social Media</p>
+
+        <span>
+            <a th:href="@{https://www.facebook.com/arpita.mukherjee.5201}"><img src="/images/facebook.jpeg" height="50"></a>
+        </span>
+        <span>
+            <a th:href="@{https://www.linkedin.com/feed/}"><img src="/images/linkedin.png" height="50"></a>
+        </span>
+    </div>
+</artcle>
+    <footer>
+        <p th:replace="fragments :: footer"></p>
+    </footer>
+</body>
+</html>

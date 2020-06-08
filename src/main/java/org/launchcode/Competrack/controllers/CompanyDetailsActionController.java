@@ -2,6 +2,7 @@ package org.launchcode.Competrack.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.HashMap;
 
@@ -22,4 +23,6 @@ public class CompanyDetailsActionController {
         model.addAttribute("columns", columnChoices);
         return "actions";
     }
+
+
 }

@@ -5,8 +5,8 @@
         <title>Companies with Category</title>
     </header>
 </head>
-<body class="container">
-<div class="container body-content">
+<body class="container body-content">
+<div id="content-wrap">
 
     <h1 th:text="${#strings.capitalizeWords(title)}"></h1>
     <div th:replace="fragments :: list-per-page"></div>

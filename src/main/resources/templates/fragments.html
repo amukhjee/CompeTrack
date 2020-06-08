@@ -38,8 +38,8 @@
             </div>
             <ul class="nav navbar-nav">
                 <li><a href="/register"><span class="glyphicon glyphicon-home"></span> Home</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-home"></span> About US</a></li>
-                <li><a href="#"><span class="glyphicon glyphicon-envelope"></span> Contact US</a></li>
+                <li><a href="/aboutUs"><span class="glyphicon glyphicon-home"></span> About US</a></li>
+                <li><a href="/contact"><span class="glyphicon glyphicon-envelope"></span> Contact US</a></li>
                 <div class="btn-group">
                     <div class="btn-group">
                 <li class="dropdown">
@@ -77,7 +77,7 @@
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="/search"><span class="glyphicon glyphicon-search"></span>Search</a></li>
-                <li><a href="/login"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
             </ul>
         </div>
     </nav>
@@ -86,6 +86,7 @@
 
 
 <div th:fragment="companyDetails-lister">
+    <span th:unless="${companyDetails!=null and !companyDetails.empty}"><h3>No Data Available</h3></span>
     <table id="tadminViewReport" class="table table-striped">
         <tr th:each="companyDetail : ${companyDetails}">
             <td>

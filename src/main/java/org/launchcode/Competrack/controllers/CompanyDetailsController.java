@@ -148,6 +148,8 @@ public class CompanyDetailsController {
         return "companyDetails/map";
     }
 
+
+
     public ServiceResponse restServiceInvoker(String name)
     {
         RestTemplateBuilder restBuilder = new RestTemplateBuilder();
