@@ -5,7 +5,8 @@
         <title>Company Details Update Form</title>
     </header>
 </head>
-<body class="container">
+<body class="container body-content">
+<div id="content-wrap">
 <div><nav th:replace="fragments :: navigation"></nav></div>
 <h1>Company Detail Update Form</h1>
 
@@ -42,6 +43,9 @@
     </div>
     <input type="submit" value="Update Company" class="btn btn-primary">
 </form>
-
+</div>
+<footer>
+    <p th:replace="fragments :: footer"></p>
+</footer>
 </body>
 </html>

@@ -5,8 +5,8 @@
         <title>Google Map Locator</title>
     </header>
 </head>
-<body class="container">
-
+<body class="container body-content">
+<div id="content-wrap">
 <h1>Company Location</h1>
 <style>
     #map{
@@ -15,10 +15,7 @@
     }
   </style>
 <script src="https://unpkg.com/axios/dist/axios.min.js">
-
-
 </script>
-
 
 <div id="formatted_address"></div>
 <div id="map"></div>
@@ -85,9 +82,9 @@ function initMap(){
 <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXjJTcvOUa8wmbwlPx7u19u0BiALEK4B8&callback=initMap">
 </script>
-
-
-
-
+</div>
+<footer>
+    <p th:replace="fragments :: footer"></p>
+</footer>
 </body>
 </html>

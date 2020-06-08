@@ -5,7 +5,8 @@
         <title>Delete Company Details</title>
     </header>
 </head>
-<body class="container">
+<body class="container body-content">
+    <div id="content-wrap">
 <h1>Delete Company</h1>
 <form method="post">
 <th:block th:each="companyDetail:${companyDetails}">
@@ -17,6 +18,11 @@
     </div>
 </th:block>
     <input type="submit" value="delete" class="btn btn-primary">
-</form>
+</form></div>
+<footer>
+    <p th:replace="fragments :: footer"></p>
+</footer>
+
+</div>
 </body>
 </html>

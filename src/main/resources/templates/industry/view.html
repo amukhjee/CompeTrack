@@ -1,16 +1,21 @@
 <!DOCTYPE html>
-<<html lang="en" xmlns:th="https://www.thymeleaf.org/">
+<html lang="en" xmlns:th="https://www.thymeleaf.org/">
 <head th:replace="fragments :: head">
     <header th:replace="fragments :: headerloggedin">
         <title>View Industries</title>
     </header>
 </head>
 
-<body class="container  body-content">
+<body class="container body-content">
+<div id="content-wrap">
 <h1>Available Industries</h1>
 <div class="industry-listing">
     <li th:each="industry: ${industries}">
         <a th:href="@{/list/companyDetails(column=industry,value=${industry.name})}" th:text="${industry.name}" th:value="${industry.id}"></a>
 </div>
+</div>
+<footer>
+    <p th:replace="fragments :: footer"></p>
+</footer>
 </body>
 </html>

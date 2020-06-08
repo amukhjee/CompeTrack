@@ -6,8 +6,8 @@
         <title>All Company Details</title>
     </header>
 </head>
-<body>
-
+<body class="container body-content">
+    <div id="content-wrap">
 <div id="user_id"></div>
     <script>
        axios.get('http://localhost:8081/greeting?name=Arpita&description=description',{
@@ -28,8 +28,6 @@
         console.log(error);
       });
 </script>
-
-    <div class="container">
         <h1>All Company Details</h1>
 
 
@@ -43,6 +41,8 @@
             <th> Location</th>
             <th> Industry</th>
             <th> Sub-industry</th>
+            <th> Annual Revenue(USD)</th>
+            <th> Earning(USD)</th>
             <th> Update Company Details</th>
         </tr>
         </thead>
@@ -58,8 +58,12 @@
             <td class="nav">
                 <ul  th:text="${companyDetail.subindustry}" th:value="${companyDetail.subindustry}"></ul></td>
             <td class="nav">
-            <li class="nav-item">
-                <a class="nav-link" th:href="@{'/companyDetails/update?search=' + ${companyDetail.id}}" th:name="companyDetailId" th:value="${companyDetail.id}" >Update Company Details</a></li>
+                    <ul  th:text="${companyDetail.revenue}" ></ul></td>
+            <td class="nav">
+                <ul th:text="${companyDetail.earnings}" ></ul></td>
+            <td class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" th:href="@{'/companyDetails/update?search=' + ${companyDetail.id}}" th:name="companyDetailId" th:value="${companyDetail.id}" >Update </a></li>
 
         </tr>
     </table></div>
@@ -168,5 +172,9 @@ function Pager(tableName, itemsPerPage) {
     }
 }
 </script>
+    </div>
+
+            <p th:replace="fragments :: footer"></p>
+
 </body>
 </html>

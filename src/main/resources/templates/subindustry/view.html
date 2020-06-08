@@ -5,13 +5,16 @@
         <title>View Subindustry</title>
     </header>
 </head>
-
-
-<body class="container  body-content">
+<body class="container body-content">
+<div id="content-wrap">
 <h1>Available Sub-industries</h1>
 <div class="subindustry-listing">
     <li th:each="subindustry: ${subindustries}">
         <a th:href="@{/list/companyDetails(column=subindustry,value=${subindustry.name})}" th:text="${subindustry.name}" th:value="${subindustry.id}"></a>
 </div>
+</div>
+<footer>
+    <p th:replace="fragments :: footer"></p>
+</footer>
 </body>
 </html>

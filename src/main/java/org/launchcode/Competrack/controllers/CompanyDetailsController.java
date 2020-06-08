@@ -9,11 +9,14 @@ import org.launchcode.Competrack.models.CompanyDetails;
 import org.launchcode.Competrack.models.Industry;
 import org.launchcode.Competrack.models.Subindustry;
 import org.launchcode.Competrack.models.User;
+import org.launchcode.Competrack.service.ServiceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 
 import javax.validation.Valid;
@@ -36,9 +39,24 @@ public class CompanyDetailsController {
 
     @GetMapping
     public String displayallcompanydetails(Model model) {
+
+        ArrayList <CompanyDetails> companyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
+
+        ServiceResponse response;
+        for(CompanyDetails companyDetail:companyDetails)
+        {
+            response = restServiceInvoker(companyDetail.getName());
+            if("SUCCESS".equalsIgnoreCase(response.getResponseType()))
+            {
+                companyDetail.setRevenue(response.getFinance().getRevenue());
+                companyDetail.setEarnings(response.getFinance().getEarnings());
+            }
+        }
+
+
         model.addAttribute("title", "All Company Details");
-        model.addAttribute("companyDetails", companyDetailsRepository.findAll());
-        ArrayList<CompanyDetails> allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
+        model.addAttribute("companyDetails", companyDetails);
+       // ArrayList<CompanyDetails> allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
        model.addAttribute("industries", industryRepository.findAll());
         model.addAttribute("subindustries", subindustryRepository.findAll());
         return "companyDetails/index";
@@ -130,7 +148,13 @@ public class CompanyDetailsController {
         return "companyDetails/map";
     }
 
-
+    public ServiceResponse restServiceInvoker(String name)
+    {
+        RestTemplateBuilder restBuilder = new RestTemplateBuilder();
+        RestTemplate restTemplate = restBuilder.build();
+        ServiceResponse response = restTemplate.getForObject("http://localhost:8083/finance?name="+name, ServiceResponse.class);
+        return response;
+    }
 
 
 }

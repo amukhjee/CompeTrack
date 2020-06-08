@@ -4,8 +4,8 @@
     <header th:replace="fragments :: headerloggedin">
         <title>Update Company Details</title>
     </header>
-<body class="container">
-
+<body class="container body-content">
+<div id="content-wrap">
 <h1>Update Company</h1>
 <form method="post" action="/companyDetails/update">
         <div>
@@ -52,5 +52,9 @@
         </div>
                 <input type="submit"  value="Update Company" class="btn btn-primary">
 </form>
+</div>
+<footer>
+    <p th:replace="fragments :: footer"></p>
+</footer>
 </body>
 </html>
