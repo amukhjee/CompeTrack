@@ -37,34 +37,59 @@ public class CompanyDetailsController {
     private SubindustryRepository subindustryRepository;
 
 
+    @GetMapping("welcome")
+    public String displayallcompanydetailsWithWelcome(Model model, @RequestParam String username) {
 
-    @GetMapping
-    public String displayallcompanydetails(Model model) {
-
-        ArrayList <CompanyDetails> companyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
+        ArrayList<CompanyDetails> companyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
 
         ServiceResponse response;
-        for(CompanyDetails companyDetail:companyDetails)
-        {
+        for (CompanyDetails companyDetail : companyDetails) {
             response = new ServiceResponse();
             response = restServiceInvoker(companyDetail.getName());
-            if("SUCCESS".equalsIgnoreCase(response.getResponseType()))
-            {
+            if ("SUCCESS".equalsIgnoreCase(response.getResponseType())) {
                 companyDetail.setRevenue(String.valueOf(response.getFinance().getRevenue()));
                 companyDetail.setEarnings(String.valueOf(response.getFinance().getEarnings()));
-            }else
-            {
+            } else {
                 companyDetail.setEarnings("No data available");
                 companyDetail.setRevenue("No data avaialble");
             }
         }
+        model.addAttribute("title", "All Company Details");
+        model.addAttribute("companyDetails", companyDetails);
+        // ArrayList<CompanyDetails> allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
+        model.addAttribute("industries", industryRepository.findAll());
+        model.addAttribute("subindustries", subindustryRepository.findAll());
+        model.addAttribute("username", username);
+        return "companyDetails/welcomeindex";
+    }
 
 
+        @GetMapping
+        public String displayallcompanydetails(Model model) {
+
+            ArrayList <CompanyDetails> companyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
+
+            ServiceResponse response;
+            for(CompanyDetails companyDetail:companyDetails)
+            {
+                response = new ServiceResponse();
+                response = restServiceInvoker(companyDetail.getName());
+                if("SUCCESS".equalsIgnoreCase(response.getResponseType()))
+                {
+                    companyDetail.setRevenue(String.valueOf(response.getFinance().getRevenue()));
+                    companyDetail.setEarnings(String.valueOf(response.getFinance().getEarnings()));
+                }else
+                {
+                    companyDetail.setEarnings("No data available");
+                    companyDetail.setRevenue("No data avaialble");
+                }
+            }
         model.addAttribute("title", "All Company Details");
         model.addAttribute("companyDetails", companyDetails);
        // ArrayList<CompanyDetails> allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
        model.addAttribute("industries", industryRepository.findAll());
         model.addAttribute("subindustries", subindustryRepository.findAll());
+        //model.addAttribute("username", username);
         return "companyDetails/index";
 
     }
@@ -96,7 +121,7 @@ public class CompanyDetailsController {
             newCompanyDetails.setSubindustry(subindustry);
             companyDetailsRepository.save(newCompanyDetails);
 
-            return "redirect:";
+            return "companyDetails/index";
         }
     }
 

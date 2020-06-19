@@ -4,11 +4,15 @@ import org.launchcode.Competrack.data.UserRepository;
 import org.launchcode.Competrack.models.DTO.LoginFormDTO;
 import org.launchcode.Competrack.models.DTO.RegisterFormDTO;
 import org.launchcode.Competrack.models.User;
+import org.launchcode.Competrack.service.ServiceResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -54,7 +58,7 @@ public class AuthenticationController {
     @PostMapping("login")
     public String processLoginForm(@ModelAttribute @Valid LoginFormDTO loginFormDTO,
                                    Errors errors, HttpServletRequest request,
-                                   Model model, @RequestParam String username) {
+                                   Model model, @RequestParam String username, RedirectAttributes redirectAttributes) {
 
         if (errors.hasErrors()) {
             model.addAttribute("title", "Log In");
@@ -78,8 +82,8 @@ public class AuthenticationController {
         }
 
         setUserInSession(request.getSession(), theUser);
-        userRepository.findByUsername(username);
-        return "redirect:companyDetails";
+       redirectAttributes.addAttribute("username", username);
+        return "redirect:companyDetails/welcome";
     }
 
     @GetMapping("register")
@@ -137,5 +141,13 @@ public class AuthenticationController {
     @GetMapping("aboutUs")
     public String getAboutUs(Model model) {
         return "aboutUs";
+    }
+
+    public ServiceResponse restServiceInvoker(String name)
+    {
+        RestTemplateBuilder restBuilder = new RestTemplateBuilder();
+        RestTemplate restTemplate = restBuilder.build();
+        ServiceResponse response = restTemplate.getForObject("http://localhost:8083/finance?name="+name, ServiceResponse.class);
+        return response;
     }
 }

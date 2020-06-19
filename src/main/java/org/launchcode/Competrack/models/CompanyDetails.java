@@ -1,5 +1,7 @@
 package org.launchcode.Competrack.models;
 import org.launchcode.Competrack.annotation.URLValidation;
+import org.springframework.lang.Nullable;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
@@ -17,8 +19,10 @@ public class CompanyDetails extends AbstractEntity{
 
     private String subindustry;
 
+    @Nullable
     private String revenue;
 
+    @Nullable
     private String earnings;
 
     @URLValidation(message = "Please provide valid URL")
