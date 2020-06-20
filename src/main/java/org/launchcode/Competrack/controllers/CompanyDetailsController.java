@@ -36,7 +36,7 @@ public class CompanyDetailsController {
     @Autowired
     private SubindustryRepository subindustryRepository;
 
-
+    @CrossOrigin(origins = "http://localhost:8081")
     @GetMapping("welcome")
     public String displayallcompanydetailsWithWelcome(Model model, @RequestParam String username) {
 

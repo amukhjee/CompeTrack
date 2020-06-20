@@ -2,7 +2,18 @@
 <html lang="en" xmlns:th="https://www.thymeleaf.org/" xmlns="http://www.w3.org/1999/html">
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="/js/greeting.js"></script>
+<script>let url_string = window.location.href;
+       let url = new URL(url_string);
+       let username = url.searchParams.get("username");
+       $(document).ready(function(username) {
+    $.ajax({
+        url: "http://localhost:8081/greeting-javaconfig?name"+username
+    }).then(function(data) {
+       $('.greeting-id').append(data.id);
+       $('.greeting-content').append(data.content);
+    });
+});</script>
+
 <head th:replace="fragments :: head">
     <header th:replace="fragments :: headerloggedin">
         <title>All Company Details</title>
@@ -11,10 +22,8 @@
 <body class="container body-content">
 <div id="content-wrap">
     <div id="user_id"></div>
-    <div>
-        <p class="greeting-content">The greeting is: </p>
-    </div>
 
+    <p class="greeting-content">The content is </p>
     <h1>All Company Details</h1>
 
     <h1>Welcome<h1 th:text="${username}"></h1></h1>
