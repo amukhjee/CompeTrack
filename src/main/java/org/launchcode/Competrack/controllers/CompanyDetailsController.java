@@ -104,7 +104,7 @@ public class CompanyDetailsController {
     }
 
     @PostMapping("create")
-    public String processCreateCompanyDetailsForm(@ModelAttribute @Valid CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam String industry, @RequestParam String subindustry, @RequestParam String url, @RequestParam String address, @RequestParam String name) {
+    public String processCreateCompanyDetailsForm(@ModelAttribute @Valid CompanyDetails newCompanyDetails, Errors errors, Model model, @RequestParam @Valid String industry, @RequestParam String subindustry, @RequestParam String url, @RequestParam String address, @RequestParam String name) {
         if (errors.hasErrors()) {
             model.addAttribute("title", "Create Company");
             model.addAttribute("industries", industryRepository.findAll());

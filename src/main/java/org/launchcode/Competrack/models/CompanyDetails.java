@@ -10,7 +10,7 @@ import javax.validation.constraints.Size;
 @Entity
 public class CompanyDetails extends AbstractEntity{
 
-
+    @NotBlank (message="Industry can not be left blank.")
     private String industry;
 
     public void setSubindustry(String subindustry) {
