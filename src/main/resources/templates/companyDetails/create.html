@@ -28,7 +28,7 @@
         <label>Industry
             <td><div class="form-group blu-margin">
                 <select name="industries" class="form-control" th:field="${companyDetails.industry}"  id="dropIndustry" required>
-                    <option value="" disabled selected hidden>Select Industry</option>
+                    <option value="" disabled selected>Select Industry</option>
                     <option th:each="industry : ${industries}" th:value="${industry.name}" th:text="${industry.name}"></option>
                 </select>
             </div></td>
