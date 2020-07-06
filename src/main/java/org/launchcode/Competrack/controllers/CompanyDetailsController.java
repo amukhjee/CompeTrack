@@ -33,7 +33,7 @@ public class CompanyDetailsController {
 
 
 
-    @GetMapping
+   /* @GetMapping("login")
     public String displayallcompanydetails(Model model) {
         model.addAttribute("title", "All Company Details");
         model.addAttribute("companyDetails", companyDetailsRepository.findAll());
@@ -42,7 +42,7 @@ public class CompanyDetailsController {
         model.addAttribute("subindustries", subindustryRepository.findAll());
         return "companyDetails/index";
 
-    }
+    }*/
 
     @GetMapping("create")
     public String renderCreateCompanyDetailsForm(Model model) {

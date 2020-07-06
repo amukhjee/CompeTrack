@@ -1,6 +1,10 @@
 package org.launchcode.Competrack.controllers;
 
+import org.launchcode.Competrack.data.CompanyDetailsRepository;
+import org.launchcode.Competrack.data.IndustryRepository;
+import org.launchcode.Competrack.data.SubindustryRepository;
 import org.launchcode.Competrack.data.UserRepository;
+import org.launchcode.Competrack.models.CompanyDetails;
 import org.launchcode.Competrack.models.DTO.LoginFormDTO;
 import org.launchcode.Competrack.models.DTO.RegisterFormDTO;
 import org.launchcode.Competrack.models.User;
@@ -9,15 +13,25 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.Errors;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.ArrayList;
 import java.util.Optional;
 
 @RequestMapping("/")
 @Controller
 public class AuthenticationController {
+    @Autowired
+    private CompanyDetailsRepository companyDetailsRepository;
+
+    @Autowired
+    private IndustryRepository industryRepository;
+
+    @Autowired
+    private SubindustryRepository subindustryRepository;
 
     @Autowired
     UserRepository userRepository;
@@ -43,6 +57,51 @@ public class AuthenticationController {
         session.setAttribute(userSessionKey, user.getId());
     }
 
+
+    @GetMapping("companyDetails")
+    public String displayLoginForm(Model model) {
+        model.addAttribute(new LoginFormDTO());
+        model.addAttribute("title", "Log In");
+        model.addAttribute("title", "All Company Details");
+        model.addAttribute("companyDetails", companyDetailsRepository.findAll());
+        ArrayList<CompanyDetails> allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
+        model.addAttribute("industries", industryRepository.findAll());
+        model.addAttribute("subindustries", subindustryRepository.findAll());
+        return "companyDetails/index";
+
+    }
+
+   /* @PostMapping("login")
+    public String processLoginForm(@ModelAttribute @Valid LoginFormDTO loginFormDTO,
+                                   Errors errors, HttpServletRequest request,
+                                   Model model, @RequestParam String username, RedirectAttributes redirectAttributes) {
+
+        if (errors.hasErrors()) {
+            model.addAttribute("title", "Log In");
+            return "login";
+        }
+
+        User theUser = userRepository.findByUsername(loginFormDTO.getUsername());
+
+        if (theUser == null) {
+            errors.rejectValue("username", "user.invalid", "The given username does not exist");
+            model.addAttribute("title", "Log In");
+            return "login";
+        }
+
+        String password = loginFormDTO.getPassword();
+
+        if (!theUser.isMatchingPassword(password)) {
+            errors.rejectValue("password", "password.invalid", "Invalid password");
+            model.addAttribute("title", "Log In");
+            return "login";
+        }
+
+        setUserInSession(request.getSession(), theUser);
+        redirectAttributes.addAttribute("username", username);
+        return "redirect:companyDetails/index";
+    }
+*/
     @GetMapping("register")
     public String displayRegistrationForm(Model model) {
         model.addAttribute(new RegisterFormDTO());
@@ -83,47 +142,22 @@ public class AuthenticationController {
         return "redirect:login";
     }
 
-    @GetMapping("login")
-    public String displayLoginForm(Model model) {
-        model.addAttribute(new LoginFormDTO());
-        model.addAttribute("title", "Log In");
-        return "login";
-    }
-
-    @PostMapping("/login")
-    public String processLoginForm(@ModelAttribute @Valid LoginFormDTO loginFormDTO,
-                                   Errors errors, HttpServletRequest request,
-                                   Model model, @RequestParam String username) {
-
-        if (errors.hasErrors()) {
-            model.addAttribute("title", "Log In");
-            return "login";
-        }
-
-        User theUser = userRepository.findByUsername(loginFormDTO.getUsername());
-
-        if (theUser == null) {
-            errors.rejectValue("username", "user.invalid", "The given username does not exist");
-            model.addAttribute("title", "Log In");
-            return "login";
-        }
-
-        String password = loginFormDTO.getPassword();
-
-        if (!theUser.isMatchingPassword(password)) {
-            errors.rejectValue("password", "password.invalid", "Invalid password");
-            model.addAttribute("title", "Log In");
-            return "login";
-        }
-
-        setUserInSession(request.getSession(), theUser);
-        userRepository.findByUsername(username);
-        return "redirect:companyDetails";
-    }
 
     @GetMapping("logout")
     public String logout(HttpServletRequest request){
         request.getSession().invalidate();
-        return "redirect:/logout";
+        return "/logout";
     }
+
+    @GetMapping("contact")
+    public String getContact(Model model) {
+        return "contact";
+    }
+
+    @GetMapping("aboutUs")
+    public String getAboutUs(Model model) {
+        return "aboutUs";
+    }
+
+
 }
