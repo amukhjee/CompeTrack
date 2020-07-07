@@ -65,7 +65,7 @@ public class CompanyDetailsController {
 
 
         @GetMapping
-        public String displayallcompanydetails(Model model) {
+        public String displayallcompanydetails(Model model, @RequestParam String username) {
 
             ArrayList <CompanyDetails> companyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
 
@@ -89,7 +89,7 @@ public class CompanyDetailsController {
        // ArrayList<CompanyDetails> allCompanyDetails = (ArrayList<CompanyDetails>) companyDetailsRepository.findAll();
        model.addAttribute("industries", industryRepository.findAll());
         model.addAttribute("subindustries", subindustryRepository.findAll());
-        //model.addAttribute("username", username);
+        model.addAttribute("username", username);
         return "companyDetails/index";
 
     }

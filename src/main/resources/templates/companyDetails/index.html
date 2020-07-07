@@ -12,7 +12,16 @@
     <div id="content-wrap">
 <div id="user_id"></div>
         <div>
-            <p class="greeting-content">The greeting is: </p>
+            <p class="greeting-content">The greeting is:
+                <script>
+                $(document).ready(function(Request(username)) {
+                $.ajax({
+                url: "http://localhost:8081/greeting?name"+username
+                }).then(function(data) {
+                $('.greeting-content').append(data.content);
+                });
+                </script>
+            </p>
         </div>
 
         <h1>All Company Details</h1>

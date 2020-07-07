@@ -5,9 +5,13 @@
 <script>let url_string = window.location.href;
        let url = new URL(url_string);
        let username = url.searchParams.get("username");
+       console.log(username);
        $(document).ready(function(username) {
     $.ajax({
-        url: "http://localhost:8081/greeting-javaconfig?name"+username
+        url: "http://localhost:8081/greeting?"+ $.param({ name: "username" })
+
+
+
     }).then(function(data) {
        $('.greeting-id').append(data.id);
        $('.greeting-content').append(data.content);
