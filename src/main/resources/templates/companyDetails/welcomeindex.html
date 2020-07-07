@@ -8,10 +8,7 @@
        console.log(username);
        $(document).ready(function(username) {
     $.ajax({
-        url: "http://localhost:8081/greeting?"+ $.param({ name: "username" })
-
-
-
+        url: "http://localhost:8081/greeting?"+ $.param({ name: url.searchParams.get("username") })
     }).then(function(data) {
        $('.greeting-id').append(data.id);
        $('.greeting-content').append(data.content);
@@ -27,7 +24,7 @@
 <div id="content-wrap">
     <div id="user_id"></div>
 
-    <p class="greeting-content">The content is </p>
+    <p class="greeting-content">Greeting is </p>
     <h1>All Company Details</h1>
 
     <h1>Welcome<h1 th:text="${username}"></h1></h1>
